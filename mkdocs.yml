@@ -27,8 +27,6 @@ theme:
 nav:
 - 2.4.21:
   - 开始阅读: index.md
-  - map 用法教程: collections/map.md
-  - 前置条件 Preconditions.kt: guides/preconditions.md
   - API 目录:
     - 注解 · kotlin.annotation:
       - 概览: api/kotlin.annotation/index.md
@@ -3012,11 +3010,9 @@ plugins:
       site_description: Bilingual usage documentation for kotlin-stdlib 2.4.21.
       nav_translations:
         开始阅读: Getting started
-        map 用法教程: map tutorial
         API 目录: API reference
         覆盖进度: Coverage
         概览: Overview
-        前置条件 Preconditions.kt: Preconditions.kt
         注解 · kotlin.annotation: Annotations · kotlin.annotation
         集合 · kotlin.collections: Collections · kotlin.collections
         比较与排序 · kotlin.comparisons: Comparisons · kotlin.comparisons

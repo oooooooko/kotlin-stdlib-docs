@@ -225,10 +225,8 @@ def build():
             return [{letter:entries} for letter,entries in sorted(buckets.items())]
         return items
     package_nav=[{PACKAGES.get(p,(p,p))[0]+" · "+p:[{"概览":f"api/{p}/index.md"},*member_nav(groups)]} for p,groups in by_package.items()]
-    config["nav"]=[{VERSION:[{"开始阅读":"index.md"},{"map 用法教程":"collections/map.md"},{"API 目录":package_nav},{"覆盖进度":"coverage.md"}]}]
-    config["nav"][0][VERSION].insert(2,{"前置条件 Preconditions.kt":"guides/preconditions.md"})
-    translations_nav={"开始阅读":"Getting started","map 用法教程":"map tutorial","API 目录":"API reference","覆盖进度":"Coverage","概览":"Overview"}
-    translations_nav["前置条件 Preconditions.kt"]="Preconditions.kt"
+    config["nav"]=[{VERSION:[{"开始阅读":"index.md"},{"API 目录":package_nav},{"覆盖进度":"coverage.md"}]}]
+    translations_nav={"开始阅读":"Getting started","API 目录":"API reference","覆盖进度":"Coverage","概览":"Overview"}
     translations_nav.update({PACKAGES.get(p,(p,p))[0]+" · "+p:PACKAGES.get(p,(p,p))[1]+" · "+p for p in by_package})
     config["plugins"]=[{"i18n":{"docs_structure":"folder","languages":[{"locale":"zh","name":"简体中文","default":True,"build":True},{"locale":"en","name":"English","build":True,"site_name":"Kotlin Standard Library Usage","site_description":"Bilingual usage documentation for kotlin-stdlib 2.4.21.","nav_translations":translations_nav}]}},{"search":{"lang":["zh","en"]}}]
     config["validation"]={"nav":{"omitted_files":"ignore"}}
