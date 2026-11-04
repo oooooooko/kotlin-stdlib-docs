@@ -2994,7 +2994,6 @@ nav:
         - ushortArrayOf: api/kotlin/ushortarrayof--73c55719.md
       - W:
         - with: api/kotlin/with--0695b563.md
-  - 覆盖进度: coverage.md
 plugins:
 - i18n:
     docs_structure: folder
@@ -3011,7 +3010,6 @@ plugins:
       nav_translations:
         开始阅读: Getting started
         API 目录: API reference
-        覆盖进度: Coverage
         概览: Overview
         注解 · kotlin.annotation: Annotations · kotlin.annotation
         集合 · kotlin.collections: Collections · kotlin.collections

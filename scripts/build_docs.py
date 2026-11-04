@@ -180,15 +180,12 @@ def build():
         home=(f"# Kotlin {'标准库用法' if zh else 'Standard Library Usage'}\n\n**kotlin-stdlib {VERSION}**\n\n")
         home+=("按包、类型和函数查找 API，结合完整程序和实际输出理解用法。\n\n" if zh else "Browse APIs by package, type, and function, with complete programs and captured output.\n\n")
         home+=("仅收录 **Common 通用 API**，不收录 JVM、JS、Native、Wasm 专有 API 或平台互操作注解。示例使用 JVM 验证；不代表每个平台行为均已验证。\n\n" if zh else "Only **Common APIs** are included. Platform-specific APIs and interop annotations are excluded. Examples are verified on the JVM; this does not establish identical behavior on every target.\n\n")
-        home+=(f"当前收录 **{stats['api_entries']}** 个通用 API 条目、**{stats['declarations']}** 条声明；**{len(covered)}** 个条目已有验证示例，待补条目 **{len(gaps)}** 个。\n\n" if zh else f"The inventory contains **{stats['api_entries']} Common API entries** and **{stats['declarations']} declarations**. **{len(covered)} entries** have verified examples; **{len(gaps)} entries** still need examples.\n\n")
-        home+=f"[{'阅读 map 教程' if zh else 'Read the map tutorial'}](collections/map.md){{ .md-button .md-button--primary }}\n\n[{'查看覆盖进度' if zh else 'View coverage'}](coverage.md){{ .md-button }}\n\n"
-        home+=f"## {'按包查找' if zh else 'Browse packages'}\n\n| {'包' if zh else 'Package'} | {'内容' if zh else 'Contents'} | API | {'已有示例' if zh else 'With examples'} |\n| --- | --- | ---: | ---: |\n"
-        coverage=home.split("## ")[0]+f"## {'各包进度' if zh else 'Coverage by package'}\n\n| {'包' if zh else 'Package'} | API | {'已有示例' if zh else 'With examples'} | {'待补示例' if zh else 'Missing examples'} |\n| --- | ---: | ---: | ---: |\n"
+        home+=(f"当前收录 **{stats['api_entries']}** 个通用 API 条目、**{stats['declarations']}** 条声明。\n\n" if zh else f"The inventory contains **{stats['api_entries']} Common API entries** and **{stats['declarations']} declarations**.\n\n")
+        home+=f"[{'阅读 map 教程' if zh else 'Read the map tutorial'}](collections/map.md){{ .md-button .md-button--primary }}\n\n"
+        home+=f"## {'按包查找' if zh else 'Browse packages'}\n\n| {'包' if zh else 'Package'} | {'内容' if zh else 'Contents'} | API |\n| --- | --- | ---: |\n"
         for package,groups in by_package.items():
             label=PACKAGES.get(package,(package,package))[0 if zh else 1]
-            count=sum(g["has_example"] for g in groups)
-            home+=f"| [`{package}`](api/{package}/index.md) | {label} | {len(groups)} | {count} |\n"
-            coverage+=f"| [`{package}`](api/{package}/index.md) | {len(groups)} | {count} | {len(groups)-count} |\n"
+            home+=f"| [`{package}`](api/{package}/index.md) | {label} | {len(groups)} |\n"
             index=f"# {label}\n\n`{package}` · {VERSION}\n\n"
             index+=f"| API | {'类型' if zh else 'Kind'} | {'示例' if zh else 'Examples'} |\n| --- | --- | --- |\n"
             for group in groups:
@@ -197,9 +194,7 @@ def build():
                 status=("已验证" if zh else "Verified") if group["has_example"] else ("待补齐" if zh else "Pending")
                 index+=f"| [`{name}`]({Path(group['path']).name}) | {kind} | {status} |\n"
             write(language,f"api/{package}/index.md",index)
-        coverage+=("\n## 覆盖口径\n\n- API 条目按包、所属类型和名称分组；同名重载集中展示，不把一个示例视为每个重载都已验证。\n- 收录公开和受保护声明，排除私有、内部和 `HIDDEN` 声明，以及标准库构建配置排除的旧 DOM 兼容源码。\n- “已有示例”表示至少有一个真实运行通过的代表性程序；每个平台声明仍保留固定版本源码链接。\n- 中文 KDoc 是自动翻译初稿；英文保留官方原文。尚未完成的示例逐项列在仓库 `data/coverage.json` 中。\n" if zh else "\n## Coverage definition\n\n- Entries are grouped by package, owning type, and name; overloads share a page. One sample does not imply that every overload was verified.\n- Public and protected declarations are included. Private, internal, HIDDEN, and legacy DOM compatibility sources excluded by the stdlib build are omitted.\n- An entry has examples only if at least one representative program really compiled and ran. Every platform declaration retains a pinned source link.\n- Chinese KDoc is a machine-translated draft; English retains the official prose. All missing examples are listed in the repository's `data/coverage.json`.\n")
         write(language,"index.md",home)
-        write(language,"coverage.md",coverage)
     config=yaml.safe_load((ROOT/"mkdocs.yml").read_text())
     config["site_url"]="https://oooooooko.github.io/kotlin-stdlib-docs/"
     config["repo_url"]="https://github.com/oooooooko/kotlin-stdlib-docs"
@@ -225,8 +220,8 @@ def build():
             return [{letter:entries} for letter,entries in sorted(buckets.items())]
         return items
     package_nav=[{PACKAGES.get(p,(p,p))[0]+" · "+p:[{"概览":f"api/{p}/index.md"},*member_nav(groups)]} for p,groups in by_package.items()]
-    config["nav"]=[{VERSION:[{"开始阅读":"index.md"},{"API 目录":package_nav},{"覆盖进度":"coverage.md"}]}]
-    translations_nav={"开始阅读":"Getting started","API 目录":"API reference","覆盖进度":"Coverage","概览":"Overview"}
+    config["nav"]=[{VERSION:[{"开始阅读":"index.md"},{"API 目录":package_nav}]}]
+    translations_nav={"开始阅读":"Getting started","API 目录":"API reference","概览":"Overview"}
     translations_nav.update({PACKAGES.get(p,(p,p))[0]+" · "+p:PACKAGES.get(p,(p,p))[1]+" · "+p for p in by_package})
     config["plugins"]=[{"i18n":{"docs_structure":"folder","languages":[{"locale":"zh","name":"简体中文","default":True,"build":True},{"locale":"en","name":"English","build":True,"site_name":"Kotlin Standard Library Usage","site_description":"Bilingual usage documentation for kotlin-stdlib 2.4.21.","nav_translations":translations_nav}]}},{"search":{"lang":["zh","en"]}}]
     config["validation"]={"nav":{"omitted_files":"ignore"}}
