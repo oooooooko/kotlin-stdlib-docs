@@ -1,0 +1,15 @@
+{
+  "version": "2.4.21",
+  "commit": "9180ce6a7a7d3627f88b424717583f28ddca052d",
+  "packages": 23,
+  "api_entries": 2590,
+  "declarations": 6611,
+  "entries_with_verified_examples": 2590,
+  "entries_missing_examples": 0,
+  "official_programs": 800,
+  "generated_programs": 1619,
+  "test_derived_programs": 52,
+  "parse_errors": [],
+  "scope": "Common",
+  "missing_examples": []
+}

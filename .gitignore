@@ -1,0 +1,8 @@
+.venv/
+.tools/
+site/
+__pycache__/
+.DS_Store
+.cache/
+*.pyc
+docs/fonts/HYYouYuan-*.ttf

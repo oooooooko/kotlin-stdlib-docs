@@ -1,0 +1,97 @@
+# lastOrNull
+
+`kotlin.ranges` · **2.4.21** · Common
+
+Representative examples on this page were compiled and executed on **JVM** with Kotlin / stdlib 2.4.21.
+
+## Description
+
+Returns the last element, or `null` if the progression is empty.
+
+@sample samples.collections.Collections.Elements.last
+
+## Declarations and overloads
+
+### 1. Common
+
+```kotlin
+@SinceKotlin("1.7")
+public fun IntProgression.lastOrNull(): Int?
+```
+
+[Common source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Ranges.kt#L122)
+
+### 2. Common
+
+```kotlin
+@SinceKotlin("1.7")
+public fun LongProgression.lastOrNull(): Long?
+```
+
+[Common source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Ranges.kt#L132)
+
+### 3. Common
+
+```kotlin
+@SinceKotlin("1.7")
+public fun CharProgression.lastOrNull(): Char?
+```
+
+[Common source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Ranges.kt#L142)
+
+### 4. Common
+
+```kotlin
+@SinceKotlin("1.7")
+public fun UIntProgression.lastOrNull(): UInt?
+```
+
+[Common source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_URanges.kt#L88)
+
+### 5. Common
+
+```kotlin
+@SinceKotlin("1.7")
+public fun ULongProgression.lastOrNull(): ULong?
+```
+
+[Common source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_URanges.kt#L98)
+
+## Usage examples and output
+
+### Example 1 · JVM
+
+```kotlin title="Example 1" linenums="1"
+@file:OptIn(kotlin.ExperimentalStdlibApi::class, kotlin.ExperimentalUnsignedTypes::class, kotlin.time.ExperimentalTime::class, kotlin.contracts.ExperimentalContracts::class, kotlin.io.path.ExperimentalPathApi::class, kotlin.uuid.ExperimentalUuidApi::class, kotlin.concurrent.atomics.ExperimentalAtomicApi::class, kotlin.io.encoding.ExperimentalEncodingApi::class)
+import kotlin.math.*
+import kotlin.test.*
+
+
+
+fun main() {
+    val list = listOf(1, 2, 3, 4)
+    println(list.last())
+    println(list.last { it % 2 == 1 })
+    println(list.lastOrNull { it < 0 })
+    assertFails { list.last { it < 0 } }
+
+    val emptyList = emptyList<Int>()
+    println(emptyList.lastOrNull())
+    assertFails { emptyList.last() }
+}
+```
+
+```text title="Output"
+4
+3
+null
+null
+```
+
+This edge-case sample also uses assertions from `kotlin-test:2.4.21`.
+
+[Sample source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/samples/test/samples/collections/collections.kt#L1368)
+
+## Version and sources
+
+Declarations and KDoc are taken from the pinned official Kotlin `v2.4.21` source tag. Chinese KDoc is a machine-translated draft, not individually human-reviewed. JVM example validation does not establish JS-, Native-, or Wasm-specific behavior.

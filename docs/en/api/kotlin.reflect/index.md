@@ -1,0 +1,56 @@
+# Reflection types
+
+`kotlin.reflect` · 2.4.21
+
+| API | Kind | Examples |
+| --- | --- | --- |
+| [`KCallable`](kcallable--2cd4608b.md) | class | Verified |
+| [`KCallable.name`](kcallable-name--cce63928.md) | property | Verified |
+| [`KClass`](kclass--4a9fc5a1.md) | class | Verified |
+| [`KClass.equals`](kclass-equals--2447b02e.md) | function | Verified |
+| [`KClass.hashCode`](kclass-hashcode--292bdd6f.md) | function | Verified |
+| [`KClass.isInstance`](kclass-isinstance--d67fed2f.md) | function | Verified |
+| [`KClass.qualifiedName`](kclass-qualifiedname--0cc8f6b8.md) | property | Verified |
+| [`KClass.simpleName`](kclass-simplename--d139ea14.md) | property | Verified |
+| [`KClassifier`](kclassifier--3ff555f9.md) | class | Verified |
+| [`KFunction`](kfunction--5b505331.md) | class | Verified |
+| [`KMutableProperty`](kmutableproperty--40f1bcf4.md) | class | Verified |
+| [`KMutableProperty0`](kmutableproperty0--a202a1bd.md) | class | Verified |
+| [`KMutableProperty0.set`](kmutableproperty0-set--03c054b0.md) | function | Verified |
+| [`KMutableProperty1`](kmutableproperty1--170ab5c5.md) | class | Verified |
+| [`KMutableProperty1.set`](kmutableproperty1-set--9621afd9.md) | function | Verified |
+| [`KMutableProperty2`](kmutableproperty2--abfa705a.md) | class | Verified |
+| [`KMutableProperty2.set`](kmutableproperty2-set--8e0a74fa.md) | function | Verified |
+| [`KProperty`](kproperty--2a4c1574.md) | class | Verified |
+| [`KProperty0`](kproperty0--9d1d9e32.md) | class | Verified |
+| [`KProperty0.get`](kproperty0-get--9d2410db.md) | function | Verified |
+| [`KProperty1`](kproperty1--bcfc5307.md) | class | Verified |
+| [`KProperty1.get`](kproperty1-get--a3a5da27.md) | function | Verified |
+| [`KProperty2`](kproperty2--cd767fba.md) | class | Verified |
+| [`KProperty2.get`](kproperty2-get--13dc4f49.md) | function | Verified |
+| [`KType`](ktype--174ffd68.md) | class | Verified |
+| [`KType.arguments`](ktype-arguments--94bea395.md) | property | Verified |
+| [`KType.classifier`](ktype-classifier--938919a2.md) | property | Verified |
+| [`KType.isMarkedNullable`](ktype-ismarkednullable--789266eb.md) | property | Verified |
+| [`KTypeParameter`](ktypeparameter--6effc128.md) | class | Verified |
+| [`KTypeParameter.isReified`](ktypeparameter-isreified--8ed7d520.md) | property | Verified |
+| [`KTypeParameter.name`](ktypeparameter-name--413c8ba0.md) | property | Verified |
+| [`KTypeParameter.upperBounds`](ktypeparameter-upperbounds--ab0d4616.md) | property | Verified |
+| [`KTypeParameter.variance`](ktypeparameter-variance--61d60f83.md) | property | Verified |
+| [`KTypeProjection`](ktypeprojection--b0c0a8aa.md) | class | Verified |
+| [`KTypeProjection.Companion`](ktypeprojection-companion--c2eed806.md) | object | Verified |
+| [`KTypeProjection.Companion.STAR`](ktypeprojection-companion-star--3ac94179.md) | property | Verified |
+| [`KTypeProjection.Companion.contravariant`](ktypeprojection-companion-contravariant--2ec0635e.md) | function | Verified |
+| [`KTypeProjection.Companion.covariant`](ktypeprojection-companion-covariant--e84cbc69.md) | function | Verified |
+| [`KTypeProjection.Companion.invariant`](ktypeprojection-companion-invariant--772bdd4d.md) | function | Verified |
+| [`KTypeProjection.constructor`](ktypeprojection-constructor--3f90730f.md) | secondary_constructor | Verified |
+| [`KTypeProjection.toString`](ktypeprojection-tostring--aaccd402.md) | function | Verified |
+| [`KTypeProjection.type`](ktypeprojection-type--9f2c8da2.md) | property | Verified |
+| [`KTypeProjection.variance`](ktypeprojection-variance--2640d4c7.md) | property | Verified |
+| [`KVariance`](kvariance--44d11edf.md) | class | Verified |
+| [`KVariance.IN`](kvariance-in--2470553e.md) | enum_entry | Verified |
+| [`KVariance.INVARIANT`](kvariance-invariant--9ede2225.md) | enum_entry | Verified |
+| [`KVariance.OUT`](kvariance-out--19a1cf78.md) | enum_entry | Verified |
+| [`cast`](cast--603705cc.md) | function | Verified |
+| [`safeCast`](safecast--07217521.md) | function | Verified |
+| [`typeOf`](typeof--74a0bd0c.md) | function | Verified |

@@ -1,0 +1,17 @@
+Kotlin Standard Library Usage Documentation
+
+API declarations, KDoc, and samples are derived from JetBrains/kotlin, pinned to
+v2.4.21 (commit 9180ce6a7a7d3627f88b424717583f28ddca052d).
+Copyright 2010-2026 JetBrains s.r.o. and Kotlin Programming Language contributors.
+The upstream material is licensed under the Apache License, Version 2.0.
+See LICENSE and the per-page source links. Samples have been adapted into
+standalone programs; Chinese KDoc includes machine-translated drafts.
+
+The local translation model Helsinki-NLP/opus-mt-en-zh is distributed under
+Apache-2.0. Model weights are not included in this repository.
+
+The visual configuration follows https://liangjingkanji.github.io/BRV/.
+Iosevka font files retain their upstream SIL Open Font License (see
+docs/fonts/LICENSE-Iosevka.md). HYYouYuan is referenced from the reference
+site author's public font URLs; those font files are not redistributed here.
+Third-party font rights are separate from the project's Apache license.

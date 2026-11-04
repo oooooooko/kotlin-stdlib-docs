@@ -1,0 +1,77 @@
+name: Build and deploy documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pages: read
+    outputs:
+      complete: ${{ steps.coverage.outputs.complete }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .tools/maven-kotlinc
+            .tools/kotlin-reflect-2.4.21.jar
+          key: kotlin-docs-toolchain-2.4.21-v1
+      - name: Install documentation dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Install pinned Kotlin toolchain
+        run: python scripts/bootstrap_kotlin.py
+      - name: Verify executable examples
+        run: python scripts/verify_examples.py --fixtures
+      - name: Render bilingual source pages
+        run: python scripts/build_docs.py
+      - name: Check inventory and bilingual parity
+        id: coverage
+        run: |
+          python scripts/check_docs.py
+          python -c 'import json; print("complete="+str(json.load(open("data/coverage.json"))["entries_missing_examples"] == 0).lower())' >> "$GITHUB_OUTPUT"
+      - name: Build website
+        run: mkdocs build --strict
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request' && steps.coverage.outputs.complete == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        if: github.event_name != 'pull_request' && steps.coverage.outputs.complete == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    if: github.event_name != 'pull_request' && needs.build.outputs.complete == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4

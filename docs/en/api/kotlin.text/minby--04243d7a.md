@@ -1,0 +1,78 @@
+# minBy
+
+`kotlin.text` · **2.4.21** · Common
+
+Representative examples on this page were compiled and executed on **JVM** with Kotlin / stdlib 2.4.21.
+
+## Description
+
+Returns the first character yielding the smallest value of the given `selector` function.
+
+If there are multiple equal minimal values returned by the `selector` function,
+this function returns the first of characters corresponding to these values.
+
+Note that the function `selector` is not invoked when the char sequence contains zero or one characters
+because in these cases it is clear which character to return without invoking the `selector`.
+Therefore it's recommended to avoid relying on side effects being performed by the `selector` function on each character.
+
+@throws NoSuchElementException if the char sequence is empty.
+
+@sample samples.collections.Collections.Aggregates.minMaxByOrNull
+
+## Declarations and overloads
+
+### 1. Common
+
+```kotlin
+@SinceKotlin("1.7")
+@kotlin.jvm.JvmName("minByOrThrow")
+@Suppress("CONFLICTING_OVERLOADS")
+public inline fun <R : Comparable<R>> CharSequence.minBy(selector: (Char) -> R): Char
+```
+
+[Common source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Strings.kt#L1559)
+
+## Usage examples and output
+
+### Example 1 · JVM
+
+```kotlin title="Example 1" linenums="1"
+@file:OptIn(kotlin.ExperimentalStdlibApi::class, kotlin.ExperimentalUnsignedTypes::class, kotlin.time.ExperimentalTime::class, kotlin.contracts.ExperimentalContracts::class, kotlin.io.path.ExperimentalPathApi::class, kotlin.uuid.ExperimentalUuidApi::class, kotlin.concurrent.atomics.ExperimentalAtomicApi::class, kotlin.io.encoding.ExperimentalEncodingApi::class)
+import kotlin.math.*
+import kotlin.test.*
+
+
+
+fun main() {
+    val strings = listOf("abcd", "abc", "ab", "de", "abcde")
+
+    val longestString = strings.maxBy { it.length }
+    println(longestString)
+
+    val shortestString = strings.minBy { it.length }
+    println(shortestString)
+
+    val emptyList = emptyList<String>()
+    // maxBy() and minBy() throw if the collection is empty
+    assertFailsWith<NoSuchElementException> { emptyList.maxBy { it.length } }
+    assertFailsWith<NoSuchElementException> { emptyList.minBy { it.length } }
+    // maxByOrNull() and minByOrNull() return null if the collection is empty
+    println(emptyList.maxByOrNull { it.length })
+    println(emptyList.minByOrNull { it.length })
+}
+```
+
+```text title="Output"
+abcde
+ab
+null
+null
+```
+
+This edge-case sample also uses assertions from `kotlin-test:2.4.21`.
+
+[Sample source](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/samples/test/samples/collections/collections.kt#L1218)
+
+## Version and sources
+
+Declarations and KDoc are taken from the pinned official Kotlin `v2.4.21` source tag. Chinese KDoc is a machine-translated draft, not individually human-reviewed. JVM example validation does not establish JS-, Native-, or Wasm-specific behavior.

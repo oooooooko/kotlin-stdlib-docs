@@ -1,0 +1,80 @@
+# takeIf
+
+`kotlin` · **2.4.21** · Common
+
+本文含经 Kotlin / stdlib 2.4.21 在 **JVM** 上编译运行的代表性示例。
+
+## 用途与说明
+
+返回 `this` 值,如果它满足给定 `predicate` 或 `null` ,如果它没有满足,则返回 `this` 值。
+
+详细使用情况信息见[范围函数]的文件(https://kotlinlang.org/docs/reference/scope-functions.html#takeif-and-takeunless).)
+
+??? note "查看英文原文"
+
+    Returns `this` value if it satisfies the given `predicate` or `null`, if it doesn't.
+    
+    For detailed usage information see the documentation for [scope functions](https://kotlinlang.org/docs/reference/scope-functions.html#takeif-and-takeunless).
+
+## 声明与重载
+
+### 1. Common
+
+```kotlin
+@kotlin.internal.InlineOnly
+@SinceKotlin("1.1")
+public inline fun <T> T.takeIf(predicate: (T) -> Boolean): T?
+```
+
+[Common 源码](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/src/kotlin/util/Standard.kt#L121)
+
+## 用法示例与输出
+
+### 示例 1 · JVM
+
+```kotlin title="示例 1" linenums="1"
+@file:OptIn(kotlin.ExperimentalStdlibApi::class, kotlin.ExperimentalUnsignedTypes::class, kotlin.time.ExperimentalTime::class, kotlin.contracts.ExperimentalContracts::class, kotlin.io.path.ExperimentalPathApi::class, kotlin.uuid.ExperimentalUuidApi::class, kotlin.concurrent.atomics.ExperimentalAtomicApi::class, kotlin.io.encoding.ExperimentalEncodingApi::class)
+import kotlin.math.*
+import kotlin.test.*
+
+
+
+fun main() {
+    data class Rectangle(val height: Int, val width: Int) {
+        val area: Int get() = height * width
+    }
+
+    val rectangles = listOf(
+        Rectangle(3, 4),
+        Rectangle(1, 8),
+        Rectangle(6, 3),
+        Rectangle(4, 3),
+        Rectangle(5, 7)
+    )
+
+    val largeArea = rectangles.firstNotNullOf { it.area.takeIf { area -> area >= 15 } }
+    val largeAreaOrNull = rectangles.firstNotNullOfOrNull { it.area.takeIf { area -> area >= 15 } }
+
+    println(largeArea)
+    println(largeAreaOrNull)
+
+    assertFailsWith<NoSuchElementException> { val evenLargerArea = rectangles.firstNotNullOf { it.area.takeIf { area -> area >= 50 } } }
+    val evenLargerAreaOrNull = rectangles.firstNotNullOfOrNull { it.area.takeIf { area -> area >= 50 } }
+
+    println(evenLargerAreaOrNull)
+}
+```
+
+```text title="输出"
+18
+18
+null
+```
+
+此边界示例还使用 `kotlin-test:2.4.21` 的断言工具。
+
+[示例来源](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/samples/test/samples/collections/collections.kt#L954)
+
+## 版本与来源
+
+声明和 KDoc 取自 Kotlin 官方源码的固定标签 `v2.4.21`。中文 KDoc 为自动翻译初稿，尚未经逐条人工审校；有歧义时请展开英文原文。示例的 JVM 验证结果不能视为对 JS、Native 或 Wasm 专有行为的验证。

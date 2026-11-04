@@ -1,0 +1,107 @@
+# minus
+
+`kotlin.sequences` · **2.4.21** · Common
+
+本文含经 Kotlin / stdlib 2.4.21 在 **JVM** 上编译运行的代表性示例。
+
+## 用途与说明
+
+返回包含原始序列所有元素的序列,不发生给定`element`的首次发生。
+
+操作是 _ 中间线 _ 和 _ 无国籍 。
+
+??? note "查看英文原文"
+
+    Returns a sequence containing all elements of the original sequence without the first occurrence of the given `element`.
+    
+    The operation is _intermediate_ and _stateless_.
+
+## 声明与重载
+
+### 1. Common
+
+```kotlin
+public operator fun <T> Sequence<T>.minus(element: T): Sequence<T>
+```
+
+[Common 源码](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Sequences.kt#L3045)
+
+### 2. Common
+
+```kotlin
+public operator fun <T> Sequence<T>.minus(elements: Array<out T>): Sequence<T>
+```
+
+[Common 源码](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Sequences.kt#L3059)
+
+返回包含所有原始序列元素的序列,但给定`elements`矩阵中包含的元素除外。
+
+请注意,源序列和要减去的数组只有在要求从结果序列中取`iterator`时才被迭代。在连续调用到`iterator`之间,更改其中任何一项都可能影响结果。
+
+操作是 _ 中间线 _ 和 _ tateful_ 。
+
+### 3. Common
+
+```kotlin
+public operator fun <T> Sequence<T>.minus(elements: Iterable<T>): Sequence<T>
+```
+
+[Common 源码](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Sequences.kt#L3076)
+
+返回包含所有原始序列元素的序列,但给定`elements`收藏中包含的元素除外。
+
+请注意,源序列和要减去的收藏只有在要求从结果序列中取`iterator`时才被迭代。 更改顺序到 `iterator` 之间的任何顺序可能会影响结果 。
+
+操作是 _ 中间线 _ 和 _ tateful_ 。
+
+### 4. Common
+
+```kotlin
+public operator fun <T> Sequence<T>.minus(elements: Sequence<T>): Sequence<T>
+```
+
+[Common 源码](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/common/src/generated/_Sequences.kt#L3096)
+
+返回包含所有原始序列元素的序列,但给定`elements`序列中包含元素除外。
+
+请注意,源序列和要减去的序列只有在要求从结果序列中取`iterator`时才被迭代。 更改顺序到 `iterator` 之间的任何顺序都可能影响结果 。
+
+此序列的操作是 _ 中间线 _ , `elements` 序列的操作是 _ terminal_ 和 _ tateful_ 。
+
+## 用法示例与输出
+
+### 示例 1 · JVM
+
+```kotlin title="示例 1" linenums="1"
+@file:OptIn(kotlin.ExperimentalStdlibApi::class, kotlin.ExperimentalUnsignedTypes::class, kotlin.time.ExperimentalTime::class, kotlin.uuid.ExperimentalUuidApi::class, kotlin.io.encoding.ExperimentalEncodingApi::class, kotlin.io.path.ExperimentalPathApi::class, kotlin.concurrent.atomics.ExperimentalAtomicApi::class)
+
+import kotlin.collections.*
+import kotlin.comparisons.*
+import kotlin.math.*
+import kotlin.random.*
+import kotlin.ranges.*
+import kotlin.reflect.*
+import kotlin.sequences.*
+import kotlin.text.*
+import kotlin.time.*
+import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.uuid.*
+import kotlin.io.encoding.*
+import java.io.File
+import kotlin.sequences.*
+
+fun main() {
+    val source = sequenceOf(1, 2, 3)
+    val result = source.`minus`(1)
+    println(result.toList())
+}
+```
+
+```text title="输出"
+[2, 3]
+```
+
+## 版本与来源
+
+声明和 KDoc 取自 Kotlin 官方源码的固定标签 `v2.4.21`。中文 KDoc 为自动翻译初稿，尚未经逐条人工审校；有歧义时请展开英文原文。示例的 JVM 验证结果不能视为对 JS、Native 或 Wasm 专有行为的验证。

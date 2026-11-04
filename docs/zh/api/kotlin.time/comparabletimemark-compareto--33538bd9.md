@@ -1,0 +1,77 @@
+# ComparableTimeMark.compareTo
+
+`kotlin.time` · **2.4.21** · Common
+
+本文含经 Kotlin / stdlib 2.4.21 在 **JVM** 上编译运行的代表性示例。
+
+## 用途与说明
+
+与这个时间值相比, 与顺序的`other`时间值是`other`。
+
+- 如果此时间标记代表 `other` 时间标记的同一时刻 * 返回零。 - 如果此时间标记是`other`时间标记的原始值 * 则返回负数。 - 如果此时间标记是 `other` 时间标记的后期值 * 返回正数。
+
+请注意,另一个时间标记必须从与此相同的时间源获取。
+
+@throws 非法辩护,如果从不同时间来源获得时间标记,则例外。
+
+??? note "查看英文原文"
+
+    Compares this time mark with the `other` time mark for order.
+    
+    - Returns zero if this time mark represents *the same moment* of time as the `other` time mark.
+    - Returns a negative number if this time mark is *earlier* than the `other` time mark.
+    - Returns a positive number if this time mark is *later* than the `other` time mark.
+    
+    Note that the other time mark must be obtained from the same time source as this one.
+    
+    @throws IllegalArgumentException if time marks were obtained from different time sources.
+
+## 声明与重载
+
+### 1. Common
+
+```kotlin
+public override operator fun compareTo(other: ComparableTimeMark): Int
+```
+
+[Common 源码](https://github.com/JetBrains/kotlin/blob/v2.4.21/libraries/stdlib/src/kotlin/time/TimeSource.kt#L223)
+
+## 用法示例与输出
+
+### 示例 1 · JVM
+
+```kotlin title="示例 1" linenums="1"
+@file:OptIn(kotlin.ExperimentalStdlibApi::class, kotlin.ExperimentalUnsignedTypes::class, kotlin.time.ExperimentalTime::class, kotlin.uuid.ExperimentalUuidApi::class, kotlin.io.encoding.ExperimentalEncodingApi::class, kotlin.io.path.ExperimentalPathApi::class, kotlin.concurrent.atomics.ExperimentalAtomicApi::class)
+
+import kotlin.collections.*
+import kotlin.comparisons.*
+import kotlin.math.*
+import kotlin.random.*
+import kotlin.ranges.*
+import kotlin.reflect.*
+import kotlin.sequences.*
+import kotlin.text.*
+import kotlin.time.*
+import kotlin.time.Duration.Companion.seconds
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.uuid.*
+import kotlin.io.encoding.*
+import java.io.File
+import kotlin.time.*
+
+fun main() {
+    val source = TimeSource.Monotonic.markNow()
+    val result = source.`compareTo`(TimeSource.Monotonic.markNow())
+    println(result)
+}
+```
+
+```text title="输出"
+-1
+```
+
+本次实际运行的输出如上；随机数、时间、临时路径或对象标识等内容可能随运行和环境变化。
+
+## 版本与来源
+
+声明和 KDoc 取自 Kotlin 官方源码的固定标签 `v2.4.21`。中文 KDoc 为自动翻译初稿，尚未经逐条人工审校；有歧义时请展开英文原文。示例的 JVM 验证结果不能视为对 JS、Native 或 Wasm 专有行为的验证。

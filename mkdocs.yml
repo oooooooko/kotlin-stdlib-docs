@@ -1,0 +1,3067 @@
+site_name: Kotlin 标准库用法
+site_description: 基于 kotlin-stdlib 2.4.21 的中文用法手册，用示例和输出理解每个 API。
+site_author: Kotlin 标准库用法手册
+repo_url: https://github.com/oooooooko/kotlin-stdlib-docs
+repo_name: kotlin-stdlib-docs
+copyright: 非官方中文用法手册 · 基于 kotlin-stdlib 2.4.21
+theme:
+  name: material
+  language: zh
+  font: false
+  logo: img/book-open.svg
+  favicon: img/book-open.svg
+  palette:
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: white
+    accent: indigo
+  features:
+  - navigation.prune
+  - navigation.top
+  - navigation.footer
+  - search.suggest
+  - search.highlight
+  - search.share
+  - content.code.copy
+  - content.code.annotate
+nav:
+- 2.4.21:
+  - 开始阅读: index.md
+  - map 用法教程: collections/map.md
+  - 前置条件 Preconditions.kt: guides/preconditions.md
+  - API 目录:
+    - 注解 · kotlin.annotation:
+      - 概览: api/kotlin.annotation/index.md
+      - AnnotationRetention:
+        - 概览: api/kotlin.annotation/annotationretention--757a7834.md
+        - BINARY: api/kotlin.annotation/annotationretention-binary--a2a8fd71.md
+        - RUNTIME: api/kotlin.annotation/annotationretention-runtime--a17a14aa.md
+        - SOURCE: api/kotlin.annotation/annotationretention-source--5a490e66.md
+      - AnnotationTarget:
+        - 概览: api/kotlin.annotation/annotationtarget--2235d157.md
+        - ANNOTATION_CLASS: api/kotlin.annotation/annotationtarget-annotation-class--324453d6.md
+        - CLASS: api/kotlin.annotation/annotationtarget-class--479dd853.md
+        - CONSTRUCTOR: api/kotlin.annotation/annotationtarget-constructor--402b3710.md
+        - EXPRESSION: api/kotlin.annotation/annotationtarget-expression--5eed0407.md
+        - FIELD: api/kotlin.annotation/annotationtarget-field--22459317.md
+        - FILE: api/kotlin.annotation/annotationtarget-file--c6a8477f.md
+        - FUNCTION: api/kotlin.annotation/annotationtarget-function--73537cb2.md
+        - LOCAL_VARIABLE: api/kotlin.annotation/annotationtarget-local-variable--af9236fa.md
+        - PROPERTY: api/kotlin.annotation/annotationtarget-property--711456f8.md
+        - PROPERTY_GETTER: api/kotlin.annotation/annotationtarget-property-getter--d06eaae6.md
+        - PROPERTY_SETTER: api/kotlin.annotation/annotationtarget-property-setter--079dd191.md
+        - TYPE: api/kotlin.annotation/annotationtarget-type--b4a6261c.md
+        - TYPEALIAS: api/kotlin.annotation/annotationtarget-typealias--9458f4fb.md
+        - TYPE_PARAMETER: api/kotlin.annotation/annotationtarget-type-parameter--7ca68300.md
+        - VALUE_PARAMETER: api/kotlin.annotation/annotationtarget-value-parameter--772ea0cc.md
+      - MustBeDocumented: api/kotlin.annotation/mustbedocumented--1a3027ec.md
+      - Repeatable: api/kotlin.annotation/repeatable--f961e9e5.md
+      - Retention:
+        - 概览: api/kotlin.annotation/retention--3b1f58d9.md
+        - constructor: api/kotlin.annotation/retention-constructor--251d2533.md
+        - value: api/kotlin.annotation/retention-value--582c2102.md
+      - Target:
+        - 概览: api/kotlin.annotation/target--978354db.md
+        - allowedTargets: api/kotlin.annotation/target-allowedtargets--44a13438.md
+        - constructor: api/kotlin.annotation/target-constructor--fcf48ecc.md
+    - 集合 · kotlin.collections:
+      - 概览: api/kotlin.collections/index.md
+      - A:
+        - AbstractCollection:
+          - 概览: api/kotlin.collections/abstractcollection--bb86628c.md
+          - constructor: api/kotlin.collections/abstractcollection-constructor--034af759.md
+          - contains: api/kotlin.collections/abstractcollection-contains--83a52329.md
+          - containsAll: api/kotlin.collections/abstractcollection-containsall--0a09e0ba.md
+          - isEmpty: api/kotlin.collections/abstractcollection-isempty--7282bf05.md
+          - iterator: api/kotlin.collections/abstractcollection-iterator--b1655a70.md
+          - size: api/kotlin.collections/abstractcollection-size--cedbf957.md
+          - toArray: api/kotlin.collections/abstractcollection-toarray--ecb41473.md
+          - toString: api/kotlin.collections/abstractcollection-tostring--097d635b.md
+        - AbstractIterator:
+          - 概览: api/kotlin.collections/abstractiterator--7169fd1e.md
+          - computeNext: api/kotlin.collections/abstractiterator-computenext--42e25d0d.md
+          - done: api/kotlin.collections/abstractiterator-done--22ac55c2.md
+          - hasNext: api/kotlin.collections/abstractiterator-hasnext--45b0a8af.md
+          - next: api/kotlin.collections/abstractiterator-next--d72ba600.md
+          - setNext: api/kotlin.collections/abstractiterator-setnext--6a42009d.md
+        - AbstractList:
+          - 概览: api/kotlin.collections/abstractlist--f5c016dd.md
+          - constructor: api/kotlin.collections/abstractlist-constructor--8840607d.md
+          - equals: api/kotlin.collections/abstractlist-equals--5da563ca.md
+          - get: api/kotlin.collections/abstractlist-get--01c9f277.md
+          - hashCode: api/kotlin.collections/abstractlist-hashcode--852e061a.md
+          - indexOf: api/kotlin.collections/abstractlist-indexof--a66b652d.md
+          - iterator: api/kotlin.collections/abstractlist-iterator--7b6fa74f.md
+          - lastIndexOf: api/kotlin.collections/abstractlist-lastindexof--f25c836a.md
+          - listIterator: api/kotlin.collections/abstractlist-listiterator--f925c64e.md
+          - size: api/kotlin.collections/abstractlist-size--48b75b70.md
+          - subList: api/kotlin.collections/abstractlist-sublist--bdcc9cf5.md
+        - AbstractMap:
+          - 概览: api/kotlin.collections/abstractmap--f8a395a7.md
+          - constructor: api/kotlin.collections/abstractmap-constructor--f822b8f1.md
+          - containsKey: api/kotlin.collections/abstractmap-containskey--7e88fa31.md
+          - containsValue: api/kotlin.collections/abstractmap-containsvalue--7bbedbda.md
+          - equals: api/kotlin.collections/abstractmap-equals--f6a4b70e.md
+          - get: api/kotlin.collections/abstractmap-get--9535b4c1.md
+          - hashCode: api/kotlin.collections/abstractmap-hashcode--a913d347.md
+          - isEmpty: api/kotlin.collections/abstractmap-isempty--83b72a30.md
+          - keys: api/kotlin.collections/abstractmap-keys--d2bc8bd3.md
+          - size: api/kotlin.collections/abstractmap-size--fe814eeb.md
+          - toString: api/kotlin.collections/abstractmap-tostring--01c0723c.md
+          - values: api/kotlin.collections/abstractmap-values--faff531a.md
+        - AbstractMutableCollection:
+          - 概览: api/kotlin.collections/abstractmutablecollection--1d6ce858.md
+          - add: api/kotlin.collections/abstractmutablecollection-add--a17d83a2.md
+          - addAll: api/kotlin.collections/abstractmutablecollection-addall--be776aa6.md
+          - clear: api/kotlin.collections/abstractmutablecollection-clear--aafb20b0.md
+          - constructor: api/kotlin.collections/abstractmutablecollection-constructor--0751246b.md
+          - contains: api/kotlin.collections/abstractmutablecollection-contains--4979b9f2.md
+          - containsAll: api/kotlin.collections/abstractmutablecollection-containsall--45691c58.md
+          - isEmpty: api/kotlin.collections/abstractmutablecollection-isempty--de930c08.md
+          - iterator: api/kotlin.collections/abstractmutablecollection-iterator--309eecfd.md
+          - remove: api/kotlin.collections/abstractmutablecollection-remove--3ed42565.md
+          - removeAll: api/kotlin.collections/abstractmutablecollection-removeall--63d38902.md
+          - retainAll: api/kotlin.collections/abstractmutablecollection-retainall--5e170239.md
+          - size: api/kotlin.collections/abstractmutablecollection-size--7c4c36c9.md
+        - AbstractMutableList:
+          - 概览: api/kotlin.collections/abstractmutablelist--2781a20e.md
+          - add: api/kotlin.collections/abstractmutablelist-add--3d366158.md
+          - addAll: api/kotlin.collections/abstractmutablelist-addall--86d4049a.md
+          - clear: api/kotlin.collections/abstractmutablelist-clear--eb93c2d6.md
+          - constructor: api/kotlin.collections/abstractmutablelist-constructor--fbe251dd.md
+          - contains: api/kotlin.collections/abstractmutablelist-contains--ed716d69.md
+          - containsAll: api/kotlin.collections/abstractmutablelist-containsall--bf34664f.md
+          - indexOf: api/kotlin.collections/abstractmutablelist-indexof--895b8a7f.md
+          - isEmpty: api/kotlin.collections/abstractmutablelist-isempty--e12ca26b.md
+          - iterator: api/kotlin.collections/abstractmutablelist-iterator--46cd429f.md
+          - lastIndexOf: api/kotlin.collections/abstractmutablelist-lastindexof--721652ae.md
+          - listIterator: api/kotlin.collections/abstractmutablelist-listiterator--60e08100.md
+          - modCount: api/kotlin.collections/abstractmutablelist-modcount--2aac9928.md
+          - remove: api/kotlin.collections/abstractmutablelist-remove--fabede8e.md
+          - removeAll: api/kotlin.collections/abstractmutablelist-removeall--e32322be.md
+          - removeRange: api/kotlin.collections/abstractmutablelist-removerange--39c60f0e.md
+          - retainAll: api/kotlin.collections/abstractmutablelist-retainall--7f5315d3.md
+          - subList: api/kotlin.collections/abstractmutablelist-sublist--2bbe4fe5.md
+        - AbstractMutableMap:
+          - 概览: api/kotlin.collections/abstractmutablemap--b0622f5c.md
+          - clear: api/kotlin.collections/abstractmutablemap-clear--05f11530.md
+          - constructor: api/kotlin.collections/abstractmutablemap-constructor--75dd6488.md
+          - containsKey: api/kotlin.collections/abstractmutablemap-containskey--399b206d.md
+          - containsValue: api/kotlin.collections/abstractmutablemap-containsvalue--ef83176c.md
+          - entries: api/kotlin.collections/abstractmutablemap-entries--c7d016ab.md
+          - get: api/kotlin.collections/abstractmutablemap-get--5c18cc87.md
+          - isEmpty: api/kotlin.collections/abstractmutablemap-isempty--44ec4550.md
+          - keys: api/kotlin.collections/abstractmutablemap-keys--410ac060.md
+          - put: api/kotlin.collections/abstractmutablemap-put--9c35af20.md
+          - putAll: api/kotlin.collections/abstractmutablemap-putall--4047507e.md
+          - remove: api/kotlin.collections/abstractmutablemap-remove--9f422c9c.md
+          - size: api/kotlin.collections/abstractmutablemap-size--613aff76.md
+          - values: api/kotlin.collections/abstractmutablemap-values--8715d65f.md
+        - AbstractMutableSet:
+          - 概览: api/kotlin.collections/abstractmutableset--e907995f.md
+          - add: api/kotlin.collections/abstractmutableset-add--fcabd872.md
+          - addAll: api/kotlin.collections/abstractmutableset-addall--80ad6050.md
+          - clear: api/kotlin.collections/abstractmutableset-clear--df91fb5e.md
+          - constructor: api/kotlin.collections/abstractmutableset-constructor--df1e53b6.md
+          - contains: api/kotlin.collections/abstractmutableset-contains--57f0a023.md
+          - containsAll: api/kotlin.collections/abstractmutableset-containsall--b911ace0.md
+          - isEmpty: api/kotlin.collections/abstractmutableset-isempty--20e02b5f.md
+          - iterator: api/kotlin.collections/abstractmutableset-iterator--037c6278.md
+          - remove: api/kotlin.collections/abstractmutableset-remove--0d809be4.md
+          - removeAll: api/kotlin.collections/abstractmutableset-removeall--e87ea31a.md
+          - retainAll: api/kotlin.collections/abstractmutableset-retainall--7212e0df.md
+          - size: api/kotlin.collections/abstractmutableset-size--6e1eac58.md
+        - AbstractSet:
+          - 概览: api/kotlin.collections/abstractset--0d4da29f.md
+          - constructor: api/kotlin.collections/abstractset-constructor--1af77c63.md
+          - equals: api/kotlin.collections/abstractset-equals--c687a51c.md
+          - hashCode: api/kotlin.collections/abstractset-hashcode--fc941bdb.md
+        - ArrayDeque:
+          - 概览: api/kotlin.collections/arraydeque--73153784.md
+          - add: api/kotlin.collections/arraydeque-add--c20aa6e7.md
+          - addAll: api/kotlin.collections/arraydeque-addall--ca4220db.md
+          - addFirst: api/kotlin.collections/arraydeque-addfirst--ae7b01ee.md
+          - addLast: api/kotlin.collections/arraydeque-addlast--30a7b38a.md
+          - clear: api/kotlin.collections/arraydeque-clear--8de3ac7b.md
+          - constructor: api/kotlin.collections/arraydeque-constructor--0cc03b38.md
+          - contains: api/kotlin.collections/arraydeque-contains--b57f618c.md
+          - first: api/kotlin.collections/arraydeque-first--fd8b2e27.md
+          - firstOrNull: api/kotlin.collections/arraydeque-firstornull--17fa7c46.md
+          - get: api/kotlin.collections/arraydeque-get--aed95de2.md
+          - indexOf: api/kotlin.collections/arraydeque-indexof--758c6e13.md
+          - isEmpty: api/kotlin.collections/arraydeque-isempty--56e444ed.md
+          - last: api/kotlin.collections/arraydeque-last--38c5aaa0.md
+          - lastIndexOf: api/kotlin.collections/arraydeque-lastindexof--963bfef6.md
+          - lastOrNull: api/kotlin.collections/arraydeque-lastornull--676859f5.md
+          - remove: api/kotlin.collections/arraydeque-remove--56e9f254.md
+          - removeAll: api/kotlin.collections/arraydeque-removeall--8ae583be.md
+          - removeAt: api/kotlin.collections/arraydeque-removeat--6a0d62a8.md
+          - removeFirst: api/kotlin.collections/arraydeque-removefirst--6c775485.md
+          - removeFirstOrNull: api/kotlin.collections/arraydeque-removefirstornull--365f74ca.md
+          - removeLast: api/kotlin.collections/arraydeque-removelast--09084536.md
+          - removeLastOrNull: api/kotlin.collections/arraydeque-removelastornull--f4819b38.md
+          - removeRange: api/kotlin.collections/arraydeque-removerange--77fe8d7b.md
+          - retainAll: api/kotlin.collections/arraydeque-retainall--c637a833.md
+          - set: api/kotlin.collections/arraydeque-set--62facfbc.md
+          - size: api/kotlin.collections/arraydeque-size--1bcf7ac1.md
+          - toArray: api/kotlin.collections/arraydeque-toarray--d64e82cf.md
+        - ArrayList:
+          - 概览: api/kotlin.collections/arraylist--14b755a8.md
+          - add: api/kotlin.collections/arraylist-add--d4d04fa8.md
+          - addAll: api/kotlin.collections/arraylist-addall--a9d0ebf4.md
+          - clear: api/kotlin.collections/arraylist-clear--eccbaf25.md
+          - constructor: api/kotlin.collections/arraylist-constructor--26ad3d29.md
+          - contains: api/kotlin.collections/arraylist-contains--37cfd0f3.md
+          - containsAll: api/kotlin.collections/arraylist-containsall--1b285a25.md
+          - ensureCapacity: api/kotlin.collections/arraylist-ensurecapacity--a4577340.md
+          - get: api/kotlin.collections/arraylist-get--0d485d8c.md
+          - indexOf: api/kotlin.collections/arraylist-indexof--f2feeb1d.md
+          - isEmpty: api/kotlin.collections/arraylist-isempty--b7769601.md
+          - iterator: api/kotlin.collections/arraylist-iterator--ec9a0c29.md
+          - lastIndexOf: api/kotlin.collections/arraylist-lastindexof--c67a8204.md
+          - listIterator: api/kotlin.collections/arraylist-listiterator--282f41d9.md
+          - remove: api/kotlin.collections/arraylist-remove--597bbc2e.md
+          - removeAll: api/kotlin.collections/arraylist-removeall--7f4c6bf7.md
+          - removeAt: api/kotlin.collections/arraylist-removeat--a1e999a6.md
+          - retainAll: api/kotlin.collections/arraylist-retainall--460c6b86.md
+          - set: api/kotlin.collections/arraylist-set--06f84447.md
+          - size: api/kotlin.collections/arraylist-size--4adf6ac5.md
+          - subList: api/kotlin.collections/arraylist-sublist--da84988c.md
+          - trimToSize: api/kotlin.collections/arraylist-trimtosize--6b46f5ab.md
+        - addAll: api/kotlin.collections/addall--5d630c23.md
+        - aggregate: api/kotlin.collections/aggregate--ee3c65b5.md
+        - aggregateTo: api/kotlin.collections/aggregateto--13f9bb48.md
+        - all: api/kotlin.collections/all--5ef5ef03.md
+        - allDistinct: api/kotlin.collections/alldistinct--2fc85fa3.md
+        - allDistinctBy: api/kotlin.collections/alldistinctby--623562c4.md
+        - allEqual: api/kotlin.collections/allequal--fc1973f3.md
+        - allEqualBy: api/kotlin.collections/allequalby--8ee4a701.md
+        - any: api/kotlin.collections/any--d6a7cd2a.md
+        - arrayListOf: api/kotlin.collections/arraylistof--88e2ec9a.md
+        - asByteArray: api/kotlin.collections/asbytearray--e54040a8.md
+        - asIntArray: api/kotlin.collections/asintarray--e3298239.md
+        - asIterable: api/kotlin.collections/asiterable--2ddaeb5d.md
+        - asList: api/kotlin.collections/aslist--139c1cd3.md
+        - asLongArray: api/kotlin.collections/aslongarray--393b1bca.md
+        - asReversed: api/kotlin.collections/asreversed--3d4a9730.md
+        - asSequence: api/kotlin.collections/assequence--5fa70f53.md
+        - asShortArray: api/kotlin.collections/asshortarray--9dce0746.md
+        - asUByteArray: api/kotlin.collections/asubytearray--1abd8d68.md
+        - asUIntArray: api/kotlin.collections/asuintarray--b659b347.md
+        - asULongArray: api/kotlin.collections/asulongarray--bc13ae47.md
+        - asUShortArray: api/kotlin.collections/asushortarray--4ddb1e78.md
+        - associate: api/kotlin.collections/associate--178b6e06.md
+        - associateBy: api/kotlin.collections/associateby--1985d26b.md
+        - associateByTo: api/kotlin.collections/associatebyto--258bb9c9.md
+        - associateTo: api/kotlin.collections/associateto--f37cc920.md
+        - associateWith: api/kotlin.collections/associatewith--7d48394b.md
+        - associateWithTo: api/kotlin.collections/associatewithto--9b1ce907.md
+        - average: api/kotlin.collections/average--184df936.md
+      - B:
+        - BooleanIterator:
+          - 概览: api/kotlin.collections/booleaniterator--208fd18b.md
+          - next: api/kotlin.collections/booleaniterator-next--956af047.md
+          - nextBoolean: api/kotlin.collections/booleaniterator-nextboolean--cca4ff3b.md
+        - ByteIterator:
+          - 概览: api/kotlin.collections/byteiterator--4b606932.md
+          - next: api/kotlin.collections/byteiterator-next--6e228908.md
+          - nextByte: api/kotlin.collections/byteiterator-nextbyte--b4d9c1d4.md
+        - binarySearch: api/kotlin.collections/binarysearch--d006787d.md
+        - binarySearchBy: api/kotlin.collections/binarysearchby--75257ec5.md
+        - buildList: api/kotlin.collections/buildlist--0ed8408d.md
+        - buildMap: api/kotlin.collections/buildmap--6728b8cc.md
+        - buildSet: api/kotlin.collections/buildset--05bcd53e.md
+      - C:
+        - CharIterator:
+          - 概览: api/kotlin.collections/chariterator--dbac0659.md
+          - next: api/kotlin.collections/chariterator-next--3b1fa4ee.md
+          - nextChar: api/kotlin.collections/chariterator-nextchar--704f635a.md
+        - Collection:
+          - 概览: api/kotlin.collections/collection--7b790708.md
+          - contains: api/kotlin.collections/collection-contains--b0567999.md
+          - containsAll: api/kotlin.collections/collection-containsall--a7279678.md
+          - isEmpty: api/kotlin.collections/collection-isempty--0cc56643.md
+          - iterator: api/kotlin.collections/collection-iterator--69b000e5.md
+          - size: api/kotlin.collections/collection-size--c4417c1c.md
+        - chunked: api/kotlin.collections/chunked--59fdd34a.md
+        - component1: api/kotlin.collections/component1--49f0d6ea.md
+        - component2: api/kotlin.collections/component2--2e05b0ae.md
+        - component3: api/kotlin.collections/component3--575a2945.md
+        - component4: api/kotlin.collections/component4--e12cbe9f.md
+        - component5: api/kotlin.collections/component5--4ecadffd.md
+        - contains: api/kotlin.collections/contains--beeb20fb.md
+        - containsAll: api/kotlin.collections/containsall--02e9990c.md
+        - containsKey: api/kotlin.collections/containskey--aaa1e9af.md
+        - containsValue: api/kotlin.collections/containsvalue--19dc65f2.md
+        - contentDeepEquals: api/kotlin.collections/contentdeepequals--e09b9895.md
+        - contentDeepHashCode: api/kotlin.collections/contentdeephashcode--559b5204.md
+        - contentDeepToString: api/kotlin.collections/contentdeeptostring--5bc98384.md
+        - contentEquals: api/kotlin.collections/contentequals--5ab3356a.md
+        - contentHashCode: api/kotlin.collections/contenthashcode--cb7def05.md
+        - contentToString: api/kotlin.collections/contenttostring--3de5ec22.md
+        - copy: api/kotlin.collections/copy--6f5a6034.md
+        - copyInto: api/kotlin.collections/copyinto--443093d5.md
+        - copyOf: api/kotlin.collections/copyof--431a695c.md
+        - copyOfRange: api/kotlin.collections/copyofrange--5534ded6.md
+        - count: api/kotlin.collections/count--6c35493a.md
+      - D:
+        - DoubleIterator:
+          - 概览: api/kotlin.collections/doubleiterator--a108e071.md
+          - next: api/kotlin.collections/doubleiterator-next--fa14ae1d.md
+          - nextDouble: api/kotlin.collections/doubleiterator-nextdouble--e30081f5.md
+        - distinct: api/kotlin.collections/distinct--54c9e847.md
+        - distinctBy: api/kotlin.collections/distinctby--d0a0816d.md
+        - drop: api/kotlin.collections/drop--d90ee9cc.md
+        - dropLast: api/kotlin.collections/droplast--d4f8a1ef.md
+        - dropLastWhile: api/kotlin.collections/droplastwhile--647033fb.md
+        - dropWhile: api/kotlin.collections/dropwhile--6189a3a9.md
+      - E:
+        - eachCount: api/kotlin.collections/eachcount--8990aac2.md
+        - eachCountTo: api/kotlin.collections/eachcountto--587502e2.md
+        - elementAt: api/kotlin.collections/elementat--9ad965d5.md
+        - elementAtOrElse: api/kotlin.collections/elementatorelse--fa2461c1.md
+        - elementAtOrNull: api/kotlin.collections/elementatornull--1bd104bb.md
+        - emptyList: api/kotlin.collections/emptylist--c33e9e35.md
+        - emptyMap: api/kotlin.collections/emptymap--58f21046.md
+        - emptySet: api/kotlin.collections/emptyset--5ab41021.md
+      - F:
+        - FloatIterator:
+          - 概览: api/kotlin.collections/floatiterator--4fc257d3.md
+          - next: api/kotlin.collections/floatiterator-next--fdb5e521.md
+          - nextFloat: api/kotlin.collections/floatiterator-nextfloat--7f80588a.md
+        - fill: api/kotlin.collections/fill--dcd32479.md
+        - filter: api/kotlin.collections/filter--dfc3376b.md
+        - filterIndexed: api/kotlin.collections/filterindexed--7ac7cf5e.md
+        - filterIndexedTo: api/kotlin.collections/filterindexedto--f88d77cc.md
+        - filterIsInstance: api/kotlin.collections/filterisinstance--f25a2273.md
+        - filterIsInstanceTo: api/kotlin.collections/filterisinstanceto--1625e86d.md
+        - filterKeys: api/kotlin.collections/filterkeys--2cb11785.md
+        - filterNot: api/kotlin.collections/filternot--15fbf245.md
+        - filterNotNull: api/kotlin.collections/filternotnull--e62e7605.md
+        - filterNotNullTo: api/kotlin.collections/filternotnullto--2c8b420b.md
+        - filterNotTo: api/kotlin.collections/filternotto--ecaaa57f.md
+        - filterTo: api/kotlin.collections/filterto--a0f5e4fd.md
+        - filterValues: api/kotlin.collections/filtervalues--62656029.md
+        - find: api/kotlin.collections/find--e6640de8.md
+        - findLast: api/kotlin.collections/findlast--88682bfe.md
+        - first: api/kotlin.collections/first--a7937b64.md
+        - firstNotNullOf: api/kotlin.collections/firstnotnullof--641cbe1c.md
+        - firstNotNullOfOrNull: api/kotlin.collections/firstnotnullofornull--78ab62af.md
+        - firstOrNull: api/kotlin.collections/firstornull--a0d28f1c.md
+        - flatMap: api/kotlin.collections/flatmap--4dd72076.md
+        - flatMapIndexed: api/kotlin.collections/flatmapindexed--a4bda2e0.md
+        - flatMapIndexedTo: api/kotlin.collections/flatmapindexedto--48be838a.md
+        - flatMapTo: api/kotlin.collections/flatmapto--1d97ec98.md
+        - flatten: api/kotlin.collections/flatten--3ab675f2.md
+        - fold: api/kotlin.collections/fold--255541b1.md
+        - foldIndexed: api/kotlin.collections/foldindexed--fde9ad93.md
+        - foldRight: api/kotlin.collections/foldright--1451ebaf.md
+        - foldRightIndexed: api/kotlin.collections/foldrightindexed--91448942.md
+        - foldTo: api/kotlin.collections/foldto--13270dc1.md
+        - forEach: api/kotlin.collections/foreach--0842ac64.md
+        - forEachIndexed: api/kotlin.collections/foreachindexed--81bb00bc.md
+      - G:
+        - Grouping:
+          - 概览: api/kotlin.collections/grouping--b3c6e63f.md
+          - keyOf: api/kotlin.collections/grouping-keyof--07e92cc3.md
+          - sourceIterator: api/kotlin.collections/grouping-sourceiterator--b6056ca4.md
+        - get: api/kotlin.collections/get--2998b323.md
+        - getOrElse: api/kotlin.collections/getorelse--f4ba5ecf.md
+        - getOrElseIfMissing: api/kotlin.collections/getorelseifmissing--ea11e3f2.md
+        - getOrElseIfNull: api/kotlin.collections/getorelseifnull--9839249d.md
+        - getOrNull: api/kotlin.collections/getornull--570e0670.md
+        - getOrPut: api/kotlin.collections/getorput--1913ee34.md
+        - getOrPutIfMissing: api/kotlin.collections/getorputifmissing--c94b8d04.md
+        - getOrPutIfNull: api/kotlin.collections/getorputifnull--bb8d0b33.md
+        - getValue: api/kotlin.collections/getvalue--4d5dea65.md
+        - groupBy: api/kotlin.collections/groupby--f73ad1ee.md
+        - groupByTo: api/kotlin.collections/groupbyto--72d66ad0.md
+        - groupingBy: api/kotlin.collections/groupingby--cdeef966.md
+      - H:
+        - HashMap:
+          - 概览: api/kotlin.collections/hashmap--774aac06.md
+          - clear: api/kotlin.collections/hashmap-clear--3d9f54df.md
+          - constructor: api/kotlin.collections/hashmap-constructor--2a8403f0.md
+          - containsKey: api/kotlin.collections/hashmap-containskey--4e233953.md
+          - containsValue: api/kotlin.collections/hashmap-containsvalue--c68ac90a.md
+          - entries: api/kotlin.collections/hashmap-entries--f296260f.md
+          - get: api/kotlin.collections/hashmap-get--f18f5d97.md
+          - isEmpty: api/kotlin.collections/hashmap-isempty--f4d99ad5.md
+          - keys: api/kotlin.collections/hashmap-keys--ffbe9fd6.md
+          - put: api/kotlin.collections/hashmap-put--6fca308f.md
+          - putAll: api/kotlin.collections/hashmap-putall--16b12e0a.md
+          - remove: api/kotlin.collections/hashmap-remove--4e1df390.md
+          - size: api/kotlin.collections/hashmap-size--a0b19361.md
+          - values: api/kotlin.collections/hashmap-values--13afe9df.md
+        - HashSet:
+          - 概览: api/kotlin.collections/hashset--3bd65b69.md
+          - add: api/kotlin.collections/hashset-add--29a70c28.md
+          - addAll: api/kotlin.collections/hashset-addall--2a4ee843.md
+          - clear: api/kotlin.collections/hashset-clear--faff9775.md
+          - constructor: api/kotlin.collections/hashset-constructor--8bee0b72.md
+          - contains: api/kotlin.collections/hashset-contains--41f739d1.md
+          - containsAll: api/kotlin.collections/hashset-containsall--3eb4c00c.md
+          - isEmpty: api/kotlin.collections/hashset-isempty--3e3785d6.md
+          - iterator: api/kotlin.collections/hashset-iterator--2cbdf240.md
+          - remove: api/kotlin.collections/hashset-remove--31e862e1.md
+          - removeAll: api/kotlin.collections/hashset-removeall--04de5568.md
+          - retainAll: api/kotlin.collections/hashset-retainall--e0dd6dae.md
+          - size: api/kotlin.collections/hashset-size--d144e486.md
+        - hashMapOf: api/kotlin.collections/hashmapof--b605c8d5.md
+        - hashSetOf: api/kotlin.collections/hashsetof--ab0f1d25.md
+      - I:
+        - IndexedValue:
+          - 概览: api/kotlin.collections/indexedvalue--6fe5c26c.md
+          - constructor: api/kotlin.collections/indexedvalue-constructor--e3352fd3.md
+          - index: api/kotlin.collections/indexedvalue-index--c26af58f.md
+          - value: api/kotlin.collections/indexedvalue-value--e86fdc17.md
+        - IntIterator:
+          - 概览: api/kotlin.collections/intiterator--8571fb83.md
+          - next: api/kotlin.collections/intiterator-next--485fbc43.md
+          - nextInt: api/kotlin.collections/intiterator-nextint--289863fd.md
+        - Iterable:
+          - 概览: api/kotlin.collections/iterable--ff787b50.md
+          - iterator: api/kotlin.collections/iterable-iterator--09baedb7.md
+        - Iterator:
+          - 概览: api/kotlin.collections/iterator--b0b04852.md
+          - hasNext: api/kotlin.collections/iterator-hasnext--37bcde32.md
+          - next: api/kotlin.collections/iterator-next--4468c435.md
+        - ifEmpty: api/kotlin.collections/ifempty--e0fdc637.md
+        - indexOf: api/kotlin.collections/indexof--0fde3e84.md
+        - indexOfFirst: api/kotlin.collections/indexoffirst--38bbd8d4.md
+        - indexOfLast: api/kotlin.collections/indexoflast--437505ea.md
+        - indices: api/kotlin.collections/indices--91744de3.md
+        - intersect: api/kotlin.collections/intersect--4780c43f.md
+        - isEmpty: api/kotlin.collections/isempty--eacba67c.md
+        - isNotEmpty: api/kotlin.collections/isnotempty--f616ad80.md
+        - isNullOrEmpty: api/kotlin.collections/isnullorempty--5331c5cf.md
+        - isSorted: api/kotlin.collections/issorted--858261c8.md
+        - isSortedBy: api/kotlin.collections/issortedby--0ce50585.md
+        - isSortedByDescending: api/kotlin.collections/issortedbydescending--86a9c28c.md
+        - isSortedDescending: api/kotlin.collections/issorteddescending--b1483108.md
+        - isSortedWith: api/kotlin.collections/issortedwith--67f2dad4.md
+        - iterator: api/kotlin.collections/iterator--ef9baedf.md
+      - J:
+        - joinTo: api/kotlin.collections/jointo--014bf5b4.md
+        - joinToString: api/kotlin.collections/jointostring--39e0d51c.md
+      - L:
+        - LinkedHashMap:
+          - 概览: api/kotlin.collections/linkedhashmap--7581c3fc.md
+          - clear: api/kotlin.collections/linkedhashmap-clear--07c72541.md
+          - constructor: api/kotlin.collections/linkedhashmap-constructor--ecf4dbf9.md
+          - containsKey: api/kotlin.collections/linkedhashmap-containskey--4d127156.md
+          - containsValue: api/kotlin.collections/linkedhashmap-containsvalue--0f276ccb.md
+          - entries: api/kotlin.collections/linkedhashmap-entries--dffa339f.md
+          - get: api/kotlin.collections/linkedhashmap-get--987ee532.md
+          - isEmpty: api/kotlin.collections/linkedhashmap-isempty--ee3024d8.md
+          - keys: api/kotlin.collections/linkedhashmap-keys--faf99995.md
+          - put: api/kotlin.collections/linkedhashmap-put--22448f33.md
+          - putAll: api/kotlin.collections/linkedhashmap-putall--0a5b6efe.md
+          - remove: api/kotlin.collections/linkedhashmap-remove--b8957d11.md
+          - size: api/kotlin.collections/linkedhashmap-size--2e026542.md
+          - values: api/kotlin.collections/linkedhashmap-values--58710ccf.md
+        - LinkedHashSet:
+          - 概览: api/kotlin.collections/linkedhashset--2c9ba96d.md
+          - add: api/kotlin.collections/linkedhashset-add--9e5a9d9f.md
+          - addAll: api/kotlin.collections/linkedhashset-addall--77d35371.md
+          - clear: api/kotlin.collections/linkedhashset-clear--880458f1.md
+          - constructor: api/kotlin.collections/linkedhashset-constructor--a20feec5.md
+          - contains: api/kotlin.collections/linkedhashset-contains--b7329c51.md
+          - containsAll: api/kotlin.collections/linkedhashset-containsall--93dd7986.md
+          - isEmpty: api/kotlin.collections/linkedhashset-isempty--3e2beb74.md
+          - iterator: api/kotlin.collections/linkedhashset-iterator--c3bab1ab.md
+          - remove: api/kotlin.collections/linkedhashset-remove--32b06579.md
+          - removeAll: api/kotlin.collections/linkedhashset-removeall--0510436e.md
+          - retainAll: api/kotlin.collections/linkedhashset-retainall--a054753b.md
+          - size: api/kotlin.collections/linkedhashset-size--0455069c.md
+        - List:
+          - 概览: api/kotlin.collections/list--6f202f54.md
+          - contains: api/kotlin.collections/list-contains--a3d7b816.md
+          - containsAll: api/kotlin.collections/list-containsall--cd10d19d.md
+          - get: api/kotlin.collections/list-get--b9aa96b1.md
+          - indexOf: api/kotlin.collections/list-indexof--5b05988f.md
+          - isEmpty: api/kotlin.collections/list-isempty--a39099ea.md
+          - iterator: api/kotlin.collections/list-iterator--9712241e.md
+          - lastIndexOf: api/kotlin.collections/list-lastindexof--474cb55e.md
+          - listIterator: api/kotlin.collections/list-listiterator--37a7bc1f.md
+          - size: api/kotlin.collections/list-size--affabe4b.md
+          - subList: api/kotlin.collections/list-sublist--0be0ac64.md
+        - ListIterator:
+          - 概览: api/kotlin.collections/listiterator--1dea1054.md
+          - hasNext: api/kotlin.collections/listiterator-hasnext--bc1e4cf8.md
+          - hasPrevious: api/kotlin.collections/listiterator-hasprevious--e9e36447.md
+          - next: api/kotlin.collections/listiterator-next--f5eae1d4.md
+          - nextIndex: api/kotlin.collections/listiterator-nextindex--34fed4fb.md
+          - previous: api/kotlin.collections/listiterator-previous--43b1ca60.md
+          - previousIndex: api/kotlin.collections/listiterator-previousindex--54de381c.md
+        - LongIterator:
+          - 概览: api/kotlin.collections/longiterator--c793a208.md
+          - next: api/kotlin.collections/longiterator-next--34908682.md
+          - nextLong: api/kotlin.collections/longiterator-nextlong--c7f74389.md
+        - last: api/kotlin.collections/last--3547cb11.md
+        - lastIndex: api/kotlin.collections/lastindex--fe3fbb6d.md
+        - lastIndexOf: api/kotlin.collections/lastindexof--e13001ac.md
+        - lastOrNull: api/kotlin.collections/lastornull--65babe08.md
+        - linkedMapOf: api/kotlin.collections/linkedmapof--80584542.md
+        - linkedSetOf: api/kotlin.collections/linkedsetof--234d6d3b.md
+        - listOf: api/kotlin.collections/listof--d62a7f7f.md
+        - listOfNotNull: api/kotlin.collections/listofnotnull--9300f9fa.md
+      - M:
+        - Map:
+          - 概览: api/kotlin.collections/map--be176b00.md
+          - Entry:
+            - 概览: api/kotlin.collections/map-entry--4ae91949.md
+            - key: api/kotlin.collections/map-entry-key--715a8320.md
+            - value: api/kotlin.collections/map-entry-value--932cd5c4.md
+          - containsKey: api/kotlin.collections/map-containskey--374c6239.md
+          - containsValue: api/kotlin.collections/map-containsvalue--4bfd5ac4.md
+          - entries: api/kotlin.collections/map-entries--7478118e.md
+          - get: api/kotlin.collections/map-get--72b4de8f.md
+          - isEmpty: api/kotlin.collections/map-isempty--8d775c18.md
+          - keys: api/kotlin.collections/map-keys--b1003b2c.md
+          - size: api/kotlin.collections/map-size--2984cb3d.md
+          - values: api/kotlin.collections/map-values--df818894.md
+        - MutableCollection:
+          - 概览: api/kotlin.collections/mutablecollection--e66f3fc7.md
+          - add: api/kotlin.collections/mutablecollection-add--5a7ab408.md
+          - addAll: api/kotlin.collections/mutablecollection-addall--21fab59e.md
+          - clear: api/kotlin.collections/mutablecollection-clear--cdba5bc7.md
+          - iterator: api/kotlin.collections/mutablecollection-iterator--37d8f1b9.md
+          - remove: api/kotlin.collections/mutablecollection-remove--74264930.md
+          - removeAll: api/kotlin.collections/mutablecollection-removeall--2ce5306f.md
+          - retainAll: api/kotlin.collections/mutablecollection-retainall--c6914b58.md
+        - MutableIterable:
+          - 概览: api/kotlin.collections/mutableiterable--7480ab7c.md
+          - iterator: api/kotlin.collections/mutableiterable-iterator--e1617a33.md
+        - MutableIterator:
+          - 概览: api/kotlin.collections/mutableiterator--712549ea.md
+          - remove: api/kotlin.collections/mutableiterator-remove--07107e20.md
+        - MutableList:
+          - 概览: api/kotlin.collections/mutablelist--f696bd67.md
+          - add: api/kotlin.collections/mutablelist-add--1964e095.md
+          - addAll: api/kotlin.collections/mutablelist-addall--6fad23b4.md
+          - clear: api/kotlin.collections/mutablelist-clear--5b8305c6.md
+          - listIterator: api/kotlin.collections/mutablelist-listiterator--3a02e49a.md
+          - remove: api/kotlin.collections/mutablelist-remove--a108b180.md
+          - removeAll: api/kotlin.collections/mutablelist-removeall--17692108.md
+          - removeAt: api/kotlin.collections/mutablelist-removeat--45c22e1c.md
+          - retainAll: api/kotlin.collections/mutablelist-retainall--8fe1433a.md
+          - set: api/kotlin.collections/mutablelist-set--1f57538e.md
+          - subList: api/kotlin.collections/mutablelist-sublist--aaa0a9c7.md
+        - MutableListIterator:
+          - 概览: api/kotlin.collections/mutablelistiterator--d685fd6a.md
+          - add: api/kotlin.collections/mutablelistiterator-add--36016698.md
+          - hasNext: api/kotlin.collections/mutablelistiterator-hasnext--ffcf3802.md
+          - next: api/kotlin.collections/mutablelistiterator-next--4701e30a.md
+          - remove: api/kotlin.collections/mutablelistiterator-remove--cd1da504.md
+          - set: api/kotlin.collections/mutablelistiterator-set--faf7a464.md
+        - MutableMap:
+          - 概览: api/kotlin.collections/mutablemap--2a51b4de.md
+          - MutableEntry:
+            - 概览: api/kotlin.collections/mutablemap-mutableentry--bbdb28c7.md
+            - setValue: api/kotlin.collections/mutablemap-mutableentry-setvalue--cca125dd.md
+          - clear: api/kotlin.collections/mutablemap-clear--a1c9b4b3.md
+          - entries: api/kotlin.collections/mutablemap-entries--f8efad2a.md
+          - keys: api/kotlin.collections/mutablemap-keys--b294ccbe.md
+          - put: api/kotlin.collections/mutablemap-put--9a51280c.md
+          - putAll: api/kotlin.collections/mutablemap-putall--3da9e6fa.md
+          - remove: api/kotlin.collections/mutablemap-remove--08c073d7.md
+          - values: api/kotlin.collections/mutablemap-values--f2e5a77c.md
+        - MutableSet:
+          - 概览: api/kotlin.collections/mutableset--df27e18f.md
+          - add: api/kotlin.collections/mutableset-add--65f542c1.md
+          - addAll: api/kotlin.collections/mutableset-addall--e4c043b5.md
+          - clear: api/kotlin.collections/mutableset-clear--0f62c404.md
+          - iterator: api/kotlin.collections/mutableset-iterator--a29f1dc9.md
+          - remove: api/kotlin.collections/mutableset-remove--a5d01421.md
+          - removeAll: api/kotlin.collections/mutableset-removeall--4e338ae3.md
+          - retainAll: api/kotlin.collections/mutableset-retainall--d90b251d.md
+        - map: api/kotlin.collections/map--60be9861.md
+        - mapIndexed: api/kotlin.collections/mapindexed--fd530ac2.md
+        - mapIndexedNotNull: api/kotlin.collections/mapindexednotnull--51796bc8.md
+        - mapIndexedNotNullTo: api/kotlin.collections/mapindexednotnullto--3cfdfa94.md
+        - mapIndexedTo: api/kotlin.collections/mapindexedto--c7abb5a1.md
+        - mapKeys: api/kotlin.collections/mapkeys--49d601a4.md
+        - mapKeysTo: api/kotlin.collections/mapkeysto--7647b519.md
+        - mapNotNull: api/kotlin.collections/mapnotnull--c413debf.md
+        - mapNotNullTo: api/kotlin.collections/mapnotnullto--3c9fa12d.md
+        - mapOf: api/kotlin.collections/mapof--227ee3e8.md
+        - mapTo: api/kotlin.collections/mapto--583e5b26.md
+        - mapValues: api/kotlin.collections/mapvalues--04aceeae.md
+        - mapValuesTo: api/kotlin.collections/mapvaluesto--da98f63b.md
+        - max: api/kotlin.collections/max--9baf3a40.md
+        - maxBy: api/kotlin.collections/maxby--573d9408.md
+        - maxByOrNull: api/kotlin.collections/maxbyornull--52b8b51f.md
+        - maxOf: api/kotlin.collections/maxof--8014bb42.md
+        - maxOfOrNull: api/kotlin.collections/maxofornull--0f85778b.md
+        - maxOfWith: api/kotlin.collections/maxofwith--f207ab5a.md
+        - maxOfWithOrNull: api/kotlin.collections/maxofwithornull--8c9d6cdf.md
+        - maxOrNull: api/kotlin.collections/maxornull--991d0f1e.md
+        - maxWith: api/kotlin.collections/maxwith--3012e79a.md
+        - maxWithOrNull: api/kotlin.collections/maxwithornull--c1a9369e.md
+        - min: api/kotlin.collections/min--1f6fa6f6.md
+        - minBy: api/kotlin.collections/minby--04243d7a.md
+        - minByOrNull: api/kotlin.collections/minbyornull--42524680.md
+        - minOf: api/kotlin.collections/minof--c4eb1195.md
+        - minOfOrNull: api/kotlin.collections/minofornull--2f6ccdce.md
+        - minOfWith: api/kotlin.collections/minofwith--4691f17c.md
+        - minOfWithOrNull: api/kotlin.collections/minofwithornull--08933ee1.md
+        - minOrNull: api/kotlin.collections/minornull--2ca98165.md
+        - minWith: api/kotlin.collections/minwith--5bd970f2.md
+        - minWithOrNull: api/kotlin.collections/minwithornull--d6549c1a.md
+        - minus: api/kotlin.collections/minus--129fa771.md
+        - minusAssign: api/kotlin.collections/minusassign--5e31c583.md
+        - minusElement: api/kotlin.collections/minuselement--f12197f6.md
+        - mutableListOf: api/kotlin.collections/mutablelistof--3c1cc999.md
+        - mutableMapOf: api/kotlin.collections/mutablemapof--1b3582d0.md
+        - mutableSetOf: api/kotlin.collections/mutablesetof--4619e985.md
+      - N:
+        - none: api/kotlin.collections/none--140bedbf.md
+      - O:
+        - onEach: api/kotlin.collections/oneach--df158ce3.md
+        - onEachIndexed: api/kotlin.collections/oneachindexed--1b158779.md
+        - orEmpty: api/kotlin.collections/orempty--84666296.md
+      - P:
+        - partition: api/kotlin.collections/partition--2df962d3.md
+        - plus: api/kotlin.collections/plus--383ef369.md
+        - plusAssign: api/kotlin.collections/plusassign--e2f3fbb3.md
+        - plusElement: api/kotlin.collections/pluselement--e24a5db6.md
+        - putAll: api/kotlin.collections/putall--f3b00652.md
+      - R:
+        - RandomAccess: api/kotlin.collections/randomaccess--581d4115.md
+        - random: api/kotlin.collections/random--a441b15f.md
+        - randomOrNull: api/kotlin.collections/randomornull--e0a0f069.md
+        - reduce: api/kotlin.collections/reduce--4c7e98bf.md
+        - reduceIndexed: api/kotlin.collections/reduceindexed--9ffb6ca6.md
+        - reduceIndexedOrNull: api/kotlin.collections/reduceindexedornull--7e645fe2.md
+        - reduceOrNull: api/kotlin.collections/reduceornull--232f12bb.md
+        - reduceRight: api/kotlin.collections/reduceright--294a63b1.md
+        - reduceRightIndexed: api/kotlin.collections/reducerightindexed--3c338cfb.md
+        - reduceRightIndexedOrNull: api/kotlin.collections/reducerightindexedornull--e58f8d83.md
+        - reduceRightOrNull: api/kotlin.collections/reducerightornull--85fe2394.md
+        - reduceTo: api/kotlin.collections/reduceto--20442239.md
+        - remove: api/kotlin.collections/remove--7e5608ab.md
+        - removeAll: api/kotlin.collections/removeall--39330024.md
+        - removeFirst: api/kotlin.collections/removefirst--4c442731.md
+        - removeFirstOrNull: api/kotlin.collections/removefirstornull--5ee6c175.md
+        - removeLast: api/kotlin.collections/removelast--02663f20.md
+        - removeLastOrNull: api/kotlin.collections/removelastornull--c4ad958d.md
+        - requireNoNulls: api/kotlin.collections/requirenonulls--bd3b5147.md
+        - retainAll: api/kotlin.collections/retainall--fce36f03.md
+        - reverse: api/kotlin.collections/reverse--b2d7f24e.md
+        - reversed: api/kotlin.collections/reversed--bc64f64f.md
+        - reversedArray: api/kotlin.collections/reversedarray--a66c712f.md
+        - runningFold: api/kotlin.collections/runningfold--a8ae5385.md
+        - runningFoldIndexed: api/kotlin.collections/runningfoldindexed--0632f781.md
+        - runningReduce: api/kotlin.collections/runningreduce--5ec3d464.md
+        - runningReduceIndexed: api/kotlin.collections/runningreduceindexed--ca4c282a.md
+      - S:
+        - Set:
+          - 概览: api/kotlin.collections/set--b6f6f3ad.md
+          - contains: api/kotlin.collections/set-contains--420fa7e9.md
+          - containsAll: api/kotlin.collections/set-containsall--1b293be8.md
+          - isEmpty: api/kotlin.collections/set-isempty--87c158c6.md
+          - iterator: api/kotlin.collections/set-iterator--1cbcd21e.md
+          - size: api/kotlin.collections/set-size--92043994.md
+        - ShortIterator:
+          - 概览: api/kotlin.collections/shortiterator--75443ad7.md
+          - next: api/kotlin.collections/shortiterator-next--093e33f5.md
+          - nextShort: api/kotlin.collections/shortiterator-nextshort--48a80200.md
+        - scan: api/kotlin.collections/scan--59ad1b2f.md
+        - scanIndexed: api/kotlin.collections/scanindexed--276e70a7.md
+        - set: api/kotlin.collections/set--6ee0eb49.md
+        - setOf: api/kotlin.collections/setof--f2a3032e.md
+        - setOfNotNull: api/kotlin.collections/setofnotnull--9ccca405.md
+        - setValue: api/kotlin.collections/setvalue--4d9bc18c.md
+        - shuffle: api/kotlin.collections/shuffle--8f30a852.md
+        - shuffled: api/kotlin.collections/shuffled--6b1f79e5.md
+        - single: api/kotlin.collections/single--947f1875.md
+        - singleOrNull: api/kotlin.collections/singleornull--02aaa8d9.md
+        - slice: api/kotlin.collections/slice--03fdb065.md
+        - sliceArray: api/kotlin.collections/slicearray--ca03dc79.md
+        - sort: api/kotlin.collections/sort--64696494.md
+        - sortBy: api/kotlin.collections/sortby--e3f84df7.md
+        - sortByDescending: api/kotlin.collections/sortbydescending--ed7d187e.md
+        - sortDescending: api/kotlin.collections/sortdescending--4e20d9a3.md
+        - sortWith: api/kotlin.collections/sortwith--be7e2d91.md
+        - sorted: api/kotlin.collections/sorted--db8cf333.md
+        - sortedArray: api/kotlin.collections/sortedarray--68e1d75d.md
+        - sortedArrayDescending: api/kotlin.collections/sortedarraydescending--fea8938d.md
+        - sortedArrayWith: api/kotlin.collections/sortedarraywith--69fc08de.md
+        - sortedBy: api/kotlin.collections/sortedby--1e884146.md
+        - sortedByDescending: api/kotlin.collections/sortedbydescending--4051d4af.md
+        - sortedDescending: api/kotlin.collections/sorteddescending--91b33f5e.md
+        - sortedWith: api/kotlin.collections/sortedwith--13dd7d8a.md
+        - subtract: api/kotlin.collections/subtract--1cc624bb.md
+        - sum: api/kotlin.collections/sum--09f5ffef.md
+        - sumBy: api/kotlin.collections/sumby--97db0fda.md
+        - sumByDouble: api/kotlin.collections/sumbydouble--0c1807ab.md
+        - sumOf: api/kotlin.collections/sumof--9113380b.md
+      - T:
+        - take: api/kotlin.collections/take--d1905cf9.md
+        - takeLast: api/kotlin.collections/takelast--bfe1e63d.md
+        - takeLastWhile: api/kotlin.collections/takelastwhile--51d2c1ff.md
+        - takeWhile: api/kotlin.collections/takewhile--3f148881.md
+        - toBooleanArray: api/kotlin.collections/tobooleanarray--48e5c19d.md
+        - toByteArray: api/kotlin.collections/tobytearray--abd46a1f.md
+        - toCharArray: api/kotlin.collections/tochararray--7c85cb51.md
+        - toCollection: api/kotlin.collections/tocollection--e1154c18.md
+        - toDoubleArray: api/kotlin.collections/todoublearray--657a402e.md
+        - toFloatArray: api/kotlin.collections/tofloatarray--93cdba76.md
+        - toHashSet: api/kotlin.collections/tohashset--37fd4891.md
+        - toIntArray: api/kotlin.collections/tointarray--498faebc.md
+        - toList: api/kotlin.collections/tolist--658fe2ed.md
+        - toLongArray: api/kotlin.collections/tolongarray--d80fbf69.md
+        - toMap: api/kotlin.collections/tomap--2bc39691.md
+        - toMutableList: api/kotlin.collections/tomutablelist--4b7c7445.md
+        - toMutableMap: api/kotlin.collections/tomutablemap--37d7d3dd.md
+        - toMutableSet: api/kotlin.collections/tomutableset--33a4ff1e.md
+        - toPair: api/kotlin.collections/topair--88c91135.md
+        - toSet: api/kotlin.collections/toset--da2cd29c.md
+        - toShortArray: api/kotlin.collections/toshortarray--43cd19fe.md
+        - toTypedArray: api/kotlin.collections/totypedarray--7f4d395e.md
+        - toUByteArray: api/kotlin.collections/toubytearray--5bfc6fe6.md
+        - toUIntArray: api/kotlin.collections/touintarray--8da4fbaa.md
+        - toULongArray: api/kotlin.collections/toulongarray--2e6b2d62.md
+        - toUShortArray: api/kotlin.collections/toushortarray--488505b1.md
+      - U:
+        - union: api/kotlin.collections/union--ef3ff703.md
+        - unzip: api/kotlin.collections/unzip--13bf8205.md
+      - W:
+        - windowed: api/kotlin.collections/windowed--eff9f08c.md
+        - withDefault: api/kotlin.collections/withdefault--2f1934fc.md
+        - withIndex: api/kotlin.collections/withindex--dd2bc029.md
+      - Z:
+        - zip: api/kotlin.collections/zip--4a70fe9a.md
+        - zipWithNext: api/kotlin.collections/zipwithnext--8bb5a452.md
+    - 比较与排序 · kotlin.comparisons:
+      - 概览: api/kotlin.comparisons/index.md
+      - compareBy: api/kotlin.comparisons/compareby--11dcd808.md
+      - compareByDescending: api/kotlin.comparisons/comparebydescending--1558c454.md
+      - compareValues: api/kotlin.comparisons/comparevalues--d4895817.md
+      - compareValuesBy: api/kotlin.comparisons/comparevaluesby--9bdd7afa.md
+      - maxOf: api/kotlin.comparisons/maxof--8014bb42.md
+      - minOf: api/kotlin.comparisons/minof--c4eb1195.md
+      - naturalOrder: api/kotlin.comparisons/naturalorder--328011d0.md
+      - nullsFirst: api/kotlin.comparisons/nullsfirst--b2e07033.md
+      - nullsLast: api/kotlin.comparisons/nullslast--6cbf745e.md
+      - reverseOrder: api/kotlin.comparisons/reverseorder--1a244fa3.md
+      - reversed: api/kotlin.comparisons/reversed--bc64f64f.md
+      - then: api/kotlin.comparisons/then--21af6f12.md
+      - thenBy: api/kotlin.comparisons/thenby--5d1b1c6e.md
+      - thenByDescending: api/kotlin.comparisons/thenbydescending--03d16962.md
+      - thenComparator: api/kotlin.comparisons/thencomparator--b0098720.md
+      - thenDescending: api/kotlin.comparisons/thendescending--9b2c179c.md
+    - 原子操作 · kotlin.concurrent.atomics:
+      - 概览: api/kotlin.concurrent.atomics/index.md
+      - AtomicArray:
+        - 概览: api/kotlin.concurrent.atomics/atomicarray--e48c3822.md
+        - compareAndExchangeAt: api/kotlin.concurrent.atomics/atomicarray-compareandexchangeat--11bc8033.md
+        - compareAndSetAt: api/kotlin.concurrent.atomics/atomicarray-compareandsetat--941e5539.md
+        - constructor: api/kotlin.concurrent.atomics/atomicarray-constructor--2de6a8f8.md
+        - exchangeAt: api/kotlin.concurrent.atomics/atomicarray-exchangeat--25aa532f.md
+        - loadAt: api/kotlin.concurrent.atomics/atomicarray-loadat--44778f57.md
+        - size: api/kotlin.concurrent.atomics/atomicarray-size--be75545e.md
+        - storeAt: api/kotlin.concurrent.atomics/atomicarray-storeat--843d7742.md
+        - toString: api/kotlin.concurrent.atomics/atomicarray-tostring--fffd82a2.md
+      - AtomicBoolean:
+        - 概览: api/kotlin.concurrent.atomics/atomicboolean--811706c1.md
+        - compareAndExchange: api/kotlin.concurrent.atomics/atomicboolean-compareandexchange--738db2da.md
+        - compareAndSet: api/kotlin.concurrent.atomics/atomicboolean-compareandset--09f3325d.md
+        - constructor: api/kotlin.concurrent.atomics/atomicboolean-constructor--81498346.md
+        - exchange: api/kotlin.concurrent.atomics/atomicboolean-exchange--ba78cde2.md
+        - load: api/kotlin.concurrent.atomics/atomicboolean-load--0318a144.md
+        - store: api/kotlin.concurrent.atomics/atomicboolean-store--167b3cea.md
+        - toString: api/kotlin.concurrent.atomics/atomicboolean-tostring--7147d77e.md
+      - AtomicInt:
+        - 概览: api/kotlin.concurrent.atomics/atomicint--6fc3161e.md
+        - addAndFetch: api/kotlin.concurrent.atomics/atomicint-addandfetch--2ddc1b6d.md
+        - compareAndExchange: api/kotlin.concurrent.atomics/atomicint-compareandexchange--f1e29855.md
+        - compareAndSet: api/kotlin.concurrent.atomics/atomicint-compareandset--603c2683.md
+        - constructor: api/kotlin.concurrent.atomics/atomicint-constructor--06ba0a90.md
+        - exchange: api/kotlin.concurrent.atomics/atomicint-exchange--f2503bd9.md
+        - fetchAndAdd: api/kotlin.concurrent.atomics/atomicint-fetchandadd--0a4aa853.md
+        - load: api/kotlin.concurrent.atomics/atomicint-load--3b905981.md
+        - store: api/kotlin.concurrent.atomics/atomicint-store--54d38282.md
+        - toString: api/kotlin.concurrent.atomics/atomicint-tostring--696c8792.md
+      - AtomicIntArray:
+        - 概览: api/kotlin.concurrent.atomics/atomicintarray--77c1cf63.md
+        - addAndFetchAt: api/kotlin.concurrent.atomics/atomicintarray-addandfetchat--2cbbbbe5.md
+        - compareAndExchangeAt: api/kotlin.concurrent.atomics/atomicintarray-compareandexchangeat--6abd9616.md
+        - compareAndSetAt: api/kotlin.concurrent.atomics/atomicintarray-compareandsetat--d00674cf.md
+        - constructor: api/kotlin.concurrent.atomics/atomicintarray-constructor--026c539a.md
+        - exchangeAt: api/kotlin.concurrent.atomics/atomicintarray-exchangeat--215fd066.md
+        - fetchAndAddAt: api/kotlin.concurrent.atomics/atomicintarray-fetchandaddat--524a6b3d.md
+        - loadAt: api/kotlin.concurrent.atomics/atomicintarray-loadat--46983696.md
+        - size: api/kotlin.concurrent.atomics/atomicintarray-size--82e94c16.md
+        - storeAt: api/kotlin.concurrent.atomics/atomicintarray-storeat--21ae077c.md
+        - toString: api/kotlin.concurrent.atomics/atomicintarray-tostring--ca2c9737.md
+      - AtomicLong:
+        - 概览: api/kotlin.concurrent.atomics/atomiclong--959a0786.md
+        - addAndFetch: api/kotlin.concurrent.atomics/atomiclong-addandfetch--55af5317.md
+        - compareAndExchange: api/kotlin.concurrent.atomics/atomiclong-compareandexchange--00f20676.md
+        - compareAndSet: api/kotlin.concurrent.atomics/atomiclong-compareandset--ace1cdec.md
+        - constructor: api/kotlin.concurrent.atomics/atomiclong-constructor--859da4ef.md
+        - exchange: api/kotlin.concurrent.atomics/atomiclong-exchange--73288bef.md
+        - fetchAndAdd: api/kotlin.concurrent.atomics/atomiclong-fetchandadd--383f586f.md
+        - load: api/kotlin.concurrent.atomics/atomiclong-load--21b3d529.md
+        - store: api/kotlin.concurrent.atomics/atomiclong-store--b7c78029.md
+        - toString: api/kotlin.concurrent.atomics/atomiclong-tostring--d42ce279.md
+      - AtomicLongArray:
+        - 概览: api/kotlin.concurrent.atomics/atomiclongarray--6633532b.md
+        - addAndFetchAt: api/kotlin.concurrent.atomics/atomiclongarray-addandfetchat--899b725e.md
+        - compareAndExchangeAt: api/kotlin.concurrent.atomics/atomiclongarray-compareandexchangeat--0dfa82df.md
+        - compareAndSetAt: api/kotlin.concurrent.atomics/atomiclongarray-compareandsetat--41390e19.md
+        - constructor: api/kotlin.concurrent.atomics/atomiclongarray-constructor--046647a0.md
+        - exchangeAt: api/kotlin.concurrent.atomics/atomiclongarray-exchangeat--44497838.md
+        - fetchAndAddAt: api/kotlin.concurrent.atomics/atomiclongarray-fetchandaddat--e8c15c89.md
+        - loadAt: api/kotlin.concurrent.atomics/atomiclongarray-loadat--7ad60582.md
+        - size: api/kotlin.concurrent.atomics/atomiclongarray-size--08c67ca4.md
+        - storeAt: api/kotlin.concurrent.atomics/atomiclongarray-storeat--495a18ba.md
+        - toString: api/kotlin.concurrent.atomics/atomiclongarray-tostring--17e0417f.md
+      - AtomicReference:
+        - 概览: api/kotlin.concurrent.atomics/atomicreference--6d5c0050.md
+        - compareAndExchange: api/kotlin.concurrent.atomics/atomicreference-compareandexchange--9440f199.md
+        - compareAndSet: api/kotlin.concurrent.atomics/atomicreference-compareandset--a8d821f7.md
+        - constructor: api/kotlin.concurrent.atomics/atomicreference-constructor--a898c398.md
+        - exchange: api/kotlin.concurrent.atomics/atomicreference-exchange--60cddfaf.md
+        - load: api/kotlin.concurrent.atomics/atomicreference-load--f292a663.md
+        - store: api/kotlin.concurrent.atomics/atomicreference-store--43a6248f.md
+        - toString: api/kotlin.concurrent.atomics/atomicreference-tostring--6d47cd92.md
+      - ExperimentalAtomicApi: api/kotlin.concurrent.atomics/experimentalatomicapi--e57f2fe1.md
+      - atomicArrayOfNulls: api/kotlin.concurrent.atomics/atomicarrayofnulls--0c364d83.md
+      - decrementAndFetch: api/kotlin.concurrent.atomics/decrementandfetch--bcc9dc94.md
+      - decrementAndFetchAt: api/kotlin.concurrent.atomics/decrementandfetchat--cbffc0c8.md
+      - fetchAndDecrement: api/kotlin.concurrent.atomics/fetchanddecrement--5dd61ddc.md
+      - fetchAndDecrementAt: api/kotlin.concurrent.atomics/fetchanddecrementat--1f75a52a.md
+      - fetchAndIncrement: api/kotlin.concurrent.atomics/fetchandincrement--ad90e809.md
+      - fetchAndIncrementAt: api/kotlin.concurrent.atomics/fetchandincrementat--043ab5e9.md
+      - fetchAndUpdate: api/kotlin.concurrent.atomics/fetchandupdate--368cef55.md
+      - fetchAndUpdateAt: api/kotlin.concurrent.atomics/fetchandupdateat--5cfa5185.md
+      - incrementAndFetch: api/kotlin.concurrent.atomics/incrementandfetch--dc42113a.md
+      - incrementAndFetchAt: api/kotlin.concurrent.atomics/incrementandfetchat--367adac9.md
+      - minusAssign: api/kotlin.concurrent.atomics/minusassign--5e31c583.md
+      - plusAssign: api/kotlin.concurrent.atomics/plusassign--e2f3fbb3.md
+      - update: api/kotlin.concurrent.atomics/update--2937013f.md
+      - updateAndFetch: api/kotlin.concurrent.atomics/updateandfetch--87223f75.md
+      - updateAndFetchAt: api/kotlin.concurrent.atomics/updateandfetchat--ccdb60bd.md
+      - updateAt: api/kotlin.concurrent.atomics/updateat--f2ae15a2.md
+    - 契约 · kotlin.contracts:
+      - 概览: api/kotlin.contracts/index.md
+      - CallsInPlace: api/kotlin.contracts/callsinplace--cc0c46af.md
+      - ConditionalEffect: api/kotlin.contracts/conditionaleffect--6c90b354.md
+      - ContractBuilder:
+        - 概览: api/kotlin.contracts/contractbuilder--ab24664d.md
+        - callsInPlace: api/kotlin.contracts/contractbuilder-callsinplace--c3b44a35.md
+        - holdsIn: api/kotlin.contracts/contractbuilder-holdsin--1a5686ea.md
+        - implies: api/kotlin.contracts/contractbuilder-implies--8dcde260.md
+        - returns: api/kotlin.contracts/contractbuilder-returns--30c058b9.md
+        - returnsNotNull: api/kotlin.contracts/contractbuilder-returnsnotnull--e44033f5.md
+        - returnsResultOf: api/kotlin.contracts/contractbuilder-returnsresultof--a03a1f96.md
+      - Effect: api/kotlin.contracts/effect--2252d5cf.md
+      - ExperimentalContracts: api/kotlin.contracts/experimentalcontracts--73008651.md
+      - ExperimentalExtendedContracts: api/kotlin.contracts/experimentalextendedcontracts--b6c57b67.md
+      - HoldsIn: api/kotlin.contracts/holdsin--d208b645.md
+      - InvocationKind:
+        - 概览: api/kotlin.contracts/invocationkind--d2b1d662.md
+        - AT_LEAST_ONCE: api/kotlin.contracts/invocationkind-at-least-once--cf83e117.md
+        - AT_MOST_ONCE: api/kotlin.contracts/invocationkind-at-most-once--fafdc3a2.md
+        - EXACTLY_ONCE: api/kotlin.contracts/invocationkind-exactly-once--88e63aa5.md
+        - UNKNOWN: api/kotlin.contracts/invocationkind-unknown--1328d79f.md
+      - Returns: api/kotlin.contracts/returns--16dcaa92.md
+      - ReturnsNotNull: api/kotlin.contracts/returnsnotnull--891d55bc.md
+      - SimpleEffect:
+        - 概览: api/kotlin.contracts/simpleeffect--1db51763.md
+        - implies: api/kotlin.contracts/simpleeffect-implies--aac96c8d.md
+      - contract: api/kotlin.contracts/contract--cc8321d6.md
+    - kotlin.coroutines.cancellation · kotlin.coroutines.cancellation:
+      - 概览: api/kotlin.coroutines.cancellation/index.md
+      - CancellationException:
+        - 概览: api/kotlin.coroutines.cancellation/cancellationexception--341df780.md
+        - constructor: api/kotlin.coroutines.cancellation/cancellationexception-constructor--fe2a38e1.md
+    - kotlin.coroutines.debug · kotlin.coroutines.debug:
+      - 概览: api/kotlin.coroutines.debug/index.md
+      - StackTraceRecoverable:
+        - 概览: api/kotlin.coroutines.debug/stacktracerecoverable--8f512c53.md
+        - copyForStackTraceRecovery: api/kotlin.coroutines.debug/stacktracerecoverable-copyforstacktracerecovery--ea5a08d9.md
+    - 协程底层 API · kotlin.coroutines.intrinsics:
+      - 概览: api/kotlin.coroutines.intrinsics/index.md
+      - COROUTINE_SUSPENDED: api/kotlin.coroutines.intrinsics/coroutine-suspended--ad8a7f51.md
+      - createCoroutineUnintercepted: api/kotlin.coroutines.intrinsics/createcoroutineunintercepted--459023c0.md
+      - intercepted: api/kotlin.coroutines.intrinsics/intercepted--22c1a22c.md
+      - startCoroutineUninterceptedOrReturn: api/kotlin.coroutines.intrinsics/startcoroutineuninterceptedorreturn--0c90d0b2.md
+      - suspendCoroutineUninterceptedOrReturn: api/kotlin.coroutines.intrinsics/suspendcoroutineuninterceptedorreturn--03beb1dd.md
+    - 协程基础 · kotlin.coroutines:
+      - 概览: api/kotlin.coroutines/index.md
+      - AbstractCoroutineContextElement:
+        - 概览: api/kotlin.coroutines/abstractcoroutinecontextelement--c2288ec6.md
+        - constructor: api/kotlin.coroutines/abstractcoroutinecontextelement-constructor--82c33fb7.md
+        - key: api/kotlin.coroutines/abstractcoroutinecontextelement-key--9ce3f7c7.md
+      - AbstractCoroutineContextKey:
+        - 概览: api/kotlin.coroutines/abstractcoroutinecontextkey--778d31ec.md
+        - constructor: api/kotlin.coroutines/abstractcoroutinecontextkey-constructor--bbcf4eea.md
+      - Continuation:
+        - 概览: api/kotlin.coroutines/continuation--29f1f4d5.md
+        - context: api/kotlin.coroutines/continuation-context--cb8b7e3e.md
+        - resumeWith: api/kotlin.coroutines/continuation-resumewith--e75a8f02.md
+      - ContinuationInterceptor:
+        - 概览: api/kotlin.coroutines/continuationinterceptor--412e84ba.md
+        - Key: api/kotlin.coroutines/continuationinterceptor-key--76356885.md
+        - get: api/kotlin.coroutines/continuationinterceptor-get--2c669c4a.md
+        - interceptContinuation: api/kotlin.coroutines/continuationinterceptor-interceptcontinuation--9688728b.md
+        - minusKey: api/kotlin.coroutines/continuationinterceptor-minuskey--1754326c.md
+        - releaseInterceptedContinuation: api/kotlin.coroutines/continuationinterceptor-releaseinterceptedcontinuation--6c764748.md
+      - CoroutineContext:
+        - 概览: api/kotlin.coroutines/coroutinecontext--79b2b1d0.md
+        - Element:
+          - 概览: api/kotlin.coroutines/coroutinecontext-element--6f78d709.md
+          - fold: api/kotlin.coroutines/coroutinecontext-element-fold--7c8f84b7.md
+          - get: api/kotlin.coroutines/coroutinecontext-element-get--63a4664c.md
+          - key: api/kotlin.coroutines/coroutinecontext-element-key--748a1336.md
+          - minusKey: api/kotlin.coroutines/coroutinecontext-element-minuskey--748857bf.md
+        - Key: api/kotlin.coroutines/coroutinecontext-key--05cf9b9b.md
+        - fold: api/kotlin.coroutines/coroutinecontext-fold--43d6c234.md
+        - get: api/kotlin.coroutines/coroutinecontext-get--ee4586b8.md
+        - minusKey: api/kotlin.coroutines/coroutinecontext-minuskey--b5506d43.md
+        - plus: api/kotlin.coroutines/coroutinecontext-plus--1c23d089.md
+      - EmptyCoroutineContext:
+        - 概览: api/kotlin.coroutines/emptycoroutinecontext--4b3694da.md
+        - fold: api/kotlin.coroutines/emptycoroutinecontext-fold--32d0fd67.md
+        - get: api/kotlin.coroutines/emptycoroutinecontext-get--c092fdfb.md
+        - hashCode: api/kotlin.coroutines/emptycoroutinecontext-hashcode--1253cef0.md
+        - minusKey: api/kotlin.coroutines/emptycoroutinecontext-minuskey--174c169c.md
+        - plus: api/kotlin.coroutines/emptycoroutinecontext-plus--7eb9aed9.md
+        - toString: api/kotlin.coroutines/emptycoroutinecontext-tostring--020b439a.md
+      - ExperimentalStdlibCoroutineSupportApi: api/kotlin.coroutines/experimentalstdlibcoroutinesupportapi--5be7daae.md
+      - RestrictsSuspension: api/kotlin.coroutines/restrictssuspension--40832f67.md
+      - coroutineContext: api/kotlin.coroutines/coroutinecontext--6e0cbf98.md
+      - createCoroutine: api/kotlin.coroutines/createcoroutine--b7fe105d.md
+      - getPolymorphicElement: api/kotlin.coroutines/getpolymorphicelement--a8eed83f.md
+      - minusPolymorphicKey: api/kotlin.coroutines/minuspolymorphickey--e66ab2e0.md
+      - resume: api/kotlin.coroutines/resume--a83a3132.md
+      - resumeWithException: api/kotlin.coroutines/resumewithexception--e8d763b2.md
+      - startCoroutine: api/kotlin.coroutines/startcoroutine--050ef984.md
+      - suspendCoroutine: api/kotlin.coroutines/suspendcoroutine--d5d9f0d8.md
+    - kotlin.enums · kotlin.enums:
+      - 概览: api/kotlin.enums/index.md
+      - EnumEntries: api/kotlin.enums/enumentries--efa34e9d.md
+      - enumEntries: api/kotlin.enums/enumentries--288c45ff.md
+    - kotlin.experimental · kotlin.experimental:
+      - 概览: api/kotlin.experimental/index.md
+      - ExpectRefinement: api/kotlin.experimental/expectrefinement--241055a2.md
+      - ExperimentalNativeApi: api/kotlin.experimental/experimentalnativeapi--63525f3f.md
+      - ExperimentalObjCEnum: api/kotlin.experimental/experimentalobjcenum--c01d6ac9.md
+      - ExperimentalObjCName: api/kotlin.experimental/experimentalobjcname--e42ab109.md
+      - ExperimentalObjCRefinement: api/kotlin.experimental/experimentalobjcrefinement--cf76c243.md
+      - ExperimentalTypeInference: api/kotlin.experimental/experimentaltypeinference--0c18f0d6.md
+      - and: api/kotlin.experimental/and--6201111b.md
+      - inv: api/kotlin.experimental/inv--89270a50.md
+      - or: api/kotlin.experimental/or--7175517a.md
+      - xor: api/kotlin.experimental/xor--1ad321bd.md
+    - 编码 · kotlin.io.encoding:
+      - 概览: api/kotlin.io.encoding/index.md
+      - Base64:
+        - 概览: api/kotlin.io.encoding/base64--f03d8fe5.md
+        - Default:
+          - 概览: api/kotlin.io.encoding/base64-default--d0654e33.md
+          - Mime: api/kotlin.io.encoding/base64-default-mime--e007f9f4.md
+          - Pem: api/kotlin.io.encoding/base64-default-pem--ace857f4.md
+          - UrlSafe: api/kotlin.io.encoding/base64-default-urlsafe--498ddba2.md
+        - PaddingOption:
+          - 概览: api/kotlin.io.encoding/base64-paddingoption--b9024e79.md
+          - ABSENT: api/kotlin.io.encoding/base64-paddingoption-absent--bfd7eec3.md
+          - ABSENT_OPTIONAL: api/kotlin.io.encoding/base64-paddingoption-absent-optional--3dc1e301.md
+          - PRESENT: api/kotlin.io.encoding/base64-paddingoption-present--2ecf4f5c.md
+          - PRESENT_OPTIONAL: api/kotlin.io.encoding/base64-paddingoption-present-optional--f7b50c7a.md
+        - decode: api/kotlin.io.encoding/base64-decode--d6355232.md
+        - decodeIntoByteArray: api/kotlin.io.encoding/base64-decodeintobytearray--4fdc7a35.md
+        - encode: api/kotlin.io.encoding/base64-encode--bc94231b.md
+        - encodeIntoByteArray: api/kotlin.io.encoding/base64-encodeintobytearray--ef0c4816.md
+        - encodeToAppendable: api/kotlin.io.encoding/base64-encodetoappendable--1ba929ba.md
+        - encodeToByteArray: api/kotlin.io.encoding/base64-encodetobytearray--e7c2e5df.md
+        - withPadding: api/kotlin.io.encoding/base64-withpadding--9bfa4110.md
+      - ExperimentalEncodingApi: api/kotlin.io.encoding/experimentalencodingapi--fa745de4.md
+    - 输入输出 · kotlin.io:
+      - 概览: api/kotlin.io/index.md
+      - print: api/kotlin.io/print--ce953a0e.md
+      - println: api/kotlin.io/println--f5e05294.md
+      - readln: api/kotlin.io/readln--43e03989.md
+      - readlnOrNull: api/kotlin.io/readlnornull--35467bbd.md
+    - 数学函数 · kotlin.math:
+      - 概览: api/kotlin.math/index.md
+      - A:
+        - abs: api/kotlin.math/abs--78da4a59.md
+        - absoluteValue: api/kotlin.math/absolutevalue--39fd35ba.md
+        - acos: api/kotlin.math/acos--15e96cbe.md
+        - acosh: api/kotlin.math/acosh--8797eb77.md
+        - asin: api/kotlin.math/asin--4b976f8a.md
+        - asinh: api/kotlin.math/asinh--2f82aa34.md
+        - atan: api/kotlin.math/atan--00d68adc.md
+        - atan2: api/kotlin.math/atan2--896128b6.md
+        - atanh: api/kotlin.math/atanh--448baa58.md
+      - C:
+        - cbrt: api/kotlin.math/cbrt--e9ade6e0.md
+        - ceil: api/kotlin.math/ceil--0fdfeaa6.md
+        - cos: api/kotlin.math/cos--9be28bbe.md
+        - cosh: api/kotlin.math/cosh--9b34fd93.md
+      - E:
+        - E: api/kotlin.math/e--a9f51566.md
+        - exp: api/kotlin.math/exp--dd7a946d.md
+        - expm1: api/kotlin.math/expm1--f9a9c795.md
+      - F:
+        - floor: api/kotlin.math/floor--a3e1f493.md
+      - H:
+        - hypot: api/kotlin.math/hypot--8ee3c79f.md
+      - L:
+        - ln: api/kotlin.math/ln--e545c2c2.md
+        - ln1p: api/kotlin.math/ln1p--3b0f770b.md
+        - log: api/kotlin.math/log--836ff184.md
+        - log10: api/kotlin.math/log10--0770f9fb.md
+        - log2: api/kotlin.math/log2--73aaa507.md
+      - M:
+        - max: api/kotlin.math/max--9baf3a40.md
+        - min: api/kotlin.math/min--1f6fa6f6.md
+      - N:
+        - nextDown: api/kotlin.math/nextdown--2c40738f.md
+        - nextTowards: api/kotlin.math/nexttowards--427e55f0.md
+        - nextUp: api/kotlin.math/nextup--ac616f8d.md
+      - P:
+        - PI: api/kotlin.math/pi--7c06efd8.md
+        - pow: api/kotlin.math/pow--a6b829b0.md
+      - R:
+        - round: api/kotlin.math/round--a97b0931.md
+        - roundToInt: api/kotlin.math/roundtoint--e8b797db.md
+        - roundToLong: api/kotlin.math/roundtolong--776cc3e6.md
+      - S:
+        - sign: api/kotlin.math/sign--0b6f395c.md
+        - sin: api/kotlin.math/sin--cccc68c7.md
+        - sinh: api/kotlin.math/sinh--933a4218.md
+        - sqrt: api/kotlin.math/sqrt--7e2131ab.md
+      - T:
+        - tan: api/kotlin.math/tan--0e5123df.md
+        - tanh: api/kotlin.math/tanh--fb7e8b7a.md
+        - truncate: api/kotlin.math/truncate--5a3a4ee4.md
+      - U:
+        - ulp: api/kotlin.math/ulp--73f45f08.md
+      - W:
+        - withSign: api/kotlin.math/withsign--876b620b.md
+    - 属性委托 · kotlin.properties:
+      - 概览: api/kotlin.properties/index.md
+      - Delegates:
+        - 概览: api/kotlin.properties/delegates--d503461e.md
+        - notNull: api/kotlin.properties/delegates-notnull--112a3711.md
+        - observable: api/kotlin.properties/delegates-observable--4d403f84.md
+        - vetoable: api/kotlin.properties/delegates-vetoable--e08754d0.md
+      - ObservableProperty:
+        - 概览: api/kotlin.properties/observableproperty--e050baa1.md
+        - afterChange: api/kotlin.properties/observableproperty-afterchange--1e905d6a.md
+        - beforeChange: api/kotlin.properties/observableproperty-beforechange--7a255279.md
+        - constructor: api/kotlin.properties/observableproperty-constructor--f72687ff.md
+        - getValue: api/kotlin.properties/observableproperty-getvalue--f1ea503e.md
+        - setValue: api/kotlin.properties/observableproperty-setvalue--859693b0.md
+        - toString: api/kotlin.properties/observableproperty-tostring--de6708a9.md
+      - PropertyDelegateProvider:
+        - 概览: api/kotlin.properties/propertydelegateprovider--8e435396.md
+        - provideDelegate: api/kotlin.properties/propertydelegateprovider-providedelegate--6b085c01.md
+      - ReadOnlyProperty:
+        - 概览: api/kotlin.properties/readonlyproperty--42dfcb6e.md
+        - getValue: api/kotlin.properties/readonlyproperty-getvalue--a56e638b.md
+      - ReadWriteProperty:
+        - 概览: api/kotlin.properties/readwriteproperty--d92b7598.md
+        - getValue: api/kotlin.properties/readwriteproperty-getvalue--63ce4b82.md
+        - setValue: api/kotlin.properties/readwriteproperty-setvalue--8fe89f86.md
+    - 随机数 · kotlin.random:
+      - 概览: api/kotlin.random/index.md
+      - Random:
+        - 概览: api/kotlin.random/random--67bc4844.md
+        - Default:
+          - 概览: api/kotlin.random/random-default--51f0de5d.md
+          - nextBits: api/kotlin.random/random-default-nextbits--57b229e0.md
+          - nextBoolean: api/kotlin.random/random-default-nextboolean--673c1bd7.md
+          - nextBytes: api/kotlin.random/random-default-nextbytes--b6b0d9f2.md
+          - nextDouble: api/kotlin.random/random-default-nextdouble--fcfc4a3e.md
+          - nextFloat: api/kotlin.random/random-default-nextfloat--cd1a4e44.md
+          - nextInt: api/kotlin.random/random-default-nextint--0dd33f93.md
+          - nextLong: api/kotlin.random/random-default-nextlong--c08a440b.md
+        - nextBits: api/kotlin.random/random-nextbits--d3dcc756.md
+        - nextBoolean: api/kotlin.random/random-nextboolean--a3dd3808.md
+        - nextBytes: api/kotlin.random/random-nextbytes--0879a0bf.md
+        - nextDouble: api/kotlin.random/random-nextdouble--82edc656.md
+        - nextFloat: api/kotlin.random/random-nextfloat--9432b730.md
+        - nextInt: api/kotlin.random/random-nextint--de73aeb8.md
+        - nextLong: api/kotlin.random/random-nextlong--b132bb1f.md
+      - nextInt: api/kotlin.random/nextint--d3f2e87e.md
+      - nextLong: api/kotlin.random/nextlong--6e0a2038.md
+      - nextUBytes: api/kotlin.random/nextubytes--6315bbdf.md
+      - nextUInt: api/kotlin.random/nextuint--5fc20af9.md
+      - nextULong: api/kotlin.random/nextulong--78b4e9e4.md
+    - 区间与步进 · kotlin.ranges:
+      - 概览: api/kotlin.ranges/index.md
+      - CharProgression:
+        - 概览: api/kotlin.ranges/charprogression--697c8902.md
+        - Companion:
+          - 概览: api/kotlin.ranges/charprogression-companion--1319c435.md
+          - fromClosedRange: api/kotlin.ranges/charprogression-companion-fromclosedrange--e1538739.md
+        - equals: api/kotlin.ranges/charprogression-equals--d81a943d.md
+        - first: api/kotlin.ranges/charprogression-first--de70ad16.md
+        - hashCode: api/kotlin.ranges/charprogression-hashcode--7d2ac117.md
+        - isEmpty: api/kotlin.ranges/charprogression-isempty--286f32b7.md
+        - iterator: api/kotlin.ranges/charprogression-iterator--9d7c42f9.md
+        - last: api/kotlin.ranges/charprogression-last--cac560fb.md
+        - step: api/kotlin.ranges/charprogression-step--b72b3d9f.md
+        - toString: api/kotlin.ranges/charprogression-tostring--14b9b5fe.md
+      - CharRange:
+        - 概览: api/kotlin.ranges/charrange--1c239714.md
+        - Companion:
+          - 概览: api/kotlin.ranges/charrange-companion--4ee89cae.md
+          - EMPTY: api/kotlin.ranges/charrange-companion-empty--0d1e8930.md
+        - constructor: api/kotlin.ranges/charrange-constructor--ffa2efd0.md
+        - contains: api/kotlin.ranges/charrange-contains--eb1a9a37.md
+        - endExclusive: api/kotlin.ranges/charrange-endexclusive--199d9b0f.md
+        - endInclusive: api/kotlin.ranges/charrange-endinclusive--7b49e52f.md
+        - equals: api/kotlin.ranges/charrange-equals--55cf3d88.md
+        - hashCode: api/kotlin.ranges/charrange-hashcode--2784ad91.md
+        - isEmpty: api/kotlin.ranges/charrange-isempty--ace58846.md
+        - start: api/kotlin.ranges/charrange-start--7c57dbf1.md
+        - toString: api/kotlin.ranges/charrange-tostring--e432e4ee.md
+      - ClosedFloatingPointRange:
+        - 概览: api/kotlin.ranges/closedfloatingpointrange--06e69c8a.md
+        - contains: api/kotlin.ranges/closedfloatingpointrange-contains--b5ec18de.md
+        - isEmpty: api/kotlin.ranges/closedfloatingpointrange-isempty--c058f99a.md
+        - lessThanOrEquals: api/kotlin.ranges/closedfloatingpointrange-lessthanorequals--66e1754f.md
+      - ClosedRange:
+        - 概览: api/kotlin.ranges/closedrange--f462aca0.md
+        - contains: api/kotlin.ranges/closedrange-contains--a3606045.md
+        - endInclusive: api/kotlin.ranges/closedrange-endinclusive--08a365aa.md
+        - isEmpty: api/kotlin.ranges/closedrange-isempty--ce18d95f.md
+        - start: api/kotlin.ranges/closedrange-start--67582282.md
+      - IntProgression:
+        - 概览: api/kotlin.ranges/intprogression--fbaf21be.md
+        - Companion:
+          - 概览: api/kotlin.ranges/intprogression-companion--2e539d86.md
+          - fromClosedRange: api/kotlin.ranges/intprogression-companion-fromclosedrange--e9d4833a.md
+        - equals: api/kotlin.ranges/intprogression-equals--7604bb1b.md
+        - first: api/kotlin.ranges/intprogression-first--b328453d.md
+        - hashCode: api/kotlin.ranges/intprogression-hashcode--7a9c5473.md
+        - isEmpty: api/kotlin.ranges/intprogression-isempty--839bd087.md
+        - iterator: api/kotlin.ranges/intprogression-iterator--615af6c9.md
+        - last: api/kotlin.ranges/intprogression-last--650a950f.md
+        - step: api/kotlin.ranges/intprogression-step--b69b3bc9.md
+        - toString: api/kotlin.ranges/intprogression-tostring--59c64d0d.md
+      - IntRange:
+        - 概览: api/kotlin.ranges/intrange--60ac9520.md
+        - Companion:
+          - 概览: api/kotlin.ranges/intrange-companion--53ee4ad8.md
+          - EMPTY: api/kotlin.ranges/intrange-companion-empty--3a657c3c.md
+        - constructor: api/kotlin.ranges/intrange-constructor--72d4817d.md
+        - contains: api/kotlin.ranges/intrange-contains--43e85c68.md
+        - endExclusive: api/kotlin.ranges/intrange-endexclusive--949ff795.md
+        - endInclusive: api/kotlin.ranges/intrange-endinclusive--f5bd032e.md
+        - equals: api/kotlin.ranges/intrange-equals--171bce96.md
+        - hashCode: api/kotlin.ranges/intrange-hashcode--3a9c1cf4.md
+        - isEmpty: api/kotlin.ranges/intrange-isempty--d05a3cca.md
+        - start: api/kotlin.ranges/intrange-start--e7040414.md
+        - toString: api/kotlin.ranges/intrange-tostring--17705cf4.md
+      - LongProgression:
+        - 概览: api/kotlin.ranges/longprogression--010039ee.md
+        - Companion:
+          - 概览: api/kotlin.ranges/longprogression-companion--63d445d4.md
+          - fromClosedRange: api/kotlin.ranges/longprogression-companion-fromclosedrange--2e641efb.md
+        - equals: api/kotlin.ranges/longprogression-equals--c45d7824.md
+        - first: api/kotlin.ranges/longprogression-first--3869ddd0.md
+        - hashCode: api/kotlin.ranges/longprogression-hashcode--42dcb0a7.md
+        - isEmpty: api/kotlin.ranges/longprogression-isempty--045da45d.md
+        - iterator: api/kotlin.ranges/longprogression-iterator--b5fff883.md
+        - last: api/kotlin.ranges/longprogression-last--fa704147.md
+        - step: api/kotlin.ranges/longprogression-step--3517f267.md
+        - toString: api/kotlin.ranges/longprogression-tostring--73f47c82.md
+      - LongRange:
+        - 概览: api/kotlin.ranges/longrange--86eba59a.md
+        - Companion:
+          - 概览: api/kotlin.ranges/longrange-companion--836181e6.md
+          - EMPTY: api/kotlin.ranges/longrange-companion-empty--5e4e5c9e.md
+        - constructor: api/kotlin.ranges/longrange-constructor--2b8f854b.md
+        - contains: api/kotlin.ranges/longrange-contains--25b5d3bc.md
+        - endExclusive: api/kotlin.ranges/longrange-endexclusive--f17cf035.md
+        - endInclusive: api/kotlin.ranges/longrange-endinclusive--eead4f77.md
+        - equals: api/kotlin.ranges/longrange-equals--ea657391.md
+        - hashCode: api/kotlin.ranges/longrange-hashcode--9f81f34d.md
+        - isEmpty: api/kotlin.ranges/longrange-isempty--65fa45a8.md
+        - start: api/kotlin.ranges/longrange-start--94557573.md
+        - toString: api/kotlin.ranges/longrange-tostring--8927a8ba.md
+      - OpenEndRange:
+        - 概览: api/kotlin.ranges/openendrange--88ffc688.md
+        - contains: api/kotlin.ranges/openendrange-contains--eb93bd46.md
+        - endExclusive: api/kotlin.ranges/openendrange-endexclusive--a6900f0c.md
+        - isEmpty: api/kotlin.ranges/openendrange-isempty--6bdc966f.md
+        - start: api/kotlin.ranges/openendrange-start--a4954f58.md
+      - UIntProgression:
+        - 概览: api/kotlin.ranges/uintprogression--9c51ddc0.md
+        - Companion:
+          - 概览: api/kotlin.ranges/uintprogression-companion--22992e69.md
+          - fromClosedRange: api/kotlin.ranges/uintprogression-companion-fromclosedrange--00939199.md
+        - equals: api/kotlin.ranges/uintprogression-equals--50c71651.md
+        - first: api/kotlin.ranges/uintprogression-first--029e6bd5.md
+        - hashCode: api/kotlin.ranges/uintprogression-hashcode--a886645d.md
+        - isEmpty: api/kotlin.ranges/uintprogression-isempty--9dda313f.md
+        - iterator: api/kotlin.ranges/uintprogression-iterator--98f74f88.md
+        - last: api/kotlin.ranges/uintprogression-last--8f84786c.md
+        - step: api/kotlin.ranges/uintprogression-step--b112fb30.md
+        - toString: api/kotlin.ranges/uintprogression-tostring--c77b99da.md
+      - UIntRange:
+        - 概览: api/kotlin.ranges/uintrange--f198eec4.md
+        - Companion:
+          - 概览: api/kotlin.ranges/uintrange-companion--b4410e56.md
+          - EMPTY: api/kotlin.ranges/uintrange-companion-empty--0abda853.md
+        - constructor: api/kotlin.ranges/uintrange-constructor--139151ed.md
+        - contains: api/kotlin.ranges/uintrange-contains--751f7e7a.md
+        - endExclusive: api/kotlin.ranges/uintrange-endexclusive--b68ec7ee.md
+        - endInclusive: api/kotlin.ranges/uintrange-endinclusive--bc0962a0.md
+        - equals: api/kotlin.ranges/uintrange-equals--cacf54c8.md
+        - hashCode: api/kotlin.ranges/uintrange-hashcode--c2aa7b0e.md
+        - isEmpty: api/kotlin.ranges/uintrange-isempty--5463ddc7.md
+        - start: api/kotlin.ranges/uintrange-start--db2b6b18.md
+        - toString: api/kotlin.ranges/uintrange-tostring--0cc3f98a.md
+      - ULongProgression:
+        - 概览: api/kotlin.ranges/ulongprogression--f8b2bfb1.md
+        - Companion:
+          - 概览: api/kotlin.ranges/ulongprogression-companion--116e4c3b.md
+          - fromClosedRange: api/kotlin.ranges/ulongprogression-companion-fromclosedrange--8a09d663.md
+        - equals: api/kotlin.ranges/ulongprogression-equals--4708b911.md
+        - first: api/kotlin.ranges/ulongprogression-first--ace9a135.md
+        - hashCode: api/kotlin.ranges/ulongprogression-hashcode--3322b04d.md
+        - isEmpty: api/kotlin.ranges/ulongprogression-isempty--aae57193.md
+        - iterator: api/kotlin.ranges/ulongprogression-iterator--3daf225f.md
+        - last: api/kotlin.ranges/ulongprogression-last--24448663.md
+        - step: api/kotlin.ranges/ulongprogression-step--ea86e836.md
+        - toString: api/kotlin.ranges/ulongprogression-tostring--ae85722d.md
+      - ULongRange:
+        - 概览: api/kotlin.ranges/ulongrange--7702987e.md
+        - Companion:
+          - 概览: api/kotlin.ranges/ulongrange-companion--25067254.md
+          - EMPTY: api/kotlin.ranges/ulongrange-companion-empty--2cd27e89.md
+        - constructor: api/kotlin.ranges/ulongrange-constructor--05e353c0.md
+        - contains: api/kotlin.ranges/ulongrange-contains--69000a35.md
+        - endExclusive: api/kotlin.ranges/ulongrange-endexclusive--ee73dc9b.md
+        - endInclusive: api/kotlin.ranges/ulongrange-endinclusive--8df9e88c.md
+        - equals: api/kotlin.ranges/ulongrange-equals--c03ff794.md
+        - hashCode: api/kotlin.ranges/ulongrange-hashcode--b422467c.md
+        - isEmpty: api/kotlin.ranges/ulongrange-isempty--76fc478a.md
+        - start: api/kotlin.ranges/ulongrange-start--66c52cec.md
+        - toString: api/kotlin.ranges/ulongrange-tostring--d5b05e3d.md
+      - coerceAtLeast: api/kotlin.ranges/coerceatleast--ca5a9115.md
+      - coerceAtMost: api/kotlin.ranges/coerceatmost--eb8677b6.md
+      - coerceIn: api/kotlin.ranges/coercein--98027daa.md
+      - contains: api/kotlin.ranges/contains--beeb20fb.md
+      - downTo: api/kotlin.ranges/downto--299a1895.md
+      - first: api/kotlin.ranges/first--a7937b64.md
+      - firstOrNull: api/kotlin.ranges/firstornull--a0d28f1c.md
+      - last: api/kotlin.ranges/last--3547cb11.md
+      - lastOrNull: api/kotlin.ranges/lastornull--65babe08.md
+      - random: api/kotlin.ranges/random--a441b15f.md
+      - randomOrNull: api/kotlin.ranges/randomornull--e0a0f069.md
+      - rangeTo: api/kotlin.ranges/rangeto--90ddbd78.md
+      - rangeUntil: api/kotlin.ranges/rangeuntil--a5bb543f.md
+      - reversed: api/kotlin.ranges/reversed--bc64f64f.md
+      - step: api/kotlin.ranges/step--3e64cc41.md
+      - until: api/kotlin.ranges/until--2e3200de.md
+    - 反射类型 · kotlin.reflect:
+      - 概览: api/kotlin.reflect/index.md
+      - KCallable:
+        - 概览: api/kotlin.reflect/kcallable--2cd4608b.md
+        - name: api/kotlin.reflect/kcallable-name--cce63928.md
+      - KClass:
+        - 概览: api/kotlin.reflect/kclass--4a9fc5a1.md
+        - equals: api/kotlin.reflect/kclass-equals--2447b02e.md
+        - hashCode: api/kotlin.reflect/kclass-hashcode--292bdd6f.md
+        - isInstance: api/kotlin.reflect/kclass-isinstance--d67fed2f.md
+        - qualifiedName: api/kotlin.reflect/kclass-qualifiedname--0cc8f6b8.md
+        - simpleName: api/kotlin.reflect/kclass-simplename--d139ea14.md
+      - KClassifier: api/kotlin.reflect/kclassifier--3ff555f9.md
+      - KFunction: api/kotlin.reflect/kfunction--5b505331.md
+      - KMutableProperty: api/kotlin.reflect/kmutableproperty--40f1bcf4.md
+      - KMutableProperty0:
+        - 概览: api/kotlin.reflect/kmutableproperty0--a202a1bd.md
+        - set: api/kotlin.reflect/kmutableproperty0-set--03c054b0.md
+      - KMutableProperty1:
+        - 概览: api/kotlin.reflect/kmutableproperty1--170ab5c5.md
+        - set: api/kotlin.reflect/kmutableproperty1-set--9621afd9.md
+      - KMutableProperty2:
+        - 概览: api/kotlin.reflect/kmutableproperty2--abfa705a.md
+        - set: api/kotlin.reflect/kmutableproperty2-set--8e0a74fa.md
+      - KProperty: api/kotlin.reflect/kproperty--2a4c1574.md
+      - KProperty0:
+        - 概览: api/kotlin.reflect/kproperty0--9d1d9e32.md
+        - get: api/kotlin.reflect/kproperty0-get--9d2410db.md
+      - KProperty1:
+        - 概览: api/kotlin.reflect/kproperty1--bcfc5307.md
+        - get: api/kotlin.reflect/kproperty1-get--a3a5da27.md
+      - KProperty2:
+        - 概览: api/kotlin.reflect/kproperty2--cd767fba.md
+        - get: api/kotlin.reflect/kproperty2-get--13dc4f49.md
+      - KType:
+        - 概览: api/kotlin.reflect/ktype--174ffd68.md
+        - arguments: api/kotlin.reflect/ktype-arguments--94bea395.md
+        - classifier: api/kotlin.reflect/ktype-classifier--938919a2.md
+        - isMarkedNullable: api/kotlin.reflect/ktype-ismarkednullable--789266eb.md
+      - KTypeParameter:
+        - 概览: api/kotlin.reflect/ktypeparameter--6effc128.md
+        - isReified: api/kotlin.reflect/ktypeparameter-isreified--8ed7d520.md
+        - name: api/kotlin.reflect/ktypeparameter-name--413c8ba0.md
+        - upperBounds: api/kotlin.reflect/ktypeparameter-upperbounds--ab0d4616.md
+        - variance: api/kotlin.reflect/ktypeparameter-variance--61d60f83.md
+      - KTypeProjection:
+        - 概览: api/kotlin.reflect/ktypeprojection--b0c0a8aa.md
+        - Companion:
+          - 概览: api/kotlin.reflect/ktypeprojection-companion--c2eed806.md
+          - STAR: api/kotlin.reflect/ktypeprojection-companion-star--3ac94179.md
+          - contravariant: api/kotlin.reflect/ktypeprojection-companion-contravariant--2ec0635e.md
+          - covariant: api/kotlin.reflect/ktypeprojection-companion-covariant--e84cbc69.md
+          - invariant: api/kotlin.reflect/ktypeprojection-companion-invariant--772bdd4d.md
+        - constructor: api/kotlin.reflect/ktypeprojection-constructor--3f90730f.md
+        - toString: api/kotlin.reflect/ktypeprojection-tostring--aaccd402.md
+        - type: api/kotlin.reflect/ktypeprojection-type--9f2c8da2.md
+        - variance: api/kotlin.reflect/ktypeprojection-variance--2640d4c7.md
+      - KVariance:
+        - 概览: api/kotlin.reflect/kvariance--44d11edf.md
+        - IN: api/kotlin.reflect/kvariance-in--2470553e.md
+        - INVARIANT: api/kotlin.reflect/kvariance-invariant--9ede2225.md
+        - OUT: api/kotlin.reflect/kvariance-out--19a1cf78.md
+      - cast: api/kotlin.reflect/cast--603705cc.md
+      - safeCast: api/kotlin.reflect/safecast--07217521.md
+      - typeOf: api/kotlin.reflect/typeof--74a0bd0c.md
+    - 序列 · kotlin.sequences:
+      - 概览: api/kotlin.sequences/index.md
+      - A:
+        - all: api/kotlin.sequences/all--5ef5ef03.md
+        - allDistinct: api/kotlin.sequences/alldistinct--2fc85fa3.md
+        - allDistinctBy: api/kotlin.sequences/alldistinctby--623562c4.md
+        - allEqual: api/kotlin.sequences/allequal--fc1973f3.md
+        - allEqualBy: api/kotlin.sequences/allequalby--8ee4a701.md
+        - any: api/kotlin.sequences/any--d6a7cd2a.md
+        - asIterable: api/kotlin.sequences/asiterable--2ddaeb5d.md
+        - asSequence: api/kotlin.sequences/assequence--5fa70f53.md
+        - associate: api/kotlin.sequences/associate--178b6e06.md
+        - associateBy: api/kotlin.sequences/associateby--1985d26b.md
+        - associateByTo: api/kotlin.sequences/associatebyto--258bb9c9.md
+        - associateTo: api/kotlin.sequences/associateto--f37cc920.md
+        - associateWith: api/kotlin.sequences/associatewith--7d48394b.md
+        - associateWithTo: api/kotlin.sequences/associatewithto--9b1ce907.md
+        - average: api/kotlin.sequences/average--184df936.md
+      - C:
+        - chunked: api/kotlin.sequences/chunked--59fdd34a.md
+        - constrainOnce: api/kotlin.sequences/constrainonce--26cbc190.md
+        - contains: api/kotlin.sequences/contains--beeb20fb.md
+        - count: api/kotlin.sequences/count--6c35493a.md
+      - D:
+        - distinct: api/kotlin.sequences/distinct--54c9e847.md
+        - distinctBy: api/kotlin.sequences/distinctby--d0a0816d.md
+        - drop: api/kotlin.sequences/drop--d90ee9cc.md
+        - dropWhile: api/kotlin.sequences/dropwhile--6189a3a9.md
+      - E:
+        - elementAt: api/kotlin.sequences/elementat--9ad965d5.md
+        - elementAtOrElse: api/kotlin.sequences/elementatorelse--fa2461c1.md
+        - elementAtOrNull: api/kotlin.sequences/elementatornull--1bd104bb.md
+        - emptySequence: api/kotlin.sequences/emptysequence--0965676b.md
+      - F:
+        - filter: api/kotlin.sequences/filter--dfc3376b.md
+        - filterIndexed: api/kotlin.sequences/filterindexed--7ac7cf5e.md
+        - filterIndexedTo: api/kotlin.sequences/filterindexedto--f88d77cc.md
+        - filterIsInstance: api/kotlin.sequences/filterisinstance--f25a2273.md
+        - filterIsInstanceTo: api/kotlin.sequences/filterisinstanceto--1625e86d.md
+        - filterNot: api/kotlin.sequences/filternot--15fbf245.md
+        - filterNotNull: api/kotlin.sequences/filternotnull--e62e7605.md
+        - filterNotNullTo: api/kotlin.sequences/filternotnullto--2c8b420b.md
+        - filterNotTo: api/kotlin.sequences/filternotto--ecaaa57f.md
+        - filterTo: api/kotlin.sequences/filterto--a0f5e4fd.md
+        - find: api/kotlin.sequences/find--e6640de8.md
+        - findLast: api/kotlin.sequences/findlast--88682bfe.md
+        - first: api/kotlin.sequences/first--a7937b64.md
+        - firstNotNullOf: api/kotlin.sequences/firstnotnullof--641cbe1c.md
+        - firstNotNullOfOrNull: api/kotlin.sequences/firstnotnullofornull--78ab62af.md
+        - firstOrNull: api/kotlin.sequences/firstornull--a0d28f1c.md
+        - flatMap: api/kotlin.sequences/flatmap--4dd72076.md
+        - flatMapIndexed: api/kotlin.sequences/flatmapindexed--a4bda2e0.md
+        - flatMapIndexedTo: api/kotlin.sequences/flatmapindexedto--48be838a.md
+        - flatMapTo: api/kotlin.sequences/flatmapto--1d97ec98.md
+        - flatten: api/kotlin.sequences/flatten--3ab675f2.md
+        - fold: api/kotlin.sequences/fold--255541b1.md
+        - foldIndexed: api/kotlin.sequences/foldindexed--fde9ad93.md
+        - forEach: api/kotlin.sequences/foreach--0842ac64.md
+        - forEachIndexed: api/kotlin.sequences/foreachindexed--81bb00bc.md
+      - G:
+        - generateSequence: api/kotlin.sequences/generatesequence--5c0aa81c.md
+        - groupBy: api/kotlin.sequences/groupby--f73ad1ee.md
+        - groupByTo: api/kotlin.sequences/groupbyto--72d66ad0.md
+        - groupingBy: api/kotlin.sequences/groupingby--cdeef966.md
+      - I:
+        - ifEmpty: api/kotlin.sequences/ifempty--e0fdc637.md
+        - indexOf: api/kotlin.sequences/indexof--0fde3e84.md
+        - indexOfFirst: api/kotlin.sequences/indexoffirst--38bbd8d4.md
+        - indexOfLast: api/kotlin.sequences/indexoflast--437505ea.md
+        - isSorted: api/kotlin.sequences/issorted--858261c8.md
+        - isSortedBy: api/kotlin.sequences/issortedby--0ce50585.md
+        - isSortedByDescending: api/kotlin.sequences/issortedbydescending--86a9c28c.md
+        - isSortedDescending: api/kotlin.sequences/issorteddescending--b1483108.md
+        - isSortedWith: api/kotlin.sequences/issortedwith--67f2dad4.md
+        - iterator: api/kotlin.sequences/iterator--ef9baedf.md
+      - J:
+        - joinTo: api/kotlin.sequences/jointo--014bf5b4.md
+        - joinToString: api/kotlin.sequences/jointostring--39e0d51c.md
+      - L:
+        - last: api/kotlin.sequences/last--3547cb11.md
+        - lastIndexOf: api/kotlin.sequences/lastindexof--e13001ac.md
+        - lastOrNull: api/kotlin.sequences/lastornull--65babe08.md
+      - M:
+        - map: api/kotlin.sequences/map--60be9861.md
+        - mapIndexed: api/kotlin.sequences/mapindexed--fd530ac2.md
+        - mapIndexedNotNull: api/kotlin.sequences/mapindexednotnull--51796bc8.md
+        - mapIndexedNotNullTo: api/kotlin.sequences/mapindexednotnullto--3cfdfa94.md
+        - mapIndexedTo: api/kotlin.sequences/mapindexedto--c7abb5a1.md
+        - mapNotNull: api/kotlin.sequences/mapnotnull--c413debf.md
+        - mapNotNullTo: api/kotlin.sequences/mapnotnullto--3c9fa12d.md
+        - mapTo: api/kotlin.sequences/mapto--583e5b26.md
+        - max: api/kotlin.sequences/max--9baf3a40.md
+        - maxBy: api/kotlin.sequences/maxby--573d9408.md
+        - maxByOrNull: api/kotlin.sequences/maxbyornull--52b8b51f.md
+        - maxOf: api/kotlin.sequences/maxof--8014bb42.md
+        - maxOfOrNull: api/kotlin.sequences/maxofornull--0f85778b.md
+        - maxOfWith: api/kotlin.sequences/maxofwith--f207ab5a.md
+        - maxOfWithOrNull: api/kotlin.sequences/maxofwithornull--8c9d6cdf.md
+        - maxOrNull: api/kotlin.sequences/maxornull--991d0f1e.md
+        - maxWith: api/kotlin.sequences/maxwith--3012e79a.md
+        - maxWithOrNull: api/kotlin.sequences/maxwithornull--c1a9369e.md
+        - min: api/kotlin.sequences/min--1f6fa6f6.md
+        - minBy: api/kotlin.sequences/minby--04243d7a.md
+        - minByOrNull: api/kotlin.sequences/minbyornull--42524680.md
+        - minOf: api/kotlin.sequences/minof--c4eb1195.md
+        - minOfOrNull: api/kotlin.sequences/minofornull--2f6ccdce.md
+        - minOfWith: api/kotlin.sequences/minofwith--4691f17c.md
+        - minOfWithOrNull: api/kotlin.sequences/minofwithornull--08933ee1.md
+        - minOrNull: api/kotlin.sequences/minornull--2ca98165.md
+        - minWith: api/kotlin.sequences/minwith--5bd970f2.md
+        - minWithOrNull: api/kotlin.sequences/minwithornull--d6549c1a.md
+        - minus: api/kotlin.sequences/minus--129fa771.md
+        - minusElement: api/kotlin.sequences/minuselement--f12197f6.md
+      - N:
+        - none: api/kotlin.sequences/none--140bedbf.md
+      - O:
+        - onEach: api/kotlin.sequences/oneach--df158ce3.md
+        - onEachIndexed: api/kotlin.sequences/oneachindexed--1b158779.md
+        - orEmpty: api/kotlin.sequences/orempty--84666296.md
+      - P:
+        - partition: api/kotlin.sequences/partition--2df962d3.md
+        - plus: api/kotlin.sequences/plus--383ef369.md
+        - plusElement: api/kotlin.sequences/pluselement--e24a5db6.md
+      - R:
+        - reduce: api/kotlin.sequences/reduce--4c7e98bf.md
+        - reduceIndexed: api/kotlin.sequences/reduceindexed--9ffb6ca6.md
+        - reduceIndexedOrNull: api/kotlin.sequences/reduceindexedornull--7e645fe2.md
+        - reduceOrNull: api/kotlin.sequences/reduceornull--232f12bb.md
+        - requireNoNulls: api/kotlin.sequences/requirenonulls--bd3b5147.md
+        - runningFold: api/kotlin.sequences/runningfold--a8ae5385.md
+        - runningFoldIndexed: api/kotlin.sequences/runningfoldindexed--0632f781.md
+        - runningReduce: api/kotlin.sequences/runningreduce--5ec3d464.md
+        - runningReduceIndexed: api/kotlin.sequences/runningreduceindexed--ca4c282a.md
+      - S:
+        - Sequence:
+          - 概览: api/kotlin.sequences/sequence--0740f4ba.md
+          - iterator: api/kotlin.sequences/sequence-iterator--55e030c1.md
+        - SequenceScope:
+          - 概览: api/kotlin.sequences/sequencescope--52e92cfd.md
+          - yield: api/kotlin.sequences/sequencescope-yield--ac610f79.md
+          - yieldAll: api/kotlin.sequences/sequencescope-yieldall--2a8b834c.md
+        - scan: api/kotlin.sequences/scan--59ad1b2f.md
+        - scanIndexed: api/kotlin.sequences/scanindexed--276e70a7.md
+        - sequence: api/kotlin.sequences/sequence--bf37c7c2.md
+        - sequenceOf: api/kotlin.sequences/sequenceof--f2da7ffe.md
+        - shuffled: api/kotlin.sequences/shuffled--6b1f79e5.md
+        - single: api/kotlin.sequences/single--947f1875.md
+        - singleOrNull: api/kotlin.sequences/singleornull--02aaa8d9.md
+        - sorted: api/kotlin.sequences/sorted--db8cf333.md
+        - sortedBy: api/kotlin.sequences/sortedby--1e884146.md
+        - sortedByDescending: api/kotlin.sequences/sortedbydescending--4051d4af.md
+        - sortedDescending: api/kotlin.sequences/sorteddescending--91b33f5e.md
+        - sortedWith: api/kotlin.sequences/sortedwith--13dd7d8a.md
+        - sum: api/kotlin.sequences/sum--09f5ffef.md
+        - sumBy: api/kotlin.sequences/sumby--97db0fda.md
+        - sumByDouble: api/kotlin.sequences/sumbydouble--0c1807ab.md
+        - sumOf: api/kotlin.sequences/sumof--9113380b.md
+      - T:
+        - take: api/kotlin.sequences/take--d1905cf9.md
+        - takeWhile: api/kotlin.sequences/takewhile--3f148881.md
+        - toCollection: api/kotlin.sequences/tocollection--e1154c18.md
+        - toHashSet: api/kotlin.sequences/tohashset--37fd4891.md
+        - toList: api/kotlin.sequences/tolist--658fe2ed.md
+        - toMutableList: api/kotlin.sequences/tomutablelist--4b7c7445.md
+        - toMutableSet: api/kotlin.sequences/tomutableset--33a4ff1e.md
+        - toSet: api/kotlin.sequences/toset--da2cd29c.md
+      - U:
+        - unzip: api/kotlin.sequences/unzip--13bf8205.md
+      - W:
+        - windowed: api/kotlin.sequences/windowed--eff9f08c.md
+        - withIndex: api/kotlin.sequences/withindex--dd2bc029.md
+      - Z:
+        - zip: api/kotlin.sequences/zip--4a70fe9a.md
+        - zipWithNext: api/kotlin.sequences/zipwithnext--8bb5a452.md
+    - 字符串与正则 · kotlin.text:
+      - 概览: api/kotlin.text/index.md
+      - A:
+        - Appendable:
+          - 概览: api/kotlin.text/appendable--71637721.md
+          - append: api/kotlin.text/appendable-append--4ae0a70a.md
+        - all: api/kotlin.text/all--5ef5ef03.md
+        - any: api/kotlin.text/any--d6a7cd2a.md
+        - append: api/kotlin.text/append--ae524b54.md
+        - appendLine: api/kotlin.text/appendline--baca4236.md
+        - appendRange: api/kotlin.text/appendrange--a841ec72.md
+        - asIterable: api/kotlin.text/asiterable--2ddaeb5d.md
+        - asSequence: api/kotlin.text/assequence--5fa70f53.md
+        - associate: api/kotlin.text/associate--178b6e06.md
+        - associateBy: api/kotlin.text/associateby--1985d26b.md
+        - associateByTo: api/kotlin.text/associatebyto--258bb9c9.md
+        - associateTo: api/kotlin.text/associateto--f37cc920.md
+        - associateWith: api/kotlin.text/associatewith--7d48394b.md
+        - associateWithTo: api/kotlin.text/associatewithto--9b1ce907.md
+      - B:
+        - buildString: api/kotlin.text/buildstring--729b1e0e.md
+      - C:
+        - CASE_INSENSITIVE_ORDER: api/kotlin.text/case-insensitive-order--f6ef72aa.md
+        - CharCategory:
+          - 概览: api/kotlin.text/charcategory--231f105d.md
+          - COMBINING_SPACING_MARK: api/kotlin.text/charcategory-combining-spacing-mark--7cd8d24e.md
+          - CONNECTOR_PUNCTUATION: api/kotlin.text/charcategory-connector-punctuation--c530cc28.md
+          - CONTROL: api/kotlin.text/charcategory-control--6ab6c7e1.md
+          - CURRENCY_SYMBOL: api/kotlin.text/charcategory-currency-symbol--fef31661.md
+          - DASH_PUNCTUATION: api/kotlin.text/charcategory-dash-punctuation--85315fb3.md
+          - DECIMAL_DIGIT_NUMBER: api/kotlin.text/charcategory-decimal-digit-number--cfdbbebc.md
+          - ENCLOSING_MARK: api/kotlin.text/charcategory-enclosing-mark--05026c3a.md
+          - END_PUNCTUATION: api/kotlin.text/charcategory-end-punctuation--5d902e59.md
+          - FINAL_QUOTE_PUNCTUATION: api/kotlin.text/charcategory-final-quote-punctuation--ca1aa1aa.md
+          - FORMAT: api/kotlin.text/charcategory-format--e21d9cf2.md
+          - INITIAL_QUOTE_PUNCTUATION: api/kotlin.text/charcategory-initial-quote-punctuation--691b028d.md
+          - LETTER_NUMBER: api/kotlin.text/charcategory-letter-number--d78e48fa.md
+          - LINE_SEPARATOR: api/kotlin.text/charcategory-line-separator--d394d531.md
+          - LOWERCASE_LETTER: api/kotlin.text/charcategory-lowercase-letter--8a418761.md
+          - MATH_SYMBOL: api/kotlin.text/charcategory-math-symbol--b0fce3bd.md
+          - MODIFIER_LETTER: api/kotlin.text/charcategory-modifier-letter--9d709bc8.md
+          - MODIFIER_SYMBOL: api/kotlin.text/charcategory-modifier-symbol--30ecfb23.md
+          - NON_SPACING_MARK: api/kotlin.text/charcategory-non-spacing-mark--93213b15.md
+          - OTHER_LETTER: api/kotlin.text/charcategory-other-letter--aee2bd21.md
+          - OTHER_NUMBER: api/kotlin.text/charcategory-other-number--5ed8b278.md
+          - OTHER_PUNCTUATION: api/kotlin.text/charcategory-other-punctuation--3eeb2d12.md
+          - OTHER_SYMBOL: api/kotlin.text/charcategory-other-symbol--9e9abca6.md
+          - PARAGRAPH_SEPARATOR: api/kotlin.text/charcategory-paragraph-separator--5861c817.md
+          - PRIVATE_USE: api/kotlin.text/charcategory-private-use--56ffcb21.md
+          - SPACE_SEPARATOR: api/kotlin.text/charcategory-space-separator--90dde92c.md
+          - START_PUNCTUATION: api/kotlin.text/charcategory-start-punctuation--eb176479.md
+          - SURROGATE: api/kotlin.text/charcategory-surrogate--7cf14bc0.md
+          - TITLECASE_LETTER: api/kotlin.text/charcategory-titlecase-letter--db3b36f0.md
+          - UNASSIGNED: api/kotlin.text/charcategory-unassigned--89c80671.md
+          - UPPERCASE_LETTER: api/kotlin.text/charcategory-uppercase-letter--83ff4798.md
+          - code: api/kotlin.text/charcategory-code--13d0b02b.md
+          - contains: api/kotlin.text/charcategory-contains--1e8906f9.md
+        - CharacterCodingException:
+          - 概览: api/kotlin.text/charactercodingexception--13be1b96.md
+          - constructor: api/kotlin.text/charactercodingexception-constructor--26feef71.md
+        - capitalize: api/kotlin.text/capitalize--3e94d01a.md
+        - category: api/kotlin.text/category--edb2cd3b.md
+        - chunked: api/kotlin.text/chunked--59fdd34a.md
+        - chunkedSequence: api/kotlin.text/chunkedsequence--3a46b7fc.md
+        - clear: api/kotlin.text/clear--913a4cb9.md
+        - commonPrefixWith: api/kotlin.text/commonprefixwith--747b0824.md
+        - commonSuffixWith: api/kotlin.text/commonsuffixwith--f4eba23c.md
+        - compareTo: api/kotlin.text/compareto--79344ca1.md
+        - concatToString: api/kotlin.text/concattostring--7eeb844c.md
+        - contains: api/kotlin.text/contains--beeb20fb.md
+        - contentEquals: api/kotlin.text/contentequals--5ab3356a.md
+        - count: api/kotlin.text/count--6c35493a.md
+      - D:
+        - decapitalize: api/kotlin.text/decapitalize--77c627fc.md
+        - decodeToString: api/kotlin.text/decodetostring--1f702057.md
+        - deleteAt: api/kotlin.text/deleteat--de1e48f4.md
+        - deleteRange: api/kotlin.text/deleterange--75672619.md
+        - digitToChar: api/kotlin.text/digittochar--e2d4e4ec.md
+        - digitToInt: api/kotlin.text/digittoint--e0d49d3e.md
+        - digitToIntOrNull: api/kotlin.text/digittointornull--ab6bf3d8.md
+        - drop: api/kotlin.text/drop--d90ee9cc.md
+        - dropLast: api/kotlin.text/droplast--d4f8a1ef.md
+        - dropLastWhile: api/kotlin.text/droplastwhile--647033fb.md
+        - dropWhile: api/kotlin.text/dropwhile--6189a3a9.md
+      - E:
+        - elementAt: api/kotlin.text/elementat--9ad965d5.md
+        - elementAtOrElse: api/kotlin.text/elementatorelse--fa2461c1.md
+        - elementAtOrNull: api/kotlin.text/elementatornull--1bd104bb.md
+        - encodeToByteArray: api/kotlin.text/encodetobytearray--639f5be1.md
+        - endsWith: api/kotlin.text/endswith--a310ad9f.md
+        - equals: api/kotlin.text/equals--e93cb41d.md
+      - F:
+        - filter: api/kotlin.text/filter--dfc3376b.md
+        - filterIndexed: api/kotlin.text/filterindexed--7ac7cf5e.md
+        - filterIndexedTo: api/kotlin.text/filterindexedto--f88d77cc.md
+        - filterNot: api/kotlin.text/filternot--15fbf245.md
+        - filterNotTo: api/kotlin.text/filternotto--ecaaa57f.md
+        - filterTo: api/kotlin.text/filterto--a0f5e4fd.md
+        - find: api/kotlin.text/find--e6640de8.md
+        - findAnyOf: api/kotlin.text/findanyof--a82e6cad.md
+        - findLast: api/kotlin.text/findlast--88682bfe.md
+        - findLastAnyOf: api/kotlin.text/findlastanyof--8ebc663d.md
+        - first: api/kotlin.text/first--a7937b64.md
+        - firstNotNullOf: api/kotlin.text/firstnotnullof--641cbe1c.md
+        - firstNotNullOfOrNull: api/kotlin.text/firstnotnullofornull--78ab62af.md
+        - firstOrNull: api/kotlin.text/firstornull--a0d28f1c.md
+        - flatMap: api/kotlin.text/flatmap--4dd72076.md
+        - flatMapIndexed: api/kotlin.text/flatmapindexed--a4bda2e0.md
+        - flatMapIndexedTo: api/kotlin.text/flatmapindexedto--48be838a.md
+        - flatMapTo: api/kotlin.text/flatmapto--1d97ec98.md
+        - fold: api/kotlin.text/fold--255541b1.md
+        - foldIndexed: api/kotlin.text/foldindexed--fde9ad93.md
+        - foldRight: api/kotlin.text/foldright--1451ebaf.md
+        - foldRightIndexed: api/kotlin.text/foldrightindexed--91448942.md
+        - forEach: api/kotlin.text/foreach--0842ac64.md
+        - forEachIndexed: api/kotlin.text/foreachindexed--81bb00bc.md
+      - G:
+        - get: api/kotlin.text/get--2998b323.md
+        - getOrElse: api/kotlin.text/getorelse--f4ba5ecf.md
+        - getOrNull: api/kotlin.text/getornull--570e0670.md
+        - groupBy: api/kotlin.text/groupby--f73ad1ee.md
+        - groupByTo: api/kotlin.text/groupbyto--72d66ad0.md
+        - groupingBy: api/kotlin.text/groupingby--cdeef966.md
+      - H:
+        - HexFormat:
+          - 概览: api/kotlin.text/hexformat--a39f4cca.md
+          - Builder:
+            - 概览: api/kotlin.text/hexformat-builder--dc9ea2b6.md
+            - bytes: api/kotlin.text/hexformat-builder-bytes--d7162dac.md
+            - number: api/kotlin.text/hexformat-builder-number--f3986186.md
+            - upperCase: api/kotlin.text/hexformat-builder-uppercase--74a8eddc.md
+          - BytesHexFormat:
+            - 概览: api/kotlin.text/hexformat-byteshexformat--f300b026.md
+            - Builder:
+              - 概览: api/kotlin.text/hexformat-byteshexformat-builder--28dc0d41.md
+              - bytePrefix: api/kotlin.text/hexformat-byteshexformat-builder-byteprefix--f378927f.md
+              - byteSeparator: api/kotlin.text/hexformat-byteshexformat-builder-byteseparator--147eb43c.md
+              - byteSuffix: api/kotlin.text/hexformat-byteshexformat-builder-bytesuffix--892d72e8.md
+              - bytesPerGroup: api/kotlin.text/hexformat-byteshexformat-builder-bytespergroup--9e1970d5.md
+              - bytesPerLine: api/kotlin.text/hexformat-byteshexformat-builder-bytesperline--6032037a.md
+              - groupSeparator: api/kotlin.text/hexformat-byteshexformat-builder-groupseparator--cf671761.md
+            - bytePrefix: api/kotlin.text/hexformat-byteshexformat-byteprefix--c776f400.md
+            - byteSeparator: api/kotlin.text/hexformat-byteshexformat-byteseparator--9d487816.md
+            - byteSuffix: api/kotlin.text/hexformat-byteshexformat-bytesuffix--5070d6c9.md
+            - bytesPerGroup: api/kotlin.text/hexformat-byteshexformat-bytespergroup--beef395c.md
+            - bytesPerLine: api/kotlin.text/hexformat-byteshexformat-bytesperline--2b85af97.md
+            - groupSeparator: api/kotlin.text/hexformat-byteshexformat-groupseparator--d598eae1.md
+            - toString: api/kotlin.text/hexformat-byteshexformat-tostring--e8a06371.md
+          - Companion:
+            - 概览: api/kotlin.text/hexformat-companion--a2a96af6.md
+            - Default: api/kotlin.text/hexformat-companion-default--14481d15.md
+            - UpperCase: api/kotlin.text/hexformat-companion-uppercase--6262cdb4.md
+          - NumberHexFormat:
+            - 概览: api/kotlin.text/hexformat-numberhexformat--b45c5e1d.md
+            - Builder:
+              - 概览: api/kotlin.text/hexformat-numberhexformat-builder--f3988ed4.md
+              - minLength: api/kotlin.text/hexformat-numberhexformat-builder-minlength--1b16b882.md
+              - prefix: api/kotlin.text/hexformat-numberhexformat-builder-prefix--8baca43a.md
+              - removeLeadingZeros: api/kotlin.text/hexformat-numberhexformat-builder-removeleadingzeros--fd28f724.md
+              - suffix: api/kotlin.text/hexformat-numberhexformat-builder-suffix--514f793b.md
+            - minLength: api/kotlin.text/hexformat-numberhexformat-minlength--932cc0a5.md
+            - prefix: api/kotlin.text/hexformat-numberhexformat-prefix--15a6ae93.md
+            - removeLeadingZeros: api/kotlin.text/hexformat-numberhexformat-removeleadingzeros--095af297.md
+            - suffix: api/kotlin.text/hexformat-numberhexformat-suffix--6bee625c.md
+            - toString: api/kotlin.text/hexformat-numberhexformat-tostring--68db15a5.md
+          - bytes: api/kotlin.text/hexformat-bytes--d67d83aa.md
+          - number: api/kotlin.text/hexformat-number--c0aa36d1.md
+          - toString: api/kotlin.text/hexformat-tostring--43d0aa99.md
+          - upperCase: api/kotlin.text/hexformat-uppercase--64bfdace.md
+        - hasSurrogatePairAt: api/kotlin.text/hassurrogatepairat--28f7d83a.md
+        - hexToByte: api/kotlin.text/hextobyte--a95fc8bc.md
+        - hexToByteArray: api/kotlin.text/hextobytearray--74b9ed4c.md
+        - hexToInt: api/kotlin.text/hextoint--88da7e2e.md
+        - hexToLong: api/kotlin.text/hextolong--7362aef5.md
+        - hexToShort: api/kotlin.text/hextoshort--fc9da471.md
+        - hexToUByte: api/kotlin.text/hextoubyte--4ff05ae8.md
+        - hexToUByteArray: api/kotlin.text/hextoubytearray--fb437e9c.md
+        - hexToUInt: api/kotlin.text/hextouint--14b51b2d.md
+        - hexToULong: api/kotlin.text/hextoulong--4447f0c6.md
+        - hexToUShort: api/kotlin.text/hextoushort--2b9e90ab.md
+      - I:
+        - ifBlank: api/kotlin.text/ifblank--d5b3595b.md
+        - ifEmpty: api/kotlin.text/ifempty--e0fdc637.md
+        - indexOf: api/kotlin.text/indexof--0fde3e84.md
+        - indexOfAny: api/kotlin.text/indexofany--14cf911a.md
+        - indexOfFirst: api/kotlin.text/indexoffirst--38bbd8d4.md
+        - indexOfLast: api/kotlin.text/indexoflast--437505ea.md
+        - indices: api/kotlin.text/indices--91744de3.md
+        - insert: api/kotlin.text/insert--1e22560c.md
+        - insertRange: api/kotlin.text/insertrange--055b36f5.md
+        - isBlank: api/kotlin.text/isblank--5affb942.md
+        - isDefined: api/kotlin.text/isdefined--8c2fde23.md
+        - isDigit: api/kotlin.text/isdigit--89d9261c.md
+        - isEmpty: api/kotlin.text/isempty--eacba67c.md
+        - isHighSurrogate: api/kotlin.text/ishighsurrogate--c3834f9e.md
+        - isISOControl: api/kotlin.text/isisocontrol--f7fa29b4.md
+        - isLetter: api/kotlin.text/isletter--c8827f97.md
+        - isLetterOrDigit: api/kotlin.text/isletterordigit--fcacee9e.md
+        - isLowSurrogate: api/kotlin.text/islowsurrogate--4b3f0ea6.md
+        - isLowerCase: api/kotlin.text/islowercase--ca3187f5.md
+        - isNotBlank: api/kotlin.text/isnotblank--dbd47263.md
+        - isNotEmpty: api/kotlin.text/isnotempty--f616ad80.md
+        - isNullOrBlank: api/kotlin.text/isnullorblank--f04dba7a.md
+        - isNullOrEmpty: api/kotlin.text/isnullorempty--5331c5cf.md
+        - isSurrogate: api/kotlin.text/issurrogate--96202df7.md
+        - isTitleCase: api/kotlin.text/istitlecase--e57ce94a.md
+        - isUpperCase: api/kotlin.text/isuppercase--e3c7d58e.md
+        - isWhitespace: api/kotlin.text/iswhitespace--0bd0b152.md
+        - iterator: api/kotlin.text/iterator--ef9baedf.md
+      - L:
+        - last: api/kotlin.text/last--3547cb11.md
+        - lastIndex: api/kotlin.text/lastindex--fe3fbb6d.md
+        - lastIndexOf: api/kotlin.text/lastindexof--e13001ac.md
+        - lastIndexOfAny: api/kotlin.text/lastindexofany--959553d3.md
+        - lastOrNull: api/kotlin.text/lastornull--65babe08.md
+        - lineSequence: api/kotlin.text/linesequence--7b933bec.md
+        - lines: api/kotlin.text/lines--5ea44c39.md
+        - lowercase: api/kotlin.text/lowercase--46ede93b.md
+        - lowercaseChar: api/kotlin.text/lowercasechar--042a61dc.md
+      - M:
+        - MatchGroup:
+          - 概览: api/kotlin.text/matchgroup--6c1def72.md
+          - value: api/kotlin.text/matchgroup-value--c0bbc0b7.md
+        - MatchGroupCollection:
+          - 概览: api/kotlin.text/matchgroupcollection--1d7e074d.md
+          - get: api/kotlin.text/matchgroupcollection-get--c770023a.md
+        - MatchNamedGroupCollection:
+          - 概览: api/kotlin.text/matchnamedgroupcollection--e9080d94.md
+          - get: api/kotlin.text/matchnamedgroupcollection-get--67b6aa05.md
+        - MatchResult:
+          - 概览: api/kotlin.text/matchresult--8a549625.md
+          - Destructured:
+            - 概览: api/kotlin.text/matchresult-destructured--5439ee38.md
+            - component1: api/kotlin.text/matchresult-destructured-component1--c498e8ce.md
+            - component10: api/kotlin.text/matchresult-destructured-component10--16d45094.md
+            - component2: api/kotlin.text/matchresult-destructured-component2--7343858d.md
+            - component3: api/kotlin.text/matchresult-destructured-component3--113911d9.md
+            - component4: api/kotlin.text/matchresult-destructured-component4--4b5ea5a8.md
+            - component5: api/kotlin.text/matchresult-destructured-component5--24c6662c.md
+            - component6: api/kotlin.text/matchresult-destructured-component6--9068efc0.md
+            - component7: api/kotlin.text/matchresult-destructured-component7--f55ebe79.md
+            - component8: api/kotlin.text/matchresult-destructured-component8--161cbece.md
+            - component9: api/kotlin.text/matchresult-destructured-component9--2263376b.md
+            - match: api/kotlin.text/matchresult-destructured-match--af39e207.md
+            - toList: api/kotlin.text/matchresult-destructured-tolist--dc92b992.md
+          - destructured: api/kotlin.text/matchresult-destructured--57b32c6d.md
+          - groupValues: api/kotlin.text/matchresult-groupvalues--f578c12f.md
+          - groups: api/kotlin.text/matchresult-groups--5ae8e1a9.md
+          - next: api/kotlin.text/matchresult-next--a4b9ee44.md
+          - range: api/kotlin.text/matchresult-range--15168670.md
+          - value: api/kotlin.text/matchresult-value--d701101d.md
+        - map: api/kotlin.text/map--60be9861.md
+        - mapIndexed: api/kotlin.text/mapindexed--fd530ac2.md
+        - mapIndexedNotNull: api/kotlin.text/mapindexednotnull--51796bc8.md
+        - mapIndexedNotNullTo: api/kotlin.text/mapindexednotnullto--3cfdfa94.md
+        - mapIndexedTo: api/kotlin.text/mapindexedto--c7abb5a1.md
+        - mapNotNull: api/kotlin.text/mapnotnull--c413debf.md
+        - mapNotNullTo: api/kotlin.text/mapnotnullto--3c9fa12d.md
+        - mapTo: api/kotlin.text/mapto--583e5b26.md
+        - matches: api/kotlin.text/matches--a5408438.md
+        - max: api/kotlin.text/max--9baf3a40.md
+        - maxBy: api/kotlin.text/maxby--573d9408.md
+        - maxByOrNull: api/kotlin.text/maxbyornull--52b8b51f.md
+        - maxOf: api/kotlin.text/maxof--8014bb42.md
+        - maxOfOrNull: api/kotlin.text/maxofornull--0f85778b.md
+        - maxOfWith: api/kotlin.text/maxofwith--f207ab5a.md
+        - maxOfWithOrNull: api/kotlin.text/maxofwithornull--8c9d6cdf.md
+        - maxOrNull: api/kotlin.text/maxornull--991d0f1e.md
+        - maxWith: api/kotlin.text/maxwith--3012e79a.md
+        - maxWithOrNull: api/kotlin.text/maxwithornull--c1a9369e.md
+        - min: api/kotlin.text/min--1f6fa6f6.md
+        - minBy: api/kotlin.text/minby--04243d7a.md
+        - minByOrNull: api/kotlin.text/minbyornull--42524680.md
+        - minOf: api/kotlin.text/minof--c4eb1195.md
+        - minOfOrNull: api/kotlin.text/minofornull--2f6ccdce.md
+        - minOfWith: api/kotlin.text/minofwith--4691f17c.md
+        - minOfWithOrNull: api/kotlin.text/minofwithornull--08933ee1.md
+        - minOrNull: api/kotlin.text/minornull--2ca98165.md
+        - minWith: api/kotlin.text/minwith--5bd970f2.md
+        - minWithOrNull: api/kotlin.text/minwithornull--d6549c1a.md
+      - N:
+        - none: api/kotlin.text/none--140bedbf.md
+      - O:
+        - onEach: api/kotlin.text/oneach--df158ce3.md
+        - onEachIndexed: api/kotlin.text/oneachindexed--1b158779.md
+        - orEmpty: api/kotlin.text/orempty--84666296.md
+      - P:
+        - padEnd: api/kotlin.text/padend--ce9adf98.md
+        - padStart: api/kotlin.text/padstart--63c88190.md
+        - partition: api/kotlin.text/partition--2df962d3.md
+        - plus: api/kotlin.text/plus--383ef369.md
+        - prependIndent: api/kotlin.text/prependindent--e7935c1c.md
+      - R:
+        - Regex:
+          - 概览: api/kotlin.text/regex--0f271252.md
+          - Companion:
+            - 概览: api/kotlin.text/regex-companion--ff9ea045.md
+            - escape: api/kotlin.text/regex-companion-escape--2739a322.md
+            - escapeReplacement: api/kotlin.text/regex-companion-escapereplacement--a4fe67f4.md
+            - fromLiteral: api/kotlin.text/regex-companion-fromliteral--b3abb28b.md
+          - constructor: api/kotlin.text/regex-constructor--175fe55a.md
+          - containsMatchIn: api/kotlin.text/regex-containsmatchin--ea027c07.md
+          - find: api/kotlin.text/regex-find--a99fb2a5.md
+          - findAll: api/kotlin.text/regex-findall--0ce428fc.md
+          - matchAt: api/kotlin.text/regex-matchat--03030ac0.md
+          - matchEntire: api/kotlin.text/regex-matchentire--766c9de6.md
+          - matches: api/kotlin.text/regex-matches--97ac2e7e.md
+          - matchesAt: api/kotlin.text/regex-matchesat--4c6112bf.md
+          - options: api/kotlin.text/regex-options--e8362ac7.md
+          - pattern: api/kotlin.text/regex-pattern--a16f0aae.md
+          - replace: api/kotlin.text/regex-replace--e00c8501.md
+          - replaceFirst: api/kotlin.text/regex-replacefirst--2d56acb7.md
+          - split: api/kotlin.text/regex-split--86d2d66a.md
+          - splitToSequence: api/kotlin.text/regex-splittosequence--9052fecf.md
+        - RegexOption:
+          - 概览: api/kotlin.text/regexoption--c3cf0b46.md
+          - IGNORE_CASE: api/kotlin.text/regexoption-ignore-case--f2178b02.md
+          - MULTILINE: api/kotlin.text/regexoption-multiline--5be5cd6b.md
+        - random: api/kotlin.text/random--a441b15f.md
+        - randomOrNull: api/kotlin.text/randomornull--e0a0f069.md
+        - reduce: api/kotlin.text/reduce--4c7e98bf.md
+        - reduceIndexed: api/kotlin.text/reduceindexed--9ffb6ca6.md
+        - reduceIndexedOrNull: api/kotlin.text/reduceindexedornull--7e645fe2.md
+        - reduceOrNull: api/kotlin.text/reduceornull--232f12bb.md
+        - reduceRight: api/kotlin.text/reduceright--294a63b1.md
+        - reduceRightIndexed: api/kotlin.text/reducerightindexed--3c338cfb.md
+        - reduceRightIndexedOrNull: api/kotlin.text/reducerightindexedornull--e58f8d83.md
+        - reduceRightOrNull: api/kotlin.text/reducerightornull--85fe2394.md
+        - regionMatches: api/kotlin.text/regionmatches--78944127.md
+        - removePrefix: api/kotlin.text/removeprefix--58936531.md
+        - removeRange: api/kotlin.text/removerange--6cee4b58.md
+        - removeSuffix: api/kotlin.text/removesuffix--e6fbc8e3.md
+        - removeSurrounding: api/kotlin.text/removesurrounding--6568f3a9.md
+        - repeat: api/kotlin.text/repeat--25e2b6b1.md
+        - replace: api/kotlin.text/replace--7ab37787.md
+        - replaceAfter: api/kotlin.text/replaceafter--4412e54e.md
+        - replaceAfterLast: api/kotlin.text/replaceafterlast--8d5885fe.md
+        - replaceBefore: api/kotlin.text/replacebefore--2bbea38b.md
+        - replaceBeforeLast: api/kotlin.text/replacebeforelast--9227dc1a.md
+        - replaceFirst: api/kotlin.text/replacefirst--a0131766.md
+        - replaceFirstChar: api/kotlin.text/replacefirstchar--1b1bcf8b.md
+        - replaceIndent: api/kotlin.text/replaceindent--898a14e1.md
+        - replaceIndentByMargin: api/kotlin.text/replaceindentbymargin--de87ddba.md
+        - replaceRange: api/kotlin.text/replacerange--a1a5cb94.md
+        - reversed: api/kotlin.text/reversed--bc64f64f.md
+        - runningFold: api/kotlin.text/runningfold--a8ae5385.md
+        - runningFoldIndexed: api/kotlin.text/runningfoldindexed--0632f781.md
+        - runningReduce: api/kotlin.text/runningreduce--5ec3d464.md
+        - runningReduceIndexed: api/kotlin.text/runningreduceindexed--ca4c282a.md
+      - S:
+        - String: api/kotlin.text/string--b2ef230e.md
+        - StringBuilder:
+          - 概览: api/kotlin.text/stringbuilder--30fb30c8.md
+          - append: api/kotlin.text/stringbuilder-append--516abac4.md
+          - capacity: api/kotlin.text/stringbuilder-capacity--2dda3e1d.md
+          - constructor: api/kotlin.text/stringbuilder-constructor--f434de73.md
+          - ensureCapacity: api/kotlin.text/stringbuilder-ensurecapacity--53f9d2a2.md
+          - get: api/kotlin.text/stringbuilder-get--fc2e5e5f.md
+          - indexOf: api/kotlin.text/stringbuilder-indexof--50feb23b.md
+          - insert: api/kotlin.text/stringbuilder-insert--0db3f544.md
+          - lastIndexOf: api/kotlin.text/stringbuilder-lastindexof--64d85e0f.md
+          - length: api/kotlin.text/stringbuilder-length--d754f137.md
+          - reverse: api/kotlin.text/stringbuilder-reverse--5459f795.md
+          - setLength: api/kotlin.text/stringbuilder-setlength--e3de35c0.md
+          - subSequence: api/kotlin.text/stringbuilder-subsequence--7dd75aa8.md
+          - substring: api/kotlin.text/stringbuilder-substring--855abd8e.md
+          - trimToSize: api/kotlin.text/stringbuilder-trimtosize--98c7f86c.md
+        - scan: api/kotlin.text/scan--59ad1b2f.md
+        - scanIndexed: api/kotlin.text/scanindexed--276e70a7.md
+        - set: api/kotlin.text/set--6ee0eb49.md
+        - setRange: api/kotlin.text/setrange--5d7f9479.md
+        - single: api/kotlin.text/single--947f1875.md
+        - singleOrNull: api/kotlin.text/singleornull--02aaa8d9.md
+        - slice: api/kotlin.text/slice--03fdb065.md
+        - split: api/kotlin.text/split--ad1a6405.md
+        - splitToSequence: api/kotlin.text/splittosequence--0f82c117.md
+        - startsWith: api/kotlin.text/startswith--b024da53.md
+        - subSequence: api/kotlin.text/subsequence--10df82ae.md
+        - substring: api/kotlin.text/substring--2b9c5d5d.md
+        - substringAfter: api/kotlin.text/substringafter--7bbabfd2.md
+        - substringAfterLast: api/kotlin.text/substringafterlast--4f4ba964.md
+        - substringBefore: api/kotlin.text/substringbefore--5d12838f.md
+        - substringBeforeLast: api/kotlin.text/substringbeforelast--c60f9792.md
+        - sumBy: api/kotlin.text/sumby--97db0fda.md
+        - sumByDouble: api/kotlin.text/sumbydouble--0c1807ab.md
+        - sumOf: api/kotlin.text/sumof--9113380b.md
+      - T:
+        - Typography:
+          - 概览: api/kotlin.text/typography--cab94aba.md
+          - almostEqual: api/kotlin.text/typography-almostequal--7da70711.md
+          - amp: api/kotlin.text/typography-amp--60d6bf65.md
+          - bullet: api/kotlin.text/typography-bullet--3079b0ce.md
+          - cent: api/kotlin.text/typography-cent--25d689dd.md
+          - copyright: api/kotlin.text/typography-copyright--848d0d50.md
+          - dagger: api/kotlin.text/typography-dagger--f241e8d2.md
+          - degree: api/kotlin.text/typography-degree--efa06cb3.md
+          - dollar: api/kotlin.text/typography-dollar--09d36ee7.md
+          - doubleDagger: api/kotlin.text/typography-doubledagger--b470bd08.md
+          - doublePrime: api/kotlin.text/typography-doubleprime--2fb091d8.md
+          - ellipsis: api/kotlin.text/typography-ellipsis--3620edf7.md
+          - euro: api/kotlin.text/typography-euro--bc285e72.md
+          - greater: api/kotlin.text/typography-greater--1fc26632.md
+          - greaterOrEqual: api/kotlin.text/typography-greaterorequal--06f2b1eb.md
+          - half: api/kotlin.text/typography-half--cdc6f212.md
+          - leftDoubleQuote: api/kotlin.text/typography-leftdoublequote--efde09da.md
+          - leftGuillemet: api/kotlin.text/typography-leftguillemet--584f54ef.md
+          - leftGuillemete: api/kotlin.text/typography-leftguillemete--6974a3b7.md
+          - leftSingleQuote: api/kotlin.text/typography-leftsinglequote--4da85bef.md
+          - less: api/kotlin.text/typography-less--1c316f39.md
+          - lessOrEqual: api/kotlin.text/typography-lessorequal--adba79c9.md
+          - lowDoubleQuote: api/kotlin.text/typography-lowdoublequote--c0ada163.md
+          - lowSingleQuote: api/kotlin.text/typography-lowsinglequote--b86e802a.md
+          - mdash: api/kotlin.text/typography-mdash--7458f56b.md
+          - middleDot: api/kotlin.text/typography-middledot--72233371.md
+          - nbsp: api/kotlin.text/typography-nbsp--94354cdd.md
+          - ndash: api/kotlin.text/typography-ndash--0a036745.md
+          - notEqual: api/kotlin.text/typography-notequal--37118fc5.md
+          - paragraph: api/kotlin.text/typography-paragraph--703726b1.md
+          - plusMinus: api/kotlin.text/typography-plusminus--52172cbf.md
+          - pound: api/kotlin.text/typography-pound--56cc8cc8.md
+          - prime: api/kotlin.text/typography-prime--a982c8f9.md
+          - quote: api/kotlin.text/typography-quote--8646aa91.md
+          - registered: api/kotlin.text/typography-registered--c0a2e125.md
+          - rightDoubleQuote: api/kotlin.text/typography-rightdoublequote--d17152c7.md
+          - rightGuillemet: api/kotlin.text/typography-rightguillemet--9054f00f.md
+          - rightGuillemete: api/kotlin.text/typography-rightguillemete--74172ccb.md
+          - rightSingleQuote: api/kotlin.text/typography-rightsinglequote--748f944c.md
+          - section: api/kotlin.text/typography-section--5f607d7d.md
+          - times: api/kotlin.text/typography-times--24440c52.md
+          - tm: api/kotlin.text/typography-tm--dc6bdcae.md
+        - take: api/kotlin.text/take--d1905cf9.md
+        - takeLast: api/kotlin.text/takelast--bfe1e63d.md
+        - takeLastWhile: api/kotlin.text/takelastwhile--51d2c1ff.md
+        - takeWhile: api/kotlin.text/takewhile--3f148881.md
+        - titlecase: api/kotlin.text/titlecase--640e1a66.md
+        - titlecaseChar: api/kotlin.text/titlecasechar--3e66bd1e.md
+        - toBoolean: api/kotlin.text/toboolean--cb5aa54d.md
+        - toBooleanStrict: api/kotlin.text/tobooleanstrict--24b0eda5.md
+        - toBooleanStrictOrNull: api/kotlin.text/tobooleanstrictornull--54effa91.md
+        - toByte: api/kotlin.text/tobyte--3927bf16.md
+        - toByteOrNull: api/kotlin.text/tobyteornull--f2ec385e.md
+        - toCharArray: api/kotlin.text/tochararray--7c85cb51.md
+        - toCollection: api/kotlin.text/tocollection--e1154c18.md
+        - toDouble: api/kotlin.text/todouble--1967d4f1.md
+        - toDoubleOrNull: api/kotlin.text/todoubleornull--a9c89b98.md
+        - toFloat: api/kotlin.text/tofloat--9c4d5295.md
+        - toFloatOrNull: api/kotlin.text/tofloatornull--29c12cdb.md
+        - toHashSet: api/kotlin.text/tohashset--37fd4891.md
+        - toHexString: api/kotlin.text/tohexstring--52991f54.md
+        - toInt: api/kotlin.text/toint--33e71186.md
+        - toIntOrNull: api/kotlin.text/tointornull--5c24eefc.md
+        - toList: api/kotlin.text/tolist--658fe2ed.md
+        - toLong: api/kotlin.text/tolong--9b28b93f.md
+        - toLongOrNull: api/kotlin.text/tolongornull--457cc9a9.md
+        - toLowerCase: api/kotlin.text/tolowercase--c9a67831.md
+        - toMutableList: api/kotlin.text/tomutablelist--4b7c7445.md
+        - toRegex: api/kotlin.text/toregex--0f346aa2.md
+        - toSet: api/kotlin.text/toset--da2cd29c.md
+        - toShort: api/kotlin.text/toshort--113ff768.md
+        - toShortOrNull: api/kotlin.text/toshortornull--bf882969.md
+        - toString: api/kotlin.text/tostring--bbb522f7.md
+        - toUByte: api/kotlin.text/toubyte--ae5ea4a7.md
+        - toUByteOrNull: api/kotlin.text/toubyteornull--6f1babf7.md
+        - toUInt: api/kotlin.text/touint--cda05c11.md
+        - toUIntOrNull: api/kotlin.text/touintornull--b82a7799.md
+        - toULong: api/kotlin.text/toulong--bfb07ee5.md
+        - toULongOrNull: api/kotlin.text/toulongornull--c2fb8acc.md
+        - toUShort: api/kotlin.text/toushort--2173fac9.md
+        - toUShortOrNull: api/kotlin.text/toushortornull--17748838.md
+        - toUpperCase: api/kotlin.text/touppercase--e325f824.md
+        - trim: api/kotlin.text/trim--657c97bf.md
+        - trimEnd: api/kotlin.text/trimend--ee71749b.md
+        - trimIndent: api/kotlin.text/trimindent--7b9ae734.md
+        - trimMargin: api/kotlin.text/trimmargin--e19ae779.md
+        - trimStart: api/kotlin.text/trimstart--4486954a.md
+      - U:
+        - uppercase: api/kotlin.text/uppercase--d2cf63c7.md
+        - uppercaseChar: api/kotlin.text/uppercasechar--2e788dd1.md
+      - W:
+        - windowed: api/kotlin.text/windowed--eff9f08c.md
+        - windowedSequence: api/kotlin.text/windowedsequence--50936eeb.md
+        - withIndex: api/kotlin.text/withindex--dd2bc029.md
+      - Z:
+        - zip: api/kotlin.text/zip--4a70fe9a.md
+        - zipWithNext: api/kotlin.text/zipwithnext--8bb5a452.md
+    - 时间与时长 · kotlin.time:
+      - 概览: api/kotlin.time/index.md
+      - AbstractDoubleTimeSource:
+        - 概览: api/kotlin.time/abstractdoubletimesource--92b1dc21.md
+        - constructor: api/kotlin.time/abstractdoubletimesource-constructor--d88bb401.md
+        - markNow: api/kotlin.time/abstractdoubletimesource-marknow--26373847.md
+        - read: api/kotlin.time/abstractdoubletimesource-read--db7709d7.md
+        - unit: api/kotlin.time/abstractdoubletimesource-unit--d4985102.md
+      - AbstractLongTimeSource:
+        - 概览: api/kotlin.time/abstractlongtimesource--b1cde7e3.md
+        - constructor: api/kotlin.time/abstractlongtimesource-constructor--a93dd3ad.md
+        - markNow: api/kotlin.time/abstractlongtimesource-marknow--b20c8ee1.md
+        - read: api/kotlin.time/abstractlongtimesource-read--79199a4b.md
+        - unit: api/kotlin.time/abstractlongtimesource-unit--546d5fb5.md
+      - Clock:
+        - 概览: api/kotlin.time/clock--93ff9273.md
+        - Companion: api/kotlin.time/clock-companion--ebc326b2.md
+        - System:
+          - 概览: api/kotlin.time/clock-system--4e44c6a6.md
+          - now: api/kotlin.time/clock-system-now--9d225902.md
+        - now: api/kotlin.time/clock-now--f30e6177.md
+      - ComparableTimeMark:
+        - 概览: api/kotlin.time/comparabletimemark--d1d301a5.md
+        - compareTo: api/kotlin.time/comparabletimemark-compareto--33538bd9.md
+        - equals: api/kotlin.time/comparabletimemark-equals--61b029fd.md
+        - hashCode: api/kotlin.time/comparabletimemark-hashcode--d6b5a19b.md
+        - minus: api/kotlin.time/comparabletimemark-minus--d79bdcce.md
+        - plus: api/kotlin.time/comparabletimemark-plus--5aa0cff2.md
+      - Duration:
+        - 概览: api/kotlin.time/duration--4fc52a3c.md
+        - Companion:
+          - 概览: api/kotlin.time/duration-companion--4130b400.md
+          - INFINITE: api/kotlin.time/duration-companion-infinite--8f463a4e.md
+          - ZERO: api/kotlin.time/duration-companion-zero--0ac987b6.md
+          - convert: api/kotlin.time/duration-companion-convert--77f45d15.md
+          - days: api/kotlin.time/duration-companion-days--73ceaf76.md
+          - hours: api/kotlin.time/duration-companion-hours--6b082645.md
+          - microseconds: api/kotlin.time/duration-companion-microseconds--d94121a2.md
+          - milliseconds: api/kotlin.time/duration-companion-milliseconds--f6a6024a.md
+          - minutes: api/kotlin.time/duration-companion-minutes--a4b3f776.md
+          - nanoseconds: api/kotlin.time/duration-companion-nanoseconds--0f20255e.md
+          - parse: api/kotlin.time/duration-companion-parse--024b2bcc.md
+          - parseIsoString: api/kotlin.time/duration-companion-parseisostring--092e225e.md
+          - parseIsoStringOrNull: api/kotlin.time/duration-companion-parseisostringornull--a3c88f3d.md
+          - parseOrNull: api/kotlin.time/duration-companion-parseornull--b678bf4e.md
+          - seconds: api/kotlin.time/duration-companion-seconds--cf6e6790.md
+        - absoluteValue: api/kotlin.time/duration-absolutevalue--5f4a2d16.md
+        - compareTo: api/kotlin.time/duration-compareto--850e88b9.md
+        - div: api/kotlin.time/duration-div--011d1735.md
+        - inWholeDays: api/kotlin.time/duration-inwholedays--723c8998.md
+        - inWholeHours: api/kotlin.time/duration-inwholehours--25d7d723.md
+        - inWholeMicroseconds: api/kotlin.time/duration-inwholemicroseconds--317f36cb.md
+        - inWholeMilliseconds: api/kotlin.time/duration-inwholemilliseconds--75730cb2.md
+        - inWholeMinutes: api/kotlin.time/duration-inwholeminutes--6f9bfc27.md
+        - inWholeNanoseconds: api/kotlin.time/duration-inwholenanoseconds--1dc0de83.md
+        - inWholeSeconds: api/kotlin.time/duration-inwholeseconds--1b0929dd.md
+        - isFinite: api/kotlin.time/duration-isfinite--2a4ee903.md
+        - isInfinite: api/kotlin.time/duration-isinfinite--0c186681.md
+        - isNegative: api/kotlin.time/duration-isnegative--f1f3ff79.md
+        - isPositive: api/kotlin.time/duration-ispositive--dc72a94e.md
+        - minus: api/kotlin.time/duration-minus--bb490739.md
+        - plus: api/kotlin.time/duration-plus--fb587f2f.md
+        - times: api/kotlin.time/duration-times--451766c2.md
+        - toComponents: api/kotlin.time/duration-tocomponents--4975fac8.md
+        - toDouble: api/kotlin.time/duration-todouble--a2c9a54e.md
+        - toInt: api/kotlin.time/duration-toint--1155a6c7.md
+        - toIsoString: api/kotlin.time/duration-toisostring--68ef8fa0.md
+        - toLong: api/kotlin.time/duration-tolong--057c1693.md
+        - toString: api/kotlin.time/duration-tostring--f1c31773.md
+        - unaryMinus: api/kotlin.time/duration-unaryminus--367d8610.md
+      - DurationUnit:
+        - 概览: api/kotlin.time/durationunit--238ac99c.md
+        - DAYS: api/kotlin.time/durationunit-days--da5b54e5.md
+        - HOURS: api/kotlin.time/durationunit-hours--16131d54.md
+        - MICROSECONDS: api/kotlin.time/durationunit-microseconds--9a71a40c.md
+        - MILLISECONDS: api/kotlin.time/durationunit-milliseconds--2f222ab1.md
+        - MINUTES: api/kotlin.time/durationunit-minutes--04f76f49.md
+        - NANOSECONDS: api/kotlin.time/durationunit-nanoseconds--27ee1784.md
+        - SECONDS: api/kotlin.time/durationunit-seconds--b3aee570.md
+      - ExperimentalTime: api/kotlin.time/experimentaltime--ab876317.md
+      - Instant:
+        - 概览: api/kotlin.time/instant--e2861894.md
+        - Companion:
+          - 概览: api/kotlin.time/instant-companion--e79a74b3.md
+          - DISTANT_FUTURE: api/kotlin.time/instant-companion-distant-future--5531f84f.md
+          - DISTANT_PAST: api/kotlin.time/instant-companion-distant-past--f94f4129.md
+          - fromEpochMilliseconds: api/kotlin.time/instant-companion-fromepochmilliseconds--58aeb4cc.md
+          - fromEpochSeconds: api/kotlin.time/instant-companion-fromepochseconds--ce236808.md
+          - now: api/kotlin.time/instant-companion-now--bbb07116.md
+          - parse: api/kotlin.time/instant-companion-parse--09be6aa8.md
+          - parseOrNull: api/kotlin.time/instant-companion-parseornull--eddaa24e.md
+        - compareTo: api/kotlin.time/instant-compareto--8227df6a.md
+        - epochSeconds: api/kotlin.time/instant-epochseconds--d76d5448.md
+        - equals: api/kotlin.time/instant-equals--15ed5269.md
+        - hashCode: api/kotlin.time/instant-hashcode--6e74464b.md
+        - minus: api/kotlin.time/instant-minus--40e6b3d8.md
+        - nanosecondsOfSecond: api/kotlin.time/instant-nanosecondsofsecond--5c40ef93.md
+        - plus: api/kotlin.time/instant-plus--e124c546.md
+        - toEpochMilliseconds: api/kotlin.time/instant-toepochmilliseconds--6e29d069.md
+        - toString: api/kotlin.time/instant-tostring--f703698f.md
+      - TestTimeSource:
+        - 概览: api/kotlin.time/testtimesource--6c754fdd.md
+        - plusAssign: api/kotlin.time/testtimesource-plusassign--5c6e60f1.md
+        - read: api/kotlin.time/testtimesource-read--8dd4f10a.md
+      - TimeMark:
+        - 概览: api/kotlin.time/timemark--5a166df2.md
+        - elapsedNow: api/kotlin.time/timemark-elapsednow--9d4c4cb0.md
+        - hasNotPassedNow: api/kotlin.time/timemark-hasnotpassednow--7aff8587.md
+        - hasPassedNow: api/kotlin.time/timemark-haspassednow--243ef2e6.md
+        - minus: api/kotlin.time/timemark-minus--4a450f3f.md
+        - plus: api/kotlin.time/timemark-plus--de75f6d3.md
+      - TimeSource:
+        - 概览: api/kotlin.time/timesource--6cc94f7b.md
+        - Companion: api/kotlin.time/timesource-companion--4b6dfc0b.md
+        - Monotonic:
+          - 概览: api/kotlin.time/timesource-monotonic--9ec3164d.md
+          - ValueTimeMark:
+            - 概览: api/kotlin.time/timesource-monotonic-valuetimemark--f5e4ff0d.md
+            - compareTo: api/kotlin.time/timesource-monotonic-valuetimemark-compareto--20c7415d.md
+            - elapsedNow: api/kotlin.time/timesource-monotonic-valuetimemark-elapsednow--0d77a144.md
+            - hasNotPassedNow: api/kotlin.time/timesource-monotonic-valuetimemark-hasnotpassednow--459028e3.md
+            - hasPassedNow: api/kotlin.time/timesource-monotonic-valuetimemark-haspassednow--d737c535.md
+            - minus: api/kotlin.time/timesource-monotonic-valuetimemark-minus--2a5e648a.md
+            - plus: api/kotlin.time/timesource-monotonic-valuetimemark-plus--c5fb3a2d.md
+          - markNow: api/kotlin.time/timesource-monotonic-marknow--a657e2c6.md
+          - toString: api/kotlin.time/timesource-monotonic-tostring--608e7315.md
+        - WithComparableMarks:
+          - 概览: api/kotlin.time/timesource-withcomparablemarks--a7e8fabb.md
+          - markNow: api/kotlin.time/timesource-withcomparablemarks-marknow--36063bb7.md
+        - markNow: api/kotlin.time/timesource-marknow--b7459d70.md
+      - TimedValue:
+        - 概览: api/kotlin.time/timedvalue--14ff0c39.md
+        - constructor: api/kotlin.time/timedvalue-constructor--d52d43a0.md
+        - duration: api/kotlin.time/timedvalue-duration--567d629b.md
+        - value: api/kotlin.time/timedvalue-value--eed8959d.md
+      - asClock: api/kotlin.time/asclock--1c0f58a2.md
+      - isDistantFuture: api/kotlin.time/isdistantfuture--4e16d930.md
+      - isDistantPast: api/kotlin.time/isdistantpast--a9478c25.md
+      - measureTime: api/kotlin.time/measuretime--930d687b.md
+      - measureTimedValue: api/kotlin.time/measuretimedvalue--e121188b.md
+      - times: api/kotlin.time/times--2bf61a3b.md
+      - toDuration: api/kotlin.time/toduration--70158ebf.md
+    - UUID · kotlin.uuid:
+      - 概览: api/kotlin.uuid/index.md
+      - ExperimentalUuidApi: api/kotlin.uuid/experimentaluuidapi--81ee2a7f.md
+      - Uuid:
+        - 概览: api/kotlin.uuid/uuid--437562bb.md
+        - Companion:
+          - 概览: api/kotlin.uuid/uuid-companion--1f26aca4.md
+          - LEXICAL_ORDER: api/kotlin.uuid/uuid-companion-lexical-order--b010974a.md
+          - NIL: api/kotlin.uuid/uuid-companion-nil--5ab2d3ed.md
+          - SIZE_BITS: api/kotlin.uuid/uuid-companion-size-bits--7a5068e7.md
+          - SIZE_BYTES: api/kotlin.uuid/uuid-companion-size-bytes--892c27f5.md
+          - fromByteArray: api/kotlin.uuid/uuid-companion-frombytearray--2bf614b3.md
+          - fromLongs: api/kotlin.uuid/uuid-companion-fromlongs--86cc500c.md
+          - fromUByteArray: api/kotlin.uuid/uuid-companion-fromubytearray--a0ba2fde.md
+          - fromULongs: api/kotlin.uuid/uuid-companion-fromulongs--49d1e4b9.md
+          - generateV4: api/kotlin.uuid/uuid-companion-generatev4--9f24941e.md
+          - generateV7: api/kotlin.uuid/uuid-companion-generatev7--0056b781.md
+          - generateV7NonMonotonicAt: api/kotlin.uuid/uuid-companion-generatev7nonmonotonicat--267d1047.md
+          - parse: api/kotlin.uuid/uuid-companion-parse--21c6972b.md
+          - parseHex: api/kotlin.uuid/uuid-companion-parsehex--33e2cb93.md
+          - parseHexDash: api/kotlin.uuid/uuid-companion-parsehexdash--d51aa924.md
+          - parseHexDashOrNull: api/kotlin.uuid/uuid-companion-parsehexdashornull--0283795e.md
+          - parseHexOrNull: api/kotlin.uuid/uuid-companion-parsehexornull--88c48249.md
+          - parseOrNull: api/kotlin.uuid/uuid-companion-parseornull--6d0ac5be.md
+          - random: api/kotlin.uuid/uuid-companion-random--0c84eea9.md
+        - compareTo: api/kotlin.uuid/uuid-compareto--7d3d46da.md
+        - equals: api/kotlin.uuid/uuid-equals--e28ddb9a.md
+        - hashCode: api/kotlin.uuid/uuid-hashcode--c12335ad.md
+        - toByteArray: api/kotlin.uuid/uuid-tobytearray--4e3aa2e8.md
+        - toHexDashString: api/kotlin.uuid/uuid-tohexdashstring--ef68687f.md
+        - toHexString: api/kotlin.uuid/uuid-tohexstring--8070b15a.md
+        - toLongs: api/kotlin.uuid/uuid-tolongs--5112bd86.md
+        - toString: api/kotlin.uuid/uuid-tostring--116ce787.md
+        - toUByteArray: api/kotlin.uuid/uuid-toubytearray--525bbdd7.md
+        - toULongs: api/kotlin.uuid/uuid-toulongs--009a70c6.md
+    - 核心类型与函数 · kotlin:
+      - 概览: api/kotlin/index.md
+      - A:
+        - Annotation: api/kotlin/annotation--c7023e8a.md
+        - Any:
+          - 概览: api/kotlin/any--2b505597.md
+          - constructor: api/kotlin/any-constructor--0acbf9b1.md
+          - equals: api/kotlin/any-equals--5daff4f8.md
+          - hashCode: api/kotlin/any-hashcode--fec8c694.md
+          - toString: api/kotlin/any-tostring--bb80bdfe.md
+        - ArithmeticException:
+          - 概览: api/kotlin/arithmeticexception--885f15ca.md
+          - constructor: api/kotlin/arithmeticexception-constructor--10283f6e.md
+        - Array:
+          - 概览: api/kotlin/array--f0cf39d0.md
+          - constructor: api/kotlin/array-constructor--84fe1e22.md
+          - get: api/kotlin/array-get--510639de.md
+          - iterator: api/kotlin/array-iterator--b0a3fd12.md
+          - set: api/kotlin/array-set--c03794a4.md
+          - size: api/kotlin/array-size--4d9c5f5e.md
+        - AssertionError:
+          - 概览: api/kotlin/assertionerror--16b0fd39.md
+          - constructor: api/kotlin/assertionerror-constructor--1bd39671.md
+        - AutoCloseable:
+          - 概览: api/kotlin/autocloseable--5a6a4995.md
+          - close: api/kotlin/autocloseable-close--0ca34470.md
+        - addSuppressed: api/kotlin/addsuppressed--a30af609.md
+        - also: api/kotlin/also--bb8c8605.md
+        - apply: api/kotlin/apply--97a5e41b.md
+        - arrayOf: api/kotlin/arrayof--c24a34d3.md
+        - arrayOfNulls: api/kotlin/arrayofnulls--d6c6b76e.md
+      - B:
+        - Boolean:
+          - 概览: api/kotlin/boolean--a066ff92.md
+          - Companion: api/kotlin/boolean-companion--ad9e515a.md
+          - and: api/kotlin/boolean-and--04ef436b.md
+          - compareTo: api/kotlin/boolean-compareto--09c71647.md
+          - equals: api/kotlin/boolean-equals--59286fa8.md
+          - hashCode: api/kotlin/boolean-hashcode--53fd8b04.md
+          - not: api/kotlin/boolean-not--52baddf3.md
+          - or: api/kotlin/boolean-or--1b6cd581.md
+          - toString: api/kotlin/boolean-tostring--95cfbd74.md
+          - xor: api/kotlin/boolean-xor--f45eae6f.md
+        - BooleanArray:
+          - 概览: api/kotlin/booleanarray--3ac372df.md
+          - constructor: api/kotlin/booleanarray-constructor--e67a65a0.md
+          - get: api/kotlin/booleanarray-get--82e368c4.md
+          - iterator: api/kotlin/booleanarray-iterator--5255ab23.md
+          - set: api/kotlin/booleanarray-set--a145f31b.md
+          - size: api/kotlin/booleanarray-size--0c88e353.md
+        - BuilderInference: api/kotlin/builderinference--5e7e3f92.md
+        - Byte:
+          - 概览: api/kotlin/byte--6c19075d.md
+          - Companion:
+            - 概览: api/kotlin/byte-companion--132c6cb9.md
+            - MAX_VALUE: api/kotlin/byte-companion-max-value--47fd0dcf.md
+            - MIN_VALUE: api/kotlin/byte-companion-min-value--f2f27168.md
+            - SIZE_BITS: api/kotlin/byte-companion-size-bits--e47838b2.md
+            - SIZE_BYTES: api/kotlin/byte-companion-size-bytes--9d133de8.md
+          - compareTo: api/kotlin/byte-compareto--30d6574c.md
+          - dec: api/kotlin/byte-dec--288e6e3f.md
+          - div: api/kotlin/byte-div--ef1ed0d1.md
+          - equals: api/kotlin/byte-equals--3b7bdacb.md
+          - hashCode: api/kotlin/byte-hashcode--d6b74328.md
+          - inc: api/kotlin/byte-inc--638a6d83.md
+          - minus: api/kotlin/byte-minus--ab4493b9.md
+          - plus: api/kotlin/byte-plus--0fc5d137.md
+          - rangeTo: api/kotlin/byte-rangeto--75401db9.md
+          - rangeUntil: api/kotlin/byte-rangeuntil--9df27bbf.md
+          - rem: api/kotlin/byte-rem--bc0b783e.md
+          - times: api/kotlin/byte-times--de62a77e.md
+          - toByte: api/kotlin/byte-tobyte--3c439755.md
+          - toChar: api/kotlin/byte-tochar--fa3c6d7d.md
+          - toDouble: api/kotlin/byte-todouble--ba67866f.md
+          - toFloat: api/kotlin/byte-tofloat--08b29b44.md
+          - toInt: api/kotlin/byte-toint--5970ef5f.md
+          - toLong: api/kotlin/byte-tolong--fa7fff58.md
+          - toShort: api/kotlin/byte-toshort--14325641.md
+          - toString: api/kotlin/byte-tostring--9c207569.md
+          - unaryMinus: api/kotlin/byte-unaryminus--5d557073.md
+          - unaryPlus: api/kotlin/byte-unaryplus--9e7a15e3.md
+        - ByteArray:
+          - 概览: api/kotlin/bytearray--c8f6b4f3.md
+          - constructor: api/kotlin/bytearray-constructor--b035e70d.md
+          - get: api/kotlin/bytearray-get--f99d50c4.md
+          - iterator: api/kotlin/bytearray-iterator--196bca59.md
+          - set: api/kotlin/bytearray-set--c57b4305.md
+          - size: api/kotlin/bytearray-size--2f61044c.md
+        - booleanArrayOf: api/kotlin/booleanarrayof--244174de.md
+        - byteArrayOf: api/kotlin/bytearrayof--502588db.md
+      - C:
+        - Char:
+          - 概览: api/kotlin/char--cbaeb39b.md
+          - Companion:
+            - 概览: api/kotlin/char-companion--080d0e8a.md
+            - MAX_HIGH_SURROGATE: api/kotlin/char-companion-max-high-surrogate--df62aa66.md
+            - MAX_LOW_SURROGATE: api/kotlin/char-companion-max-low-surrogate--42a40713.md
+            - MAX_SURROGATE: api/kotlin/char-companion-max-surrogate--91e97149.md
+            - MAX_VALUE: api/kotlin/char-companion-max-value--79f89a5c.md
+            - MIN_HIGH_SURROGATE: api/kotlin/char-companion-min-high-surrogate--7e019aee.md
+            - MIN_LOW_SURROGATE: api/kotlin/char-companion-min-low-surrogate--6fa24c1a.md
+            - MIN_SURROGATE: api/kotlin/char-companion-min-surrogate--c60cb74d.md
+            - MIN_VALUE: api/kotlin/char-companion-min-value--8d1c30c4.md
+            - SIZE_BITS: api/kotlin/char-companion-size-bits--0f4a2134.md
+            - SIZE_BYTES: api/kotlin/char-companion-size-bytes--184d8587.md
+          - compareTo: api/kotlin/char-compareto--d418490e.md
+          - dec: api/kotlin/char-dec--72e608b7.md
+          - equals: api/kotlin/char-equals--122451f4.md
+          - hashCode: api/kotlin/char-hashcode--a30acfd1.md
+          - inc: api/kotlin/char-inc--397f2c8b.md
+          - minus: api/kotlin/char-minus--78ffe738.md
+          - plus: api/kotlin/char-plus--d283e3e5.md
+          - rangeTo: api/kotlin/char-rangeto--34e8f555.md
+          - rangeUntil: api/kotlin/char-rangeuntil--d929645c.md
+          - toByte: api/kotlin/char-tobyte--d4078d1d.md
+          - toChar: api/kotlin/char-tochar--a343dba9.md
+          - toDouble: api/kotlin/char-todouble--8e353b0a.md
+          - toFloat: api/kotlin/char-tofloat--c222268d.md
+          - toInt: api/kotlin/char-toint--01bcec32.md
+          - toLong: api/kotlin/char-tolong--189181aa.md
+          - toShort: api/kotlin/char-toshort--6aa144a0.md
+          - toString: api/kotlin/char-tostring--3c0cdde2.md
+        - CharArray:
+          - 概览: api/kotlin/chararray--dc3f52b2.md
+          - constructor: api/kotlin/chararray-constructor--81700f4d.md
+          - get: api/kotlin/chararray-get--768d1b41.md
+          - iterator: api/kotlin/chararray-iterator--6e819d75.md
+          - set: api/kotlin/chararray-set--122ef01e.md
+          - size: api/kotlin/chararray-size--62e7d60b.md
+        - CharSequence:
+          - 概览: api/kotlin/charsequence--2b30e7c1.md
+          - get: api/kotlin/charsequence-get--a31b323c.md
+          - length: api/kotlin/charsequence-length--462a9825.md
+          - subSequence: api/kotlin/charsequence-subsequence--34530aca.md
+        - ClassCastException:
+          - 概览: api/kotlin/classcastexception--53c5b9d4.md
+          - constructor: api/kotlin/classcastexception-constructor--31b8d866.md
+        - Comparable:
+          - 概览: api/kotlin/comparable--3dd02aae.md
+          - compareTo: api/kotlin/comparable-compareto--50a508c6.md
+        - Comparator:
+          - 概览: api/kotlin/comparator--9a348d5e.md
+          - compare: api/kotlin/comparator-compare--7ed39630.md
+        - ConcurrentModificationException:
+          - 概览: api/kotlin/concurrentmodificationexception--7933c55a.md
+          - constructor: api/kotlin/concurrentmodificationexception-constructor--4fd46c73.md
+        - ConsistentCopyVisibility: api/kotlin/consistentcopyvisibility--7dbbd1f3.md
+        - ContextFunctionTypeParams:
+          - 概览: api/kotlin/contextfunctiontypeparams--441f1165.md
+          - constructor: api/kotlin/contextfunctiontypeparams-constructor--8a6628a1.md
+          - count: api/kotlin/contextfunctiontypeparams-count--0294b565.md
+        - charArrayOf: api/kotlin/chararrayof--a9b50b87.md
+        - check: api/kotlin/check--20f65c28.md
+        - checkNotNull: api/kotlin/checknotnull--25a38b02.md
+        - code: api/kotlin/code--5694d08a.md
+        - compareTo: api/kotlin/compareto--79344ca1.md
+        - context: api/kotlin/context--ea7792a2.md
+        - contextOf: api/kotlin/contextof--d1daf88e.md
+        - countLeadingZeroBits: api/kotlin/countleadingzerobits--9a2ff061.md
+        - countOneBits: api/kotlin/countonebits--4c044b96.md
+        - countTrailingZeroBits: api/kotlin/counttrailingzerobits--57ae71e5.md
+      - D:
+        - DeepRecursiveFunction:
+          - 概览: api/kotlin/deeprecursivefunction--8b31dbc7.md
+          - constructor: api/kotlin/deeprecursivefunction-constructor--cdab23ae.md
+        - DeepRecursiveScope:
+          - 概览: api/kotlin/deeprecursivescope--0d124ce3.md
+          - callRecursive: api/kotlin/deeprecursivescope-callrecursive--be7f9c83.md
+          - invoke: api/kotlin/deeprecursivescope-invoke--c6468271.md
+        - Deprecated:
+          - 概览: api/kotlin/deprecated--6b2e8f83.md
+          - constructor: api/kotlin/deprecated-constructor--9668801a.md
+          - level: api/kotlin/deprecated-level--a588780c.md
+          - message: api/kotlin/deprecated-message--aaccff3f.md
+          - replaceWith: api/kotlin/deprecated-replacewith--3c03e215.md
+        - DeprecatedSinceKotlin:
+          - 概览: api/kotlin/deprecatedsincekotlin--8e9cb219.md
+          - constructor: api/kotlin/deprecatedsincekotlin-constructor--70c85a8e.md
+          - errorSince: api/kotlin/deprecatedsincekotlin-errorsince--a886246a.md
+          - hiddenSince: api/kotlin/deprecatedsincekotlin-hiddensince--03e89feb.md
+          - warningSince: api/kotlin/deprecatedsincekotlin-warningsince--f277a1c9.md
+        - DeprecationLevel:
+          - 概览: api/kotlin/deprecationlevel--42802f5b.md
+          - ERROR: api/kotlin/deprecationlevel-error--b5df8451.md
+          - HIDDEN: api/kotlin/deprecationlevel-hidden--4eb18f4d.md
+          - WARNING: api/kotlin/deprecationlevel-warning--ddacd9fc.md
+        - Double:
+          - 概览: api/kotlin/double--52944152.md
+          - Companion:
+            - 概览: api/kotlin/double-companion--dbbab7ee.md
+            - MAX_VALUE: api/kotlin/double-companion-max-value--1b5d410d.md
+            - MIN_VALUE: api/kotlin/double-companion-min-value--b4d93de3.md
+            - NEGATIVE_INFINITY: api/kotlin/double-companion-negative-infinity--fa40e85c.md
+            - NaN: api/kotlin/double-companion-nan--db72ac10.md
+            - POSITIVE_INFINITY: api/kotlin/double-companion-positive-infinity--138ba409.md
+            - SIZE_BITS: api/kotlin/double-companion-size-bits--8101a013.md
+            - SIZE_BYTES: api/kotlin/double-companion-size-bytes--ea30b2d1.md
+          - compareTo: api/kotlin/double-compareto--9f2cff01.md
+          - dec: api/kotlin/double-dec--f625c6e0.md
+          - div: api/kotlin/double-div--ec313741.md
+          - equals: api/kotlin/double-equals--87985c65.md
+          - hashCode: api/kotlin/double-hashcode--159612d7.md
+          - inc: api/kotlin/double-inc--53b966f3.md
+          - minus: api/kotlin/double-minus--b380790e.md
+          - plus: api/kotlin/double-plus--4624293c.md
+          - rem: api/kotlin/double-rem--1a846dab.md
+          - times: api/kotlin/double-times--785b7add.md
+          - toByte: api/kotlin/double-tobyte--426758df.md
+          - toChar: api/kotlin/double-tochar--36068cd6.md
+          - toDouble: api/kotlin/double-todouble--0f276331.md
+          - toFloat: api/kotlin/double-tofloat--a8820100.md
+          - toInt: api/kotlin/double-toint--ae9e1bf9.md
+          - toLong: api/kotlin/double-tolong--b15f4de9.md
+          - toShort: api/kotlin/double-toshort--dd9de3f5.md
+          - toString: api/kotlin/double-tostring--b1e18b33.md
+          - unaryMinus: api/kotlin/double-unaryminus--6128891e.md
+          - unaryPlus: api/kotlin/double-unaryplus--e2c7ef08.md
+        - DoubleArray:
+          - 概览: api/kotlin/doublearray--cda06433.md
+          - constructor: api/kotlin/doublearray-constructor--c62c0d1d.md
+          - get: api/kotlin/doublearray-get--a85878b9.md
+          - iterator: api/kotlin/doublearray-iterator--cd1811ab.md
+          - set: api/kotlin/doublearray-set--2f5f62db.md
+          - size: api/kotlin/doublearray-size--6e213f5e.md
+        - DslMarker: api/kotlin/dslmarker--6e082e0f.md
+        - doubleArrayOf: api/kotlin/doublearrayof--8024a662.md
+      - E:
+        - Enum:
+          - 概览: api/kotlin/enum--54108daf.md
+          - Companion: api/kotlin/enum-companion--4890ba0f.md
+          - compareTo: api/kotlin/enum-compareto--0fc79205.md
+          - constructor: api/kotlin/enum-constructor--1d1dc3fd.md
+          - equals: api/kotlin/enum-equals--2734eaa9.md
+          - hashCode: api/kotlin/enum-hashcode--66db0138.md
+          - name: api/kotlin/enum-name--1d385164.md
+          - ordinal: api/kotlin/enum-ordinal--debeeb20.md
+          - toString: api/kotlin/enum-tostring--e9cb8319.md
+        - Error:
+          - 概览: api/kotlin/error--54a0e8c1.md
+          - constructor: api/kotlin/error-constructor--bf253363.md
+        - Exception:
+          - 概览: api/kotlin/exception--b4fe3d52.md
+          - constructor: api/kotlin/exception-constructor--e3c9822e.md
+        - ExperimentalContextParameters: api/kotlin/experimentalcontextparameters--0e6173d8.md
+        - ExperimentalMultiplatform: api/kotlin/experimentalmultiplatform--860d84f4.md
+        - ExperimentalStdlibApi: api/kotlin/experimentalstdlibapi--9dce883f.md
+        - ExperimentalSubclassOptIn: api/kotlin/experimentalsubclassoptin--d54ed612.md
+        - ExperimentalUnsignedTypes: api/kotlin/experimentalunsignedtypes--d275c193.md
+        - ExperimentalVersionOverloading: api/kotlin/experimentalversionoverloading--68794524.md
+        - ExposedCopyVisibility: api/kotlin/exposedcopyvisibility--c4513ac3.md
+        - ExtensionFunctionType: api/kotlin/extensionfunctiontype--fc61b0b0.md
+        - emptyArray: api/kotlin/emptyarray--01b4ec71.md
+        - enumValueOf: api/kotlin/enumvalueof--922ce96d.md
+        - enumValues: api/kotlin/enumvalues--1076a87a.md
+        - error: api/kotlin/error--ca00fccf.md
+      - F:
+        - Float:
+          - 概览: api/kotlin/float--1a693c00.md
+          - Companion:
+            - 概览: api/kotlin/float-companion--f3283ecb.md
+            - MAX_VALUE: api/kotlin/float-companion-max-value--82c21d7e.md
+            - MIN_VALUE: api/kotlin/float-companion-min-value--9ff986fe.md
+            - NEGATIVE_INFINITY: api/kotlin/float-companion-negative-infinity--1007035f.md
+            - NaN: api/kotlin/float-companion-nan--40a487f1.md
+            - POSITIVE_INFINITY: api/kotlin/float-companion-positive-infinity--7a536ff7.md
+            - SIZE_BITS: api/kotlin/float-companion-size-bits--ba881a8a.md
+            - SIZE_BYTES: api/kotlin/float-companion-size-bytes--6249a35f.md
+          - compareTo: api/kotlin/float-compareto--2952047d.md
+          - dec: api/kotlin/float-dec--7a297359.md
+          - div: api/kotlin/float-div--b3932c5d.md
+          - equals: api/kotlin/float-equals--3e7abd52.md
+          - hashCode: api/kotlin/float-hashcode--26e7748d.md
+          - inc: api/kotlin/float-inc--1ffb25f6.md
+          - minus: api/kotlin/float-minus--6a816ca0.md
+          - plus: api/kotlin/float-plus--07230293.md
+          - rem: api/kotlin/float-rem--e8b1419f.md
+          - times: api/kotlin/float-times--56988642.md
+          - toByte: api/kotlin/float-tobyte--384b52a5.md
+          - toChar: api/kotlin/float-tochar--31b69a7a.md
+          - toDouble: api/kotlin/float-todouble--d8fce6eb.md
+          - toFloat: api/kotlin/float-tofloat--31e61cc4.md
+          - toInt: api/kotlin/float-toint--90953350.md
+          - toLong: api/kotlin/float-tolong--35742d10.md
+          - toShort: api/kotlin/float-toshort--8feb3712.md
+          - toString: api/kotlin/float-tostring--3b1f1149.md
+          - unaryMinus: api/kotlin/float-unaryminus--c21d7676.md
+          - unaryPlus: api/kotlin/float-unaryplus--3f51caa4.md
+        - FloatArray:
+          - 概览: api/kotlin/floatarray--9b404791.md
+          - constructor: api/kotlin/floatarray-constructor--90928310.md
+          - get: api/kotlin/floatarray-get--4c161a9e.md
+          - iterator: api/kotlin/floatarray-iterator--c6161940.md
+          - set: api/kotlin/floatarray-set--a6dd9793.md
+          - size: api/kotlin/floatarray-size--aba0990a.md
+        - Function: api/kotlin/function--c8037103.md
+        - floatArrayOf: api/kotlin/floatarrayof--f79ef383.md
+        - floorDiv: api/kotlin/floordiv--814942e4.md
+        - fold: api/kotlin/fold--255541b1.md
+        - fromBits: api/kotlin/frombits--79009170.md
+      - G:
+        - getOrDefault: api/kotlin/getordefault--1e49b1cf.md
+        - getOrElse: api/kotlin/getorelse--f4ba5ecf.md
+        - getOrThrow: api/kotlin/getorthrow--037bcdda.md
+        - getValue: api/kotlin/getvalue--4d5dea65.md
+      - H:
+        - hashCode: api/kotlin/hashcode--2c96c87e.md
+      - I:
+        - IgnorableReturnValue: api/kotlin/ignorablereturnvalue--baf95c2d.md
+        - IllegalArgumentException:
+          - 概览: api/kotlin/illegalargumentexception--1f0d89d8.md
+          - constructor: api/kotlin/illegalargumentexception-constructor--b13bde66.md
+        - IllegalStateException:
+          - 概览: api/kotlin/illegalstateexception--53c67e0f.md
+          - constructor: api/kotlin/illegalstateexception-constructor--be6d5472.md
+        - IndexOutOfBoundsException:
+          - 概览: api/kotlin/indexoutofboundsexception--eff2479c.md
+          - constructor: api/kotlin/indexoutofboundsexception-constructor--7856830c.md
+        - Int:
+          - 概览: api/kotlin/int--0b5f6080.md
+          - Companion:
+            - 概览: api/kotlin/int-companion--2a375614.md
+            - MAX_VALUE: api/kotlin/int-companion-max-value--e1522cab.md
+            - MIN_VALUE: api/kotlin/int-companion-min-value--d3cca124.md
+            - SIZE_BITS: api/kotlin/int-companion-size-bits--658726f2.md
+            - SIZE_BYTES: api/kotlin/int-companion-size-bytes--e7b774b1.md
+          - and: api/kotlin/int-and--8d1b1bf0.md
+          - compareTo: api/kotlin/int-compareto--27e6198c.md
+          - dec: api/kotlin/int-dec--dbb8c308.md
+          - div: api/kotlin/int-div--9ad877a3.md
+          - equals: api/kotlin/int-equals--2721e849.md
+          - hashCode: api/kotlin/int-hashcode--fb49dd0e.md
+          - inc: api/kotlin/int-inc--9669860d.md
+          - inv: api/kotlin/int-inv--4a6f57ec.md
+          - minus: api/kotlin/int-minus--3d1934df.md
+          - or: api/kotlin/int-or--52d5f998.md
+          - plus: api/kotlin/int-plus--b5e5ea7a.md
+          - rangeTo: api/kotlin/int-rangeto--b42b3d9d.md
+          - rangeUntil: api/kotlin/int-rangeuntil--4213f5ed.md
+          - rem: api/kotlin/int-rem--eccb145d.md
+          - shl: api/kotlin/int-shl--3cd67901.md
+          - shr: api/kotlin/int-shr--10c9c1f9.md
+          - times: api/kotlin/int-times--8ee2d686.md
+          - toByte: api/kotlin/int-tobyte--98687a97.md
+          - toChar: api/kotlin/int-tochar--ec098c7d.md
+          - toDouble: api/kotlin/int-todouble--1b6fec7b.md
+          - toFloat: api/kotlin/int-tofloat--ca174b04.md
+          - toInt: api/kotlin/int-toint--9c80825f.md
+          - toLong: api/kotlin/int-tolong--011dab80.md
+          - toShort: api/kotlin/int-toshort--4f372206.md
+          - toString: api/kotlin/int-tostring--93233377.md
+          - unaryMinus: api/kotlin/int-unaryminus--e4105b9b.md
+          - unaryPlus: api/kotlin/int-unaryplus--9da4b67d.md
+          - ushr: api/kotlin/int-ushr--55728e68.md
+          - xor: api/kotlin/int-xor--fa91a6f9.md
+        - IntArray:
+          - 概览: api/kotlin/intarray--ac2acb91.md
+          - constructor: api/kotlin/intarray-constructor--37b8c08b.md
+          - get: api/kotlin/intarray-get--d3c4fe2e.md
+          - iterator: api/kotlin/intarray-iterator--1c9265c7.md
+          - set: api/kotlin/intarray-set--1af9ae0a.md
+          - size: api/kotlin/intarray-size--171537c7.md
+        - IntroducedAt:
+          - 概览: api/kotlin/introducedat--111e3ed9.md
+          - constructor: api/kotlin/introducedat-constructor--2f37c29e.md
+          - version: api/kotlin/introducedat-version--2c8932de.md
+        - intArrayOf: api/kotlin/intarrayof--2713c375.md
+        - invoke: api/kotlin/invoke--e77f5b9f.md
+        - isFinite: api/kotlin/isfinite--9569f332.md
+        - isInfinite: api/kotlin/isinfinite--097f9b97.md
+        - isInitialized: api/kotlin/isinitialized--544da45c.md
+        - isNaN: api/kotlin/isnan--c4c55c21.md
+      - K:
+        - KotlinVersion:
+          - 概览: api/kotlin/kotlinversion--910efd06.md
+          - Companion:
+            - 概览: api/kotlin/kotlinversion-companion--3d82d3e4.md
+            - CURRENT: api/kotlin/kotlinversion-companion-current--637ae1b0.md
+            - MAX_COMPONENT_VALUE: api/kotlin/kotlinversion-companion-max-component-value--9d582d26.md
+          - compareTo: api/kotlin/kotlinversion-compareto--fb1bc8bd.md
+          - constructor: api/kotlin/kotlinversion-constructor--b2091850.md
+          - equals: api/kotlin/kotlinversion-equals--00174932.md
+          - hashCode: api/kotlin/kotlinversion-hashcode--57d94e6c.md
+          - isAtLeast: api/kotlin/kotlinversion-isatleast--7725c661.md
+          - major: api/kotlin/kotlinversion-major--20af68d7.md
+          - minor: api/kotlin/kotlinversion-minor--b7d7035a.md
+          - patch: api/kotlin/kotlinversion-patch--7ccb27a4.md
+          - toString: api/kotlin/kotlinversion-tostring--c5ef48d7.md
+      - L:
+        - Lazy:
+          - 概览: api/kotlin/lazy--7d1792c1.md
+          - isInitialized: api/kotlin/lazy-isinitialized--0af66a6b.md
+          - value: api/kotlin/lazy-value--117e50a4.md
+        - LazyThreadSafetyMode:
+          - 概览: api/kotlin/lazythreadsafetymode--4fa5736a.md
+          - NONE: api/kotlin/lazythreadsafetymode-none--c2d66748.md
+          - PUBLICATION: api/kotlin/lazythreadsafetymode-publication--a4e5f6f7.md
+          - SYNCHRONIZED: api/kotlin/lazythreadsafetymode-synchronized--e7cf39e9.md
+        - Long:
+          - 概览: api/kotlin/long--d1d87c47.md
+          - Companion:
+            - 概览: api/kotlin/long-companion--3b841aeb.md
+            - MAX_VALUE: api/kotlin/long-companion-max-value--4a1ad4d6.md
+            - MIN_VALUE: api/kotlin/long-companion-min-value--04d8fb7a.md
+            - SIZE_BITS: api/kotlin/long-companion-size-bits--a3e484d8.md
+            - SIZE_BYTES: api/kotlin/long-companion-size-bytes--a307cf8a.md
+          - and: api/kotlin/long-and--267f671d.md
+          - compareTo: api/kotlin/long-compareto--975921f2.md
+          - dec: api/kotlin/long-dec--8dfc186f.md
+          - div: api/kotlin/long-div--a925bc71.md
+          - equals: api/kotlin/long-equals--a7e3d9c6.md
+          - hashCode: api/kotlin/long-hashcode--1e12d2c4.md
+          - inc: api/kotlin/long-inc--df5c78f8.md
+          - inv: api/kotlin/long-inv--70410390.md
+          - minus: api/kotlin/long-minus--762eb078.md
+          - or: api/kotlin/long-or--fd06b982.md
+          - plus: api/kotlin/long-plus--d881792f.md
+          - rangeTo: api/kotlin/long-rangeto--65e9f8f2.md
+          - rangeUntil: api/kotlin/long-rangeuntil--cef59514.md
+          - rem: api/kotlin/long-rem--e6aeff27.md
+          - shl: api/kotlin/long-shl--62c42ae5.md
+          - shr: api/kotlin/long-shr--76ac7bd0.md
+          - times: api/kotlin/long-times--24ed054e.md
+          - toByte: api/kotlin/long-tobyte--f8e83233.md
+          - toChar: api/kotlin/long-tochar--0b5a5992.md
+          - toDouble: api/kotlin/long-todouble--9197f890.md
+          - toFloat: api/kotlin/long-tofloat--5900baec.md
+          - toInt: api/kotlin/long-toint--e91edfd7.md
+          - toLong: api/kotlin/long-tolong--0099740b.md
+          - toShort: api/kotlin/long-toshort--d4be0f6f.md
+          - toString: api/kotlin/long-tostring--edb222f4.md
+          - unaryMinus: api/kotlin/long-unaryminus--ca9aa8d4.md
+          - unaryPlus: api/kotlin/long-unaryplus--51e0b809.md
+          - ushr: api/kotlin/long-ushr--68ed5c2e.md
+          - xor: api/kotlin/long-xor--0aa2c5ae.md
+        - LongArray:
+          - 概览: api/kotlin/longarray--02db98cc.md
+          - constructor: api/kotlin/longarray-constructor--29a52287.md
+          - get: api/kotlin/longarray-get--81669f60.md
+          - iterator: api/kotlin/longarray-iterator--ee99b498.md
+          - set: api/kotlin/longarray-set--27ea8a1e.md
+          - size: api/kotlin/longarray-size--37b09ac9.md
+        - lazy: api/kotlin/lazy--81fd67d0.md
+        - lazyOf: api/kotlin/lazyof--0532ba35.md
+        - let: api/kotlin/let--5654d410.md
+        - longArrayOf: api/kotlin/longarrayof--2852af52.md
+      - M:
+        - MustUseReturnValues: api/kotlin/mustusereturnvalues--13e822b0.md
+        - map: api/kotlin/map--60be9861.md
+        - mapCatching: api/kotlin/mapcatching--af0a1aad.md
+        - mod: api/kotlin/mod--e55cffc8.md
+      - N:
+        - NoSuchElementException:
+          - 概览: api/kotlin/nosuchelementexception--89be80f8.md
+          - constructor: api/kotlin/nosuchelementexception-constructor--acfe5f5f.md
+        - NoWhenBranchMatchedException:
+          - 概览: api/kotlin/nowhenbranchmatchedexception--7b7e27b2.md
+          - constructor: api/kotlin/nowhenbranchmatchedexception-constructor--2c9deaa6.md
+        - NotImplementedError:
+          - 概览: api/kotlin/notimplementederror--fbd3a2a2.md
+          - constructor: api/kotlin/notimplementederror-constructor--c0321006.md
+        - Nothing: api/kotlin/nothing--67e1bca0.md
+        - NullPointerException:
+          - 概览: api/kotlin/nullpointerexception--ac29021f.md
+          - constructor: api/kotlin/nullpointerexception-constructor--fd3daa40.md
+        - Number:
+          - 概览: api/kotlin/number--bd82cf16.md
+          - constructor: api/kotlin/number-constructor--8fd8e641.md
+          - toByte: api/kotlin/number-tobyte--ceaa0b11.md
+          - toChar: api/kotlin/number-tochar--469e1ded.md
+          - toDouble: api/kotlin/number-todouble--5ffc8606.md
+          - toFloat: api/kotlin/number-tofloat--d472c1d2.md
+          - toInt: api/kotlin/number-toint--7dfd8231.md
+          - toLong: api/kotlin/number-tolong--1251ba78.md
+          - toShort: api/kotlin/number-toshort--0a057a35.md
+        - NumberFormatException:
+          - 概览: api/kotlin/numberformatexception--23a2f52d.md
+          - constructor: api/kotlin/numberformatexception-constructor--132b6570.md
+      - O:
+        - OptIn:
+          - 概览: api/kotlin/optin--47266156.md
+          - constructor: api/kotlin/optin-constructor--7c4e310a.md
+          - markerClass: api/kotlin/optin-markerclass--f890fab1.md
+        - OptionalExpectation: api/kotlin/optionalexpectation--64cb20d5.md
+        - OverloadResolutionByLambdaReturnType: api/kotlin/overloadresolutionbylambdareturntype--0e9eb98d.md
+        - onFailure: api/kotlin/onfailure--2dcd7e90.md
+        - onSuccess: api/kotlin/onsuccess--4259fa54.md
+      - P:
+        - Pair:
+          - 概览: api/kotlin/pair--989da04b.md
+          - constructor: api/kotlin/pair-constructor--4d408cc7.md
+          - first: api/kotlin/pair-first--2c0407bf.md
+          - second: api/kotlin/pair-second--7ceb147b.md
+          - toString: api/kotlin/pair-tostring--5424b978.md
+        - ParameterName:
+          - 概览: api/kotlin/parametername--1f913493.md
+          - constructor: api/kotlin/parametername-constructor--cce4ca1a.md
+          - name: api/kotlin/parametername-name--6dc1ab12.md
+        - PublishedApi: api/kotlin/publishedapi--4b761028.md
+        - plus: api/kotlin/plus--383ef369.md
+        - printStackTrace: api/kotlin/printstacktrace--394ffac5.md
+      - R:
+        - ReplaceWith:
+          - 概览: api/kotlin/replacewith--b375e912.md
+          - constructor: api/kotlin/replacewith-constructor--acc77c43.md
+          - expression: api/kotlin/replacewith-expression--987fea37.md
+          - imports: api/kotlin/replacewith-imports--70b1177b.md
+        - RequiresOptIn:
+          - 概览: api/kotlin/requiresoptin--d0b27196.md
+          - Level:
+            - 概览: api/kotlin/requiresoptin-level--9b22dc4a.md
+            - ERROR: api/kotlin/requiresoptin-level-error--df243414.md
+            - WARNING: api/kotlin/requiresoptin-level-warning--d119f9a9.md
+          - constructor: api/kotlin/requiresoptin-constructor--03fa5d93.md
+          - level: api/kotlin/requiresoptin-level--3e9552c5.md
+          - message: api/kotlin/requiresoptin-message--91bd6dfb.md
+        - Result:
+          - 概览: api/kotlin/result--6e7d50e8.md
+          - Companion:
+            - 概览: api/kotlin/result-companion--87db211c.md
+            - failure: api/kotlin/result-companion-failure--0a416e27.md
+            - success: api/kotlin/result-companion-success--73740d8f.md
+          - exceptionOrNull: api/kotlin/result-exceptionornull--b9137985.md
+          - getOrNull: api/kotlin/result-getornull--86627c4f.md
+          - isFailure: api/kotlin/result-isfailure--68b73625.md
+          - isSuccess: api/kotlin/result-issuccess--dd797733.md
+          - toString: api/kotlin/result-tostring--0b8f3159.md
+        - RuntimeException:
+          - 概览: api/kotlin/runtimeexception--7b5fefcc.md
+          - constructor: api/kotlin/runtimeexception-constructor--e142d233.md
+        - recover: api/kotlin/recover--ec3915f5.md
+        - recoverCatching: api/kotlin/recovercatching--0e9ea1a1.md
+        - repeat: api/kotlin/repeat--25e2b6b1.md
+        - require: api/kotlin/require--c4d0cf24.md
+        - requireNotNull: api/kotlin/requirenotnull--506b0c8f.md
+        - rotateLeft: api/kotlin/rotateleft--aced3db3.md
+        - rotateRight: api/kotlin/rotateright--d3a0e5a6.md
+        - run: api/kotlin/run--acba2551.md
+        - runCatching: api/kotlin/runcatching--a83ce983.md
+      - S:
+        - Short:
+          - 概览: api/kotlin/short--f5d61ead.md
+          - Companion:
+            - 概览: api/kotlin/short-companion--ec4aedf6.md
+            - MAX_VALUE: api/kotlin/short-companion-max-value--2da1e9f7.md
+            - MIN_VALUE: api/kotlin/short-companion-min-value--28417e93.md
+            - SIZE_BITS: api/kotlin/short-companion-size-bits--0a4e7d3d.md
+            - SIZE_BYTES: api/kotlin/short-companion-size-bytes--da457576.md
+          - compareTo: api/kotlin/short-compareto--97521875.md
+          - dec: api/kotlin/short-dec--73fe0409.md
+          - div: api/kotlin/short-div--cf3b4eb2.md
+          - equals: api/kotlin/short-equals--2a3710b7.md
+          - hashCode: api/kotlin/short-hashcode--2fd8a675.md
+          - inc: api/kotlin/short-inc--b9fe556b.md
+          - minus: api/kotlin/short-minus--f396d21d.md
+          - plus: api/kotlin/short-plus--72f120ee.md
+          - rangeTo: api/kotlin/short-rangeto--8d880d8f.md
+          - rangeUntil: api/kotlin/short-rangeuntil--0068b929.md
+          - rem: api/kotlin/short-rem--ceb618d0.md
+          - times: api/kotlin/short-times--5b464589.md
+          - toByte: api/kotlin/short-tobyte--0f7a3dbd.md
+          - toChar: api/kotlin/short-tochar--402d305d.md
+          - toDouble: api/kotlin/short-todouble--aa41bc8a.md
+          - toFloat: api/kotlin/short-tofloat--2e240d1c.md
+          - toInt: api/kotlin/short-toint--37db9ac0.md
+          - toLong: api/kotlin/short-tolong--27c37b7e.md
+          - toShort: api/kotlin/short-toshort--fc08eec9.md
+          - toString: api/kotlin/short-tostring--28c1eb89.md
+          - unaryMinus: api/kotlin/short-unaryminus--26611a5f.md
+          - unaryPlus: api/kotlin/short-unaryplus--6b829eb5.md
+        - ShortArray:
+          - 概览: api/kotlin/shortarray--01288690.md
+          - constructor: api/kotlin/shortarray-constructor--a9c1668b.md
+          - get: api/kotlin/shortarray-get--408fb9bb.md
+          - iterator: api/kotlin/shortarray-iterator--0ebbc0dc.md
+          - set: api/kotlin/shortarray-set--6f434736.md
+          - size: api/kotlin/shortarray-size--0e935a81.md
+        - SinceKotlin:
+          - 概览: api/kotlin/sincekotlin--68e0c947.md
+          - constructor: api/kotlin/sincekotlin-constructor--9eadfb69.md
+          - version: api/kotlin/sincekotlin-version--21630197.md
+        - String:
+          - 概览: api/kotlin/string--b2ef230e.md
+          - Companion: api/kotlin/string-companion--a1b85397.md
+          - compareTo: api/kotlin/string-compareto--8cb769dc.md
+          - equals: api/kotlin/string-equals--2c8a09f1.md
+          - get: api/kotlin/string-get--e6e1375b.md
+          - length: api/kotlin/string-length--4599647b.md
+          - plus: api/kotlin/string-plus--1ca2c1b2.md
+          - subSequence: api/kotlin/string-subsequence--b2f9f8e8.md
+          - toString: api/kotlin/string-tostring--45fd853c.md
+        - SubclassOptInRequired:
+          - 概览: api/kotlin/subclassoptinrequired--4ea3e402.md
+          - constructor: api/kotlin/subclassoptinrequired-constructor--70b20362.md
+          - markerClass: api/kotlin/subclassoptinrequired-markerclass--e0e6b96d.md
+        - Suppress:
+          - 概览: api/kotlin/suppress--60b19987.md
+          - constructor: api/kotlin/suppress-constructor--7eba6aa4.md
+          - names: api/kotlin/suppress-names--2994dd46.md
+        - setValue: api/kotlin/setvalue--4d9bc18c.md
+        - shortArrayOf: api/kotlin/shortarrayof--61970a92.md
+        - stackTraceToString: api/kotlin/stacktracetostring--f4004ecc.md
+        - suppressedExceptions: api/kotlin/suppressedexceptions--c527aefa.md
+        - suspend: api/kotlin/suspend--f516e6c2.md
+      - T:
+        - TODO: api/kotlin/todo--337e547a.md
+        - Throwable:
+          - 概览: api/kotlin/throwable--f2a23ed7.md
+          - cause: api/kotlin/throwable-cause--f947c419.md
+          - constructor: api/kotlin/throwable-constructor--26af5d9d.md
+          - message: api/kotlin/throwable-message--d3cdb758.md
+        - Triple:
+          - 概览: api/kotlin/triple--a29cdb61.md
+          - constructor: api/kotlin/triple-constructor--b146f8b7.md
+          - first: api/kotlin/triple-first--5c014788.md
+          - second: api/kotlin/triple-second--b0cad5a3.md
+          - third: api/kotlin/triple-third--7c7d8003.md
+          - toString: api/kotlin/triple-tostring--f0af2e4f.md
+        - takeHighestOneBit: api/kotlin/takehighestonebit--f16d5842.md
+        - takeIf: api/kotlin/takeif--015b555a.md
+        - takeLowestOneBit: api/kotlin/takelowestonebit--0391aa78.md
+        - takeUnless: api/kotlin/takeunless--ae3adfd1.md
+        - to: api/kotlin/to--663ea1bf.md
+        - toBits: api/kotlin/tobits--e823e1ed.md
+        - toList: api/kotlin/tolist--658fe2ed.md
+        - toRawBits: api/kotlin/torawbits--9c86d619.md
+        - toString: api/kotlin/tostring--bbb522f7.md
+        - toUByte: api/kotlin/toubyte--ae5ea4a7.md
+        - toUInt: api/kotlin/touint--cda05c11.md
+        - toULong: api/kotlin/toulong--bfb07ee5.md
+        - toUShort: api/kotlin/toushort--2173fac9.md
+      - U:
+        - UByte:
+          - 概览: api/kotlin/ubyte--04e46c44.md
+          - Companion:
+            - 概览: api/kotlin/ubyte-companion--bdd78f7a.md
+            - MAX_VALUE: api/kotlin/ubyte-companion-max-value--15518652.md
+            - MIN_VALUE: api/kotlin/ubyte-companion-min-value--4e390d53.md
+            - SIZE_BITS: api/kotlin/ubyte-companion-size-bits--2be9404f.md
+            - SIZE_BYTES: api/kotlin/ubyte-companion-size-bytes--5a56d88b.md
+          - and: api/kotlin/ubyte-and--3835d549.md
+          - compareTo: api/kotlin/ubyte-compareto--1a8f61b2.md
+          - dec: api/kotlin/ubyte-dec--ba49cc4c.md
+          - div: api/kotlin/ubyte-div--9b7651d6.md
+          - floorDiv: api/kotlin/ubyte-floordiv--dd0ce16a.md
+          - inc: api/kotlin/ubyte-inc--4769e249.md
+          - inv: api/kotlin/ubyte-inv--3579cf2a.md
+          - minus: api/kotlin/ubyte-minus--3881b1bb.md
+          - mod: api/kotlin/ubyte-mod--674babe6.md
+          - or: api/kotlin/ubyte-or--414024ec.md
+          - plus: api/kotlin/ubyte-plus--3a120f16.md
+          - rangeTo: api/kotlin/ubyte-rangeto--0fadd2f8.md
+          - rangeUntil: api/kotlin/ubyte-rangeuntil--2ec08a86.md
+          - rem: api/kotlin/ubyte-rem--61473568.md
+          - times: api/kotlin/ubyte-times--0161b2c7.md
+          - toByte: api/kotlin/ubyte-tobyte--b610d153.md
+          - toDouble: api/kotlin/ubyte-todouble--ca3a8748.md
+          - toFloat: api/kotlin/ubyte-tofloat--532c74d5.md
+          - toInt: api/kotlin/ubyte-toint--c272e977.md
+          - toLong: api/kotlin/ubyte-tolong--45e158c7.md
+          - toShort: api/kotlin/ubyte-toshort--84e7497e.md
+          - toString: api/kotlin/ubyte-tostring--cfe84991.md
+          - toUByte: api/kotlin/ubyte-toubyte--a8518b2d.md
+          - toUInt: api/kotlin/ubyte-touint--eeaa3b07.md
+          - toULong: api/kotlin/ubyte-toulong--c65e2096.md
+          - toUShort: api/kotlin/ubyte-toushort--b38a5d6f.md
+          - xor: api/kotlin/ubyte-xor--afe81b37.md
+        - UByteArray:
+          - 概览: api/kotlin/ubytearray--8caf03e3.md
+          - constructor: api/kotlin/ubytearray-constructor--e65524e5.md
+          - contains: api/kotlin/ubytearray-contains--6eae2fe4.md
+          - containsAll: api/kotlin/ubytearray-containsall--3c49fb0d.md
+          - get: api/kotlin/ubytearray-get--a1a474ef.md
+          - isEmpty: api/kotlin/ubytearray-isempty--46a4fb6d.md
+          - iterator: api/kotlin/ubytearray-iterator--27802635.md
+          - set: api/kotlin/ubytearray-set--a1bb74d1.md
+          - size: api/kotlin/ubytearray-size--bce959df.md
+        - UInt:
+          - 概览: api/kotlin/uint--26268136.md
+          - Companion:
+            - 概览: api/kotlin/uint-companion--bb4be3c0.md
+            - MAX_VALUE: api/kotlin/uint-companion-max-value--0595fa89.md
+            - MIN_VALUE: api/kotlin/uint-companion-min-value--e8cbb74b.md
+            - SIZE_BITS: api/kotlin/uint-companion-size-bits--f428a802.md
+            - SIZE_BYTES: api/kotlin/uint-companion-size-bytes--0b9a740f.md
+          - and: api/kotlin/uint-and--844d7994.md
+          - compareTo: api/kotlin/uint-compareto--008ef8d6.md
+          - dec: api/kotlin/uint-dec--b52d432d.md
+          - div: api/kotlin/uint-div--4942b3e0.md
+          - floorDiv: api/kotlin/uint-floordiv--31ccff6e.md
+          - inc: api/kotlin/uint-inc--9d11f05d.md
+          - inv: api/kotlin/uint-inv--5d8cccf7.md
+          - minus: api/kotlin/uint-minus--6d56df0b.md
+          - mod: api/kotlin/uint-mod--5d2ce429.md
+          - or: api/kotlin/uint-or--16241de6.md
+          - plus: api/kotlin/uint-plus--19f0f801.md
+          - rangeTo: api/kotlin/uint-rangeto--f0facf9c.md
+          - rangeUntil: api/kotlin/uint-rangeuntil--1b1a8047.md
+          - rem: api/kotlin/uint-rem--ff784df7.md
+          - shl: api/kotlin/uint-shl--6ff4474c.md
+          - shr: api/kotlin/uint-shr--46f82806.md
+          - times: api/kotlin/uint-times--97d25b7f.md
+          - toByte: api/kotlin/uint-tobyte--c7c7cda2.md
+          - toDouble: api/kotlin/uint-todouble--d6a5d672.md
+          - toFloat: api/kotlin/uint-tofloat--e4baf438.md
+          - toInt: api/kotlin/uint-toint--044781e0.md
+          - toLong: api/kotlin/uint-tolong--6aba274b.md
+          - toShort: api/kotlin/uint-toshort--45e43a0d.md
+          - toString: api/kotlin/uint-tostring--2cc95972.md
+          - toUByte: api/kotlin/uint-toubyte--97ccd39a.md
+          - toUInt: api/kotlin/uint-touint--4ce04eec.md
+          - toULong: api/kotlin/uint-toulong--556a50a4.md
+          - toUShort: api/kotlin/uint-toushort--19c3a50b.md
+          - xor: api/kotlin/uint-xor--2b8dbac8.md
+        - UIntArray:
+          - 概览: api/kotlin/uintarray--6dce502a.md
+          - constructor: api/kotlin/uintarray-constructor--08277106.md
+          - contains: api/kotlin/uintarray-contains--2448a680.md
+          - containsAll: api/kotlin/uintarray-containsall--4e49de67.md
+          - get: api/kotlin/uintarray-get--b2dce819.md
+          - isEmpty: api/kotlin/uintarray-isempty--efc8d80a.md
+          - iterator: api/kotlin/uintarray-iterator--0f5d47c0.md
+          - set: api/kotlin/uintarray-set--2da684f0.md
+          - size: api/kotlin/uintarray-size--8fff82ed.md
+        - ULong:
+          - 概览: api/kotlin/ulong--b4cb4fdf.md
+          - Companion:
+            - 概览: api/kotlin/ulong-companion--c4c2b3d1.md
+            - MAX_VALUE: api/kotlin/ulong-companion-max-value--3bd220a4.md
+            - MIN_VALUE: api/kotlin/ulong-companion-min-value--601d2340.md
+            - SIZE_BITS: api/kotlin/ulong-companion-size-bits--0dd6f2ef.md
+            - SIZE_BYTES: api/kotlin/ulong-companion-size-bytes--39a45b62.md
+          - and: api/kotlin/ulong-and--768968f0.md
+          - compareTo: api/kotlin/ulong-compareto--d8a13324.md
+          - dec: api/kotlin/ulong-dec--e365c43e.md
+          - div: api/kotlin/ulong-div--d43600e4.md
+          - floorDiv: api/kotlin/ulong-floordiv--70d92d17.md
+          - inc: api/kotlin/ulong-inc--799e6b5e.md
+          - inv: api/kotlin/ulong-inv--7154fd5c.md
+          - minus: api/kotlin/ulong-minus--1a77eb03.md
+          - mod: api/kotlin/ulong-mod--eb0dba73.md
+          - or: api/kotlin/ulong-or--90c9602b.md
+          - plus: api/kotlin/ulong-plus--f21fc20b.md
+          - rangeTo: api/kotlin/ulong-rangeto--85f72828.md
+          - rangeUntil: api/kotlin/ulong-rangeuntil--3198ef62.md
+          - rem: api/kotlin/ulong-rem--83f27743.md
+          - shl: api/kotlin/ulong-shl--fc762e38.md
+          - shr: api/kotlin/ulong-shr--0d6b3f94.md
+          - times: api/kotlin/ulong-times--37b75099.md
+          - toByte: api/kotlin/ulong-tobyte--cd81c705.md
+          - toDouble: api/kotlin/ulong-todouble--d2367d30.md
+          - toFloat: api/kotlin/ulong-tofloat--d0632291.md
+          - toInt: api/kotlin/ulong-toint--ca4a2cd6.md
+          - toLong: api/kotlin/ulong-tolong--39f25e77.md
+          - toShort: api/kotlin/ulong-toshort--ab2e916b.md
+          - toString: api/kotlin/ulong-tostring--44fe202d.md
+          - toUByte: api/kotlin/ulong-toubyte--a06d97b6.md
+          - toUInt: api/kotlin/ulong-touint--64217034.md
+          - toULong: api/kotlin/ulong-toulong--2267a66b.md
+          - toUShort: api/kotlin/ulong-toushort--b93e106e.md
+          - xor: api/kotlin/ulong-xor--60fccb82.md
+        - ULongArray:
+          - 概览: api/kotlin/ulongarray--b5aa2681.md
+          - constructor: api/kotlin/ulongarray-constructor--cf91dad1.md
+          - contains: api/kotlin/ulongarray-contains--6afe2565.md
+          - containsAll: api/kotlin/ulongarray-containsall--c5c1440f.md
+          - get: api/kotlin/ulongarray-get--015d1277.md
+          - isEmpty: api/kotlin/ulongarray-isempty--4ef69d5e.md
+          - iterator: api/kotlin/ulongarray-iterator--bd6ee49c.md
+          - set: api/kotlin/ulongarray-set--0734ca2a.md
+          - size: api/kotlin/ulongarray-size--f7e8e7af.md
+        - UShort:
+          - 概览: api/kotlin/ushort--fcc3d645.md
+          - Companion:
+            - 概览: api/kotlin/ushort-companion--eabc7abb.md
+            - MAX_VALUE: api/kotlin/ushort-companion-max-value--ba816db0.md
+            - MIN_VALUE: api/kotlin/ushort-companion-min-value--0845c146.md
+            - SIZE_BITS: api/kotlin/ushort-companion-size-bits--9fdd547a.md
+            - SIZE_BYTES: api/kotlin/ushort-companion-size-bytes--72478c98.md
+          - and: api/kotlin/ushort-and--d8b06d1b.md
+          - compareTo: api/kotlin/ushort-compareto--2fc5971d.md
+          - dec: api/kotlin/ushort-dec--4b646fa2.md
+          - div: api/kotlin/ushort-div--b4b51451.md
+          - floorDiv: api/kotlin/ushort-floordiv--0cc36f25.md
+          - inc: api/kotlin/ushort-inc--cf48943c.md
+          - inv: api/kotlin/ushort-inv--5fdfba00.md
+          - minus: api/kotlin/ushort-minus--6f1a51c6.md
+          - mod: api/kotlin/ushort-mod--0eb40b2f.md
+          - or: api/kotlin/ushort-or--edf0845d.md
+          - plus: api/kotlin/ushort-plus--26c212c7.md
+          - rangeTo: api/kotlin/ushort-rangeto--474c1381.md
+          - rangeUntil: api/kotlin/ushort-rangeuntil--a191ee5f.md
+          - rem: api/kotlin/ushort-rem--f642615d.md
+          - times: api/kotlin/ushort-times--d0babaf4.md
+          - toByte: api/kotlin/ushort-tobyte--b63549ab.md
+          - toDouble: api/kotlin/ushort-todouble--8f090792.md
+          - toFloat: api/kotlin/ushort-tofloat--1c4caca9.md
+          - toInt: api/kotlin/ushort-toint--2f077246.md
+          - toLong: api/kotlin/ushort-tolong--07eb9b56.md
+          - toShort: api/kotlin/ushort-toshort--37dc1288.md
+          - toString: api/kotlin/ushort-tostring--a32fd73c.md
+          - toUByte: api/kotlin/ushort-toubyte--86a56f33.md
+          - toUInt: api/kotlin/ushort-touint--aee96ea3.md
+          - toULong: api/kotlin/ushort-toulong--16203262.md
+          - toUShort: api/kotlin/ushort-toushort--177861ad.md
+          - xor: api/kotlin/ushort-xor--f581c251.md
+        - UShortArray:
+          - 概览: api/kotlin/ushortarray--fdba84e9.md
+          - constructor: api/kotlin/ushortarray-constructor--45d47468.md
+          - contains: api/kotlin/ushortarray-contains--16d4bcfd.md
+          - containsAll: api/kotlin/ushortarray-containsall--17c45c40.md
+          - get: api/kotlin/ushortarray-get--cff07cc5.md
+          - isEmpty: api/kotlin/ushortarray-isempty--40f2723a.md
+          - iterator: api/kotlin/ushortarray-iterator--cf0485b7.md
+          - set: api/kotlin/ushortarray-set--6d92ebc7.md
+          - size: api/kotlin/ushortarray-size--1617745f.md
+        - UninitializedPropertyAccessException:
+          - 概览: api/kotlin/uninitializedpropertyaccessexception--7c93816b.md
+          - constructor: api/kotlin/uninitializedpropertyaccessexception-constructor--0c393627.md
+        - Unit: api/kotlin/unit--4e545960.md
+        - UnsafeVariance: api/kotlin/unsafevariance--917f9c50.md
+        - UnsupportedOperationException:
+          - 概览: api/kotlin/unsupportedoperationexception--a5264fb0.md
+          - constructor: api/kotlin/unsupportedoperationexception-constructor--045e610e.md
+        - ubyteArrayOf: api/kotlin/ubytearrayof--ed09f28e.md
+        - uintArrayOf: api/kotlin/uintarrayof--0693f203.md
+        - ulongArrayOf: api/kotlin/ulongarrayof--c0adf939.md
+        - use: api/kotlin/use--a3b142af.md
+        - ushortArrayOf: api/kotlin/ushortarrayof--73c55719.md
+      - W:
+        - with: api/kotlin/with--0695b563.md
+  - 覆盖进度: coverage.md
+plugins:
+- i18n:
+    docs_structure: folder
+    languages:
+    - locale: zh
+      name: 简体中文
+      default: true
+      build: true
+    - locale: en
+      name: English
+      build: true
+      site_name: Kotlin Standard Library Usage
+      site_description: Bilingual usage documentation for kotlin-stdlib 2.4.21.
+      nav_translations:
+        开始阅读: Getting started
+        map 用法教程: map tutorial
+        API 目录: API reference
+        覆盖进度: Coverage
+        概览: Overview
+        前置条件 Preconditions.kt: Preconditions.kt
+        注解 · kotlin.annotation: Annotations · kotlin.annotation
+        集合 · kotlin.collections: Collections · kotlin.collections
+        比较与排序 · kotlin.comparisons: Comparisons · kotlin.comparisons
+        原子操作 · kotlin.concurrent.atomics: Atomics · kotlin.concurrent.atomics
+        契约 · kotlin.contracts: Contracts · kotlin.contracts
+        kotlin.coroutines.cancellation · kotlin.coroutines.cancellation: kotlin.coroutines.cancellation
+          · kotlin.coroutines.cancellation
+        kotlin.coroutines.debug · kotlin.coroutines.debug: kotlin.coroutines.debug
+          · kotlin.coroutines.debug
+        协程底层 API · kotlin.coroutines.intrinsics: Coroutine intrinsics · kotlin.coroutines.intrinsics
+        协程基础 · kotlin.coroutines: Coroutine primitives · kotlin.coroutines
+        kotlin.enums · kotlin.enums: kotlin.enums · kotlin.enums
+        kotlin.experimental · kotlin.experimental: kotlin.experimental · kotlin.experimental
+        编码 · kotlin.io.encoding: Encoding · kotlin.io.encoding
+        输入输出 · kotlin.io: Input and output · kotlin.io
+        数学函数 · kotlin.math: Math · kotlin.math
+        属性委托 · kotlin.properties: Property delegates · kotlin.properties
+        随机数 · kotlin.random: Random · kotlin.random
+        区间与步进 · kotlin.ranges: Ranges and progressions · kotlin.ranges
+        反射类型 · kotlin.reflect: Reflection types · kotlin.reflect
+        序列 · kotlin.sequences: Sequences · kotlin.sequences
+        字符串与正则 · kotlin.text: Text and regular expressions · kotlin.text
+        时间与时长 · kotlin.time: Time · kotlin.time
+        UUID · kotlin.uuid: UUID · kotlin.uuid
+        核心类型与函数 · kotlin: Core types and functions · kotlin
+- search:
+    lang:
+    - zh
+    - en
+markdown_extensions:
+- admonition
+- attr_list
+- md_in_html
+- toc:
+    permalink: true
+- pymdownx.details
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.superfences
+extra_css:
+- stylesheets/extra.css
+site_url: https://oooooooko.github.io/kotlin-stdlib-docs/
+edit_uri: ''
+validation:
+  nav:
+    omitted_files: ignore

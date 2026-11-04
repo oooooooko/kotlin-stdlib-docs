@@ -1,0 +1,56 @@
+# 反射类型
+
+`kotlin.reflect` · 2.4.21
+
+| API | 类型 | 示例 |
+| --- | --- | --- |
+| [`KCallable`](kcallable--2cd4608b.md) | class | 已验证 |
+| [`KCallable.name`](kcallable-name--cce63928.md) | property | 已验证 |
+| [`KClass`](kclass--4a9fc5a1.md) | class | 已验证 |
+| [`KClass.equals`](kclass-equals--2447b02e.md) | function | 已验证 |
+| [`KClass.hashCode`](kclass-hashcode--292bdd6f.md) | function | 已验证 |
+| [`KClass.isInstance`](kclass-isinstance--d67fed2f.md) | function | 已验证 |
+| [`KClass.qualifiedName`](kclass-qualifiedname--0cc8f6b8.md) | property | 已验证 |
+| [`KClass.simpleName`](kclass-simplename--d139ea14.md) | property | 已验证 |
+| [`KClassifier`](kclassifier--3ff555f9.md) | class | 已验证 |
+| [`KFunction`](kfunction--5b505331.md) | class | 已验证 |
+| [`KMutableProperty`](kmutableproperty--40f1bcf4.md) | class | 已验证 |
+| [`KMutableProperty0`](kmutableproperty0--a202a1bd.md) | class | 已验证 |
+| [`KMutableProperty0.set`](kmutableproperty0-set--03c054b0.md) | function | 已验证 |
+| [`KMutableProperty1`](kmutableproperty1--170ab5c5.md) | class | 已验证 |
+| [`KMutableProperty1.set`](kmutableproperty1-set--9621afd9.md) | function | 已验证 |
+| [`KMutableProperty2`](kmutableproperty2--abfa705a.md) | class | 已验证 |
+| [`KMutableProperty2.set`](kmutableproperty2-set--8e0a74fa.md) | function | 已验证 |
+| [`KProperty`](kproperty--2a4c1574.md) | class | 已验证 |
+| [`KProperty0`](kproperty0--9d1d9e32.md) | class | 已验证 |
+| [`KProperty0.get`](kproperty0-get--9d2410db.md) | function | 已验证 |
+| [`KProperty1`](kproperty1--bcfc5307.md) | class | 已验证 |
+| [`KProperty1.get`](kproperty1-get--a3a5da27.md) | function | 已验证 |
+| [`KProperty2`](kproperty2--cd767fba.md) | class | 已验证 |
+| [`KProperty2.get`](kproperty2-get--13dc4f49.md) | function | 已验证 |
+| [`KType`](ktype--174ffd68.md) | class | 已验证 |
+| [`KType.arguments`](ktype-arguments--94bea395.md) | property | 已验证 |
+| [`KType.classifier`](ktype-classifier--938919a2.md) | property | 已验证 |
+| [`KType.isMarkedNullable`](ktype-ismarkednullable--789266eb.md) | property | 已验证 |
+| [`KTypeParameter`](ktypeparameter--6effc128.md) | class | 已验证 |
+| [`KTypeParameter.isReified`](ktypeparameter-isreified--8ed7d520.md) | property | 已验证 |
+| [`KTypeParameter.name`](ktypeparameter-name--413c8ba0.md) | property | 已验证 |
+| [`KTypeParameter.upperBounds`](ktypeparameter-upperbounds--ab0d4616.md) | property | 已验证 |
+| [`KTypeParameter.variance`](ktypeparameter-variance--61d60f83.md) | property | 已验证 |
+| [`KTypeProjection`](ktypeprojection--b0c0a8aa.md) | class | 已验证 |
+| [`KTypeProjection.Companion`](ktypeprojection-companion--c2eed806.md) | object | 已验证 |
+| [`KTypeProjection.Companion.STAR`](ktypeprojection-companion-star--3ac94179.md) | property | 已验证 |
+| [`KTypeProjection.Companion.contravariant`](ktypeprojection-companion-contravariant--2ec0635e.md) | function | 已验证 |
+| [`KTypeProjection.Companion.covariant`](ktypeprojection-companion-covariant--e84cbc69.md) | function | 已验证 |
+| [`KTypeProjection.Companion.invariant`](ktypeprojection-companion-invariant--772bdd4d.md) | function | 已验证 |
+| [`KTypeProjection.constructor`](ktypeprojection-constructor--3f90730f.md) | secondary_constructor | 已验证 |
+| [`KTypeProjection.toString`](ktypeprojection-tostring--aaccd402.md) | function | 已验证 |
+| [`KTypeProjection.type`](ktypeprojection-type--9f2c8da2.md) | property | 已验证 |
+| [`KTypeProjection.variance`](ktypeprojection-variance--2640d4c7.md) | property | 已验证 |
+| [`KVariance`](kvariance--44d11edf.md) | class | 已验证 |
+| [`KVariance.IN`](kvariance-in--2470553e.md) | enum_entry | 已验证 |
+| [`KVariance.INVARIANT`](kvariance-invariant--9ede2225.md) | enum_entry | 已验证 |
+| [`KVariance.OUT`](kvariance-out--19a1cf78.md) | enum_entry | 已验证 |
+| [`cast`](cast--603705cc.md) | function | 已验证 |
+| [`safeCast`](safecast--07217521.md) | function | 已验证 |
+| [`typeOf`](typeof--74a0bd0c.md) | function | 已验证 |

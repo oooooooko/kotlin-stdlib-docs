@@ -1,0 +1,266 @@
+{
+  "kotlin/require": {
+    "zh": "检查调用者传入的参数是否满足条件。条件为 `false` 时抛出 `IllegalArgumentException`；带 `lazyMessage` 的重载可以提供自定义错误消息，并且只在检查失败时计算消息。检查成功时继续执行。",
+    "en": "Validate a condition on a caller-supplied argument. A false condition throws `IllegalArgumentException`. The `lazyMessage` overload computes its custom error message only when the check fails. Successful checks continue normally."
+  },
+  "kotlin/requireNotNull": {
+    "zh": "检查参数是否为 `null`，成功时返回非空值，失败时抛出 `IllegalArgumentException`。它声明了非空契约，因此对满足智能转换条件的变量，检查后可以直接访问其成员。带消息的重载只在参数为 `null` 时计算消息。",
+    "en": "Require a non-null argument and return its non-null value. A null argument throws `IllegalArgumentException`. Its contract enables smart casts for eligible variables after a successful check. The custom message is evaluated only for null input."
+  },
+  "kotlin/check": {
+    "zh": "检查当前对象或程序状态是否满足要求。条件为 `false` 时抛出 `IllegalStateException`。它和 `require` 的主要区别是用途和异常类型：`require` 检查参数，`check` 检查状态。自定义消息只在失败时计算。",
+    "en": "Validate the current state of an object or program. A false condition throws `IllegalStateException`. Use `require` for invalid arguments and `check` for invalid state. A custom message is evaluated only when the check fails."
+  },
+  "kotlin/checkNotNull": {
+    "zh": "检查表示当前状态的值是否非空。成功时返回非空值，并支持对符合条件的变量进行智能转换；为 `null` 时抛出 `IllegalStateException`。它和 `requireNotNull` 的异常类型不同，适用于对象尚未初始化等状态错误。",
+    "en": "Require a non-null value representing program state. Return the non-null value on success, with smart casts for eligible variables. A null value throws `IllegalStateException`, unlike the `IllegalArgumentException` thrown by `requireNotNull`. This is suitable for state errors such as an uninitialized object."
+  },
+  "kotlin/error": {
+    "zh": "立即抛出带指定消息的 `IllegalStateException`，不会正常返回。返回类型是 `Nothing`，因此可以放在 `when` 分支、Elvis 表达式等需要某个返回类型的位置。异常会结束当前执行路径，而不是返回错误字符串。",
+    "en": "Immediately throw an `IllegalStateException` with the supplied message. This function never returns normally. Its `Nothing` return type allows use in a `when` branch or Elvis expression where another result type is expected. It terminates the current path rather than returning an error string."
+  },
+  "kotlin.collections/ArrayDeque.removeRange": {
+    "zh": "`removeRange` 是受保护的实现钩子，不能直接调用。本例通过公开的 `subList().clear()` 删除区间。",
+    "en": "`removeRange` is a protected implementation hook. Use the public `subList().clear()` operation to remove a range."
+  },
+  "kotlin.sequences/SequenceScope": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/flatMapIndexedTo": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/flatMapTo": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/ifEmpty": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/mapIndexedNotNullTo": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/mapIndexedTo": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/mapNotNullTo": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/mapTo": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.sequences/sumByDouble": {
+    "zh": "`sumByDouble` 已弃用，新代码使用 `sumOf`。",
+    "en": "`sumByDouble` is deprecated; use `sumOf` in new code."
+  },
+  "kotlin.text/toLowerCase": {
+    "zh": "旧大小写转换 API 已弃用；新代码使用 `lowercase` / `uppercase`。",
+    "en": "The legacy case conversion APIs are deprecated. Use `lowercase` / `uppercase` in new code."
+  },
+  "kotlin.text/toUpperCase": {
+    "zh": "旧大小写转换 API 已弃用；新代码使用 `lowercase` / `uppercase`。",
+    "en": "The legacy case conversion APIs are deprecated. Use `lowercase` / `uppercase` in new code."
+  },
+  "kotlin/Byte.toChar": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Short.toChar": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Long.toChar": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Float.toChar": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Float.toByte": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Float.toShort": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Double.toChar": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Double.toByte": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/Double.toShort": {
+    "zh": "旧的直接转换已弃用。示例为兼容旧代码演示而抑制错误；新代码先显式转为 `Int`。",
+    "en": "These direct conversions are deprecated. This compatibility example suppresses deprecation errors; explicitly convert to `Int` first in new code."
+  },
+  "kotlin/DeepRecursiveScope": {
+    "zh": "作用域内部应使用 `callRecursive`；直接调用 `invoke` 已禁止，本例同时展示被抑制后的异常，便于迁移旧代码。",
+    "en": "Use `callRecursive` inside the scope. Direct `invoke` is forbidden; the suppressed legacy call demonstrates its exception for migration."
+  },
+  "kotlin/DeepRecursiveScope.invoke": {
+    "zh": "作用域内部应使用 `callRecursive`；直接调用 `invoke` 已禁止，本例同时展示被抑制后的异常，便于迁移旧代码。",
+    "en": "Use `callRecursive` inside the scope. Direct `invoke` is forbidden; the suppressed legacy call demonstrates its exception for migration."
+  },
+  "kotlin.time/Clock": {
+    "zh": "`TestTimeSource.read` 是由时间标记间接使用的受保护钩子。`Instant.now()` 已弃用，2.4.21 中的实现会抛出 `NotImplementedError`；本例捕获该异常，新代码使用 `Clock.System.now()`。",
+    "en": "`TestTimeSource.read` is a protected time-mark hook. Deprecated `Instant.now()` throws `NotImplementedError` in 2.4.21; this example catches it. Use `Clock.System.now()` in new code."
+  },
+  "kotlin.time/Instant.Companion.now": {
+    "zh": "`TestTimeSource.read` 是由时间标记间接使用的受保护钩子。`Instant.now()` 已弃用，2.4.21 中的实现会抛出 `NotImplementedError`；本例捕获该异常，新代码使用 `Clock.System.now()`。",
+    "en": "`TestTimeSource.read` is a protected time-mark hook. Deprecated `Instant.now()` throws `NotImplementedError` in 2.4.21; this example catches it. Use `Clock.System.now()` in new code."
+  },
+  "kotlin.time/TimeSource": {
+    "zh": "`TestTimeSource.read` 是由时间标记间接使用的受保护钩子。`Instant.now()` 已弃用，2.4.21 中的实现会抛出 `NotImplementedError`；本例捕获该异常，新代码使用 `Clock.System.now()`。",
+    "en": "`TestTimeSource.read` is a protected time-mark hook. Deprecated `Instant.now()` throws `NotImplementedError` in 2.4.21; this example catches it. Use `Clock.System.now()` in new code."
+  },
+  "kotlin.time/TimeSource.Monotonic.ValueTimeMark": {
+    "zh": "`TestTimeSource.read` 是由时间标记间接使用的受保护钩子。`Instant.now()` 已弃用，2.4.21 中的实现会抛出 `NotImplementedError`；本例捕获该异常，新代码使用 `Clock.System.now()`。",
+    "en": "`TestTimeSource.read` is a protected time-mark hook. Deprecated `Instant.now()` throws `NotImplementedError` in 2.4.21; this example catches it. Use `Clock.System.now()` in new code."
+  },
+  "kotlin.time/TimeSource.WithComparableMarks": {
+    "zh": "`TestTimeSource.read` 是由时间标记间接使用的受保护钩子。`Instant.now()` 已弃用，2.4.21 中的实现会抛出 `NotImplementedError`；本例捕获该异常，新代码使用 `Clock.System.now()`。",
+    "en": "`TestTimeSource.read` is a protected time-mark hook. Deprecated `Instant.now()` throws `NotImplementedError` in 2.4.21; this example catches it. Use `Clock.System.now()` in new code."
+  },
+  "kotlin.time/TestTimeSource.read": {
+    "zh": "`TestTimeSource.read` 是由时间标记间接使用的受保护钩子。`Instant.now()` 已弃用，2.4.21 中的实现会抛出 `NotImplementedError`；本例捕获该异常，新代码使用 `Clock.System.now()`。",
+    "en": "`TestTimeSource.read` is a protected time-mark hook. Deprecated `Instant.now()` throws `NotImplementedError` in 2.4.21; this example catches it. Use `Clock.System.now()` in new code."
+  },
+  "kotlin.coroutines/AbstractCoroutineContextKey": {
+    "zh": "此多态键 API 在 2.4 中已弃用。新代码建议按基础键获取元素后显式转换类型。",
+    "en": "Polymorphic context keys are deprecated since 2.4. Retrieve by the base key and cast explicitly in new code."
+  },
+  "kotlin.coroutines/AbstractCoroutineContextKey.constructor": {
+    "zh": "此多态键 API 在 2.4 中已弃用。新代码建议按基础键获取元素后显式转换类型。",
+    "en": "Polymorphic context keys are deprecated since 2.4. Retrieve by the base key and cast explicitly in new code."
+  },
+  "kotlin.coroutines/Continuation": {
+    "zh": "这里使用普通回调对象分别展示三个入口。由协程创建的一次性 continuation 只能恢复一次，不能按此例连续恢复同一真实挂起点。",
+    "en": "This plain callback object demonstrates three entry points. A one-shot continuation produced by a coroutine must be resumed only once."
+  },
+  "kotlin.coroutines/Continuation.context": {
+    "zh": "这里使用普通回调对象分别展示三个入口。由协程创建的一次性 continuation 只能恢复一次，不能按此例连续恢复同一真实挂起点。",
+    "en": "This plain callback object demonstrates three entry points. A one-shot continuation produced by a coroutine must be resumed only once."
+  },
+  "kotlin.coroutines/Continuation.resumeWith": {
+    "zh": "这里使用普通回调对象分别展示三个入口。由协程创建的一次性 continuation 只能恢复一次，不能按此例连续恢复同一真实挂起点。",
+    "en": "This plain callback object demonstrates three entry points. A one-shot continuation produced by a coroutine must be resumed only once."
+  },
+  "kotlin.coroutines/resume": {
+    "zh": "这里使用普通回调对象分别展示三个入口。由协程创建的一次性 continuation 只能恢复一次，不能按此例连续恢复同一真实挂起点。",
+    "en": "This plain callback object demonstrates three entry points. A one-shot continuation produced by a coroutine must be resumed only once."
+  },
+  "kotlin.coroutines/resumeWithException": {
+    "zh": "这里使用普通回调对象分别展示三个入口。由协程创建的一次性 continuation 只能恢复一次，不能按此例连续恢复同一真实挂起点。",
+    "en": "This plain callback object demonstrates three entry points. A one-shot continuation produced by a coroutine must be resumed only once."
+  },
+  "kotlin.coroutines.intrinsics/createCoroutineUnintercepted": {
+    "zh": "这是协程实现者使用的底层 API。同步返回值时不会再调用 completion；真正挂起时必须返回 `COROUTINE_SUSPENDED` 并确保只恢复一次。",
+    "en": "These are coroutine implementation primitives. A synchronous result does not invoke completion. A suspended operation must return `COROUTINE_SUSPENDED` and resume exactly once."
+  },
+  "kotlin.coroutines.intrinsics/intercepted": {
+    "zh": "这是协程实现者使用的底层 API。同步返回值时不会再调用 completion；真正挂起时必须返回 `COROUTINE_SUSPENDED` 并确保只恢复一次。",
+    "en": "These are coroutine implementation primitives. A synchronous result does not invoke completion. A suspended operation must return `COROUTINE_SUSPENDED` and resume exactly once."
+  },
+  "kotlin.coroutines.intrinsics/startCoroutineUninterceptedOrReturn": {
+    "zh": "这是协程实现者使用的底层 API。同步返回值时不会再调用 completion；真正挂起时必须返回 `COROUTINE_SUSPENDED` 并确保只恢复一次。",
+    "en": "These are coroutine implementation primitives. A synchronous result does not invoke completion. A suspended operation must return `COROUTINE_SUSPENDED` and resume exactly once."
+  },
+  "kotlin.coroutines.intrinsics/suspendCoroutineUninterceptedOrReturn": {
+    "zh": "这是协程实现者使用的底层 API。同步返回值时不会再调用 completion；真正挂起时必须返回 `COROUTINE_SUSPENDED` 并确保只恢复一次。",
+    "en": "These are coroutine implementation primitives. A synchronous result does not invoke completion. A suspended operation must return `COROUTINE_SUSPENDED` and resume exactly once."
+  },
+  "kotlin.contracts/CallsInPlace": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/ConditionalEffect": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/ContractBuilder": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/ContractBuilder.callsInPlace": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/ContractBuilder.returns": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/ContractBuilder.returnsNotNull": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/Effect": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/Returns": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/ReturnsNotNull": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/SimpleEffect": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/SimpleEffect.implies": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/contract": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/InvocationKind": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin.contracts/InvocationKind.EXACTLY_ONCE": {
+    "zh": "契约效果类型由 `contract` DSL 构造，不能作为普通对象手动创建。编译器使用这些声明进行智能转换和初始化分析；它们不会自动检查函数体是否兑现承诺。",
+    "en": "Effect interfaces are produced by the contract DSL, not instantiated as ordinary objects. Contracts guide smart casts and initialization analysis; they do not enforce the function's promises at runtime."
+  },
+  "kotlin/BuilderInference": {
+    "zh": "这是兼容旧代码的注解示例。现代 Kotlin 在需要时会自动启用构建器类型推断，该注解已弃用。",
+    "en": "This is a compatibility example. Modern Kotlin enables builder inference automatically when needed; the annotation is deprecated."
+  },
+  "kotlin/IntroducedAt": {
+    "zh": "版本号表示库自己的发布版本，并非 Kotlin 版本。注解参数必须带默认值，编译器生成旧签名以维持二进制兼容。",
+    "en": "The version belongs to the library being published, not Kotlin itself. Annotated parameters need defaults; the compiler emits old signatures for binary compatibility."
+  },
+  "kotlin/IntroducedAt.constructor": {
+    "zh": "版本号表示库自己的发布版本，并非 Kotlin 版本。注解参数必须带默认值，编译器生成旧签名以维持二进制兼容。",
+    "en": "The version belongs to the library being published, not Kotlin itself. Annotated parameters need defaults; the compiler emits old signatures for binary compatibility."
+  },
+  "kotlin/IntroducedAt.version": {
+    "zh": "版本号表示库自己的发布版本，并非 Kotlin 版本。注解参数必须带默认值，编译器生成旧签名以维持二进制兼容。",
+    "en": "The version belongs to the library being published, not Kotlin itself. Annotated parameters need defaults; the compiler emits old signatures for binary compatibility."
+  },
+  "kotlin/OptionalExpectation": {
+    "zh": "这是一个最小多平台编译示例。`common.kt` 属于 common 源集；注解没有 actual 实现时会被擦除，通用函数仍可正常使用。",
+    "en": "This minimal multiplatform compilation puts `common.kt` in the common source set. The optional annotation is erased without an actual implementation; the common function still works."
+  },
+  "kotlin.experimental/ExpectRefinement": {
+    "zh": "这是实验性的 expect 声明细化示例：common → shared → JVM。shared 重复原成员并新增成员，最终由 actual 类实现；它属于 Common 多平台声明机制。",
+    "en": "This experimental expect-refinement example follows common → shared → JVM. The intermediate expect repeats existing members and adds a member, with a final actual implementation."
+  },
+  "kotlin/takeUnless": {
+    "zh": "当 `predicate` 返回 `false` 时返回原对象；返回 `true` 时返回 `null`。适合用链式调用排除不符合要求的值。",
+    "en": "Returns the original value when the predicate is false, or null when it is true. Use it in a call chain to reject values that match a condition."
+  }
+}
